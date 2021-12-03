@@ -1,0 +1,59 @@
+* {
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#toolbarContainer {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+// flex
+
+.flex {
+  display: flex;
+}
+
+.JC-SB {
+  justify-content: space-between;
+}
+.JC-SA {
+  justify-content: space-around;
+}
+.JC-SE {
+  justify-content: space-evenly;
+}
+
+.JC-C {
+  justify-content: center;
+}
+.JC-E {
+  justify-content: flex-end;
+}
+
+.FW-wrap {
+  flex-wrap: wrap;
+}
+
+// tillfällig
+
+// tillf. theme
+.dark {
+  .post-pic {
+    background-color: green;
+    width: 100%;
+    height: 7rem;
+  }
+}
+.light {
+  .post-pic {
+    background-color: red;
+    width: 100%;
+    height: 7rem;
+  }
+}
