@@ -1,0 +1,35 @@
+CRITICAL - 2021-12-01 08:31:26 --> Cannot modify header information - headers already sent by (output started at /app/public/index.php:2)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', '/app/system/Deb...', 435)
+#1 /app/system/Debug/Toolbar.php(435): header('Content-Type: a...')
+#2 /app/app/Config/Events.php(48): CodeIgniter\Debug\Toolbar->respond()
+#3 /app/system/Events/Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+#4 /app/system/CodeIgniter.php(300): CodeIgniter\Events\Events::trigger('pre_system')
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-01 08:31:27 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at /app/public/index.php:2) in /app/system/Debug/Exceptions.php:107
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', '/app/system/Deb...', 107)
+#1 /app/system/Debug/Exceptions.php(107): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-12-01 08:31:59 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at /app/public/index.php:2) in /app/system/Debug/Exceptions.php:107
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', '/app/system/Deb...', 107)
+#1 /app/system/Debug/Exceptions.php(107): header('HTTP/1.1 404 No...', true, 404)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-12-01 08:49:17 --> syntax error, unexpected token "echo", expecting ";"
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Contro...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 /app/system/CodeIgniter.php(789): class_exists('\\App\\Controller...', true)
+#4 /app/system/CodeIgniter.php(397): CodeIgniter\CodeIgniter->startController()
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
