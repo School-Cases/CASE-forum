@@ -41,6 +41,6 @@ class Home extends BaseController
         // $obj=(object)$arr;
 
         // header('Content-Type: application/json');
-        echo json_encode(("name":"Deepak","age":21,"marks":75));
+        echo json_encode({"name":"Deepak","age":21,"marks":75});
     }
 }
