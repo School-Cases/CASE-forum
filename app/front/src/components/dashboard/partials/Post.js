@@ -6,9 +6,10 @@ export const Post = () => {
   const [showComments, setShowComments] = useState(false);
 
   return (
-    <>
+    <section className="container">
+      <div className="posts">
       <section
-        className="flex"
+        className="flex single-post"
         onClick={(e) => {
           console.log(e.target.classList.value.includes("flex"));
           if (!e.target.classList.value.includes("noshow-com")) {
@@ -16,88 +17,90 @@ export const Post = () => {
           }
         }}
       >
-        <div>pr.img</div>
+        <div className="author-img-container">
+          <div className="author-img"></div>
+          <div className="comment-line">
+          <div className="line"></div>
+          <div className="corner"></div>
+          </div>
+        </div>
 
         <div>
-          <div className="flex JC-SB">
+          <div className="flex JC-SB post-top">
             <div>
-              <span>Blue Dude</span>
-              <span>20.11.2021 11.04</span>
+              <span className="author-username">Pink Girl</span>
+              <span className="post-timestamp">4 jan 11:04</span>
             </div>
 
-            <div className="noshow-com">
-              <span className="noshow-com">3</span>
-              <span className="noshow-com">likes</span>
+            <div className="flex noshow-com likes">
+              <div className="noshow-com likes-number">3</div>
+              {/* <div className="noshow-com likes-title">likes</div> */}
+              <div className="likes-svg"></div>
             </div>
           </div>
 
+          <div className="post-content">
           {/* text */}
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum
-            harum voluptatibus libero corporis cupiditate, voluptas accusamus
-            aperiam? Nemo tempore laudantium adipisci, consequatur et dolorum
-            neque doloribus sunt pariatur perspiciatis architecto!
+          <p className="post-text-content">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           </p>
 
           {/* bild */}
           <div className="post-pic"></div>
+          </div>
 
-          <hr />
-
-          <div className="flex JC-SB">
+          <div className="flex JC-SB post-bot">
             <div className="flex FW-wrap">
-              <span className="noshow-com">#Deltagare</span>
-              <span className="noshow-com">#Hej</span>
-              <span className="noshow-com">#Bajs</span>
-              <span className="noshow-com">#Del</span>
-              <span className="noshow-com">#Hej</span>
-              <span className="noshow-com">#Bajs</span>
-              <span className="noshow-com">#Deltagare</span>
-              <span className="noshow-com">#Hej</span>
-              <span className="noshow-com">#Bajs</span>
+              <span className="noshow-com post-hashtag">#Deltagare</span>
+              <span className="noshow-com post-hashtag">#Hej</span>
+              <span className="noshow-com post-hashtag">#Bajs</span>
+              <span className="noshow-com post-hashtag">#Del</span>
             </div>
 
             <div className="flex">
-              <span>com</span>
-              <span>4</span>
-              <span>rea</span>
-              <span>12</span>
+              <span><i class="fas fa-comment"></i></span>
+              <span className="comment-number">4</span>
+              <span><i class="fas fa-smile"></i></span>
+              <span className="reaction-number">12</span>
             </div>
           </div>
         </div>
+
+       
       </section>
 
-      {/* comment */}
-      <If condition={showComments}>
+ {/* comment */}
+ <If condition={showComments}>
         <Comment />
       </If>
-    </>
+      </div>
+    </section>
   );
 };
 
 const Comment = () => {
   return (
-    <section className={`flex`}>
-      <div>pr.img</div>
+    <section className={`flex comment-container`}>
+      <div className="comment-img-container">
+      <div className="commentator-user-img"></div>
+      </div>
 
       <div>
-        <div>
-          <span>Red Dude</span>
-          <span>20.11.2021 13.37</span>
+        <div className="comment-top">
+          <span className="commentator-username">Red Dude</span>
+          <span className="comment-timestamp">4 jan 13:37</span>
         </div>
 
-        <p>
+        <p className="comment-content">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum neque
           doloribus sunt pariatur perspiciatis architecto!
         </p>
 
-        <hr />
-
-        <div className="flex JC-E">
-          <span>likes</span>
-          <span>4</span>
-          <span>rea</span>
-          <span>12</span>
+        <div className="flex JC-E comment-bot">
+          <span><i class="fas fa-comment"></i></span>
+          <span className="comment-number">4</span>
+          <span><i class="fas fa-smile"></i></span>
+          <span className="reaction-number">12</span>
         </div>
       </div>
     </section>

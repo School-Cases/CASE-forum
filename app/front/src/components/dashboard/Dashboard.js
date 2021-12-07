@@ -15,53 +15,58 @@ export const Dashboard = ({ theme, setTheme }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const [adata, setaData] = useState("hej");
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  const fetchData = async (signal) => {
-    let res = await get(`/home/test`, signal);
-    // setaData(res.data);
-    setaData("hejhejhjeh");
-    console.log(res);
-    setLoading(false);
-  };
+  // const fetchData = async (signal) => {
+  //   let res = await get(`/home/test`, signal);
+  //   // setaData(res.data);
+  //   setaData("hejhejhjeh");
+  //   console.log(res);
+  //   setLoading(false);
+  // };
 
-  useEffect(async () => {
-    // const abortController = new AbortController();
-    // await fetchData(abortController.signal);
-    // return () => abortController.abort();
-    // await fetch("http://localhost:8080/home/test")
-    //   .then((res) => res.json())
-    //   .then((data) => console.log(data));
+  // useEffect(async () => {
+  //   // const abortController = new AbortController();
+  //   // await fetchData(abortController.signal);
+  //   // return () => abortController.abort();
+  //   // await fetch("http://localhost:8080/home/test")
+  //   //   .then((res) => res.json())
+  //   //   .then((data) => console.log(data));
 
-    await fetch(`http://localhost:8080/home/test`, {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((messages) => {
-        console.log(messages);
-      });
-  }, []);
+  //   await fetch(`http://localhost:8080/home/test`, {
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Accept: "application/json",
+  //     },
+  //   })
+  //     .then((response) => response.json())
+  //     .then((messages) => {
+  //       console.log(messages);
+  //     });
+  // }, []);
 
-  if (loading) {
-    return <h3>loading ..</h3>;
-  }
+  // if (loading) {
+  //   return <h3>loading ..</h3>;
+  // }
 
   return (
     <>
       <If condition={!showWritePost && !showSearch && !showMenu}>
-        <header className="flex JC-SB">
-          <div>pr.img</div>
-          <div>{adata}</div>
-          <div onClick={() => setTheme(!theme)}>stars</div>
+        <header className="flex JC-SB header">
+          <div className="header-user-img"></div>
+          <div className="header-stars" onClick={() => setTheme(!theme)}></div>
         </header>
 
-        <section className="flex JC-C">
-          <div onClick={() => setShowMenu(true)}>meny</div>
-          <div onClick={() => setShowWritePost(true)}>skriv</div>
-          <div onClick={() => setShowSearch(true)}>sök</div>
+        <section className="top-btns flex JC-C">
+          <div className="menu-btn flex" onClick={() => setShowMenu(true)}>
+            <i class="fas fa-bars"></i>
+          </div>
+          <div className="write-post-btn flex" onClick={() => setShowWritePost(true)}>
+          <i class="fas fa-pencil-alt"></i>
+          </div>
+          <div className="search-btn flex" onClick={() => setShowSearch(true)}>
+          <i class="fas fa-search"></i>
+          </div>
         </section>
 
         <Post />
