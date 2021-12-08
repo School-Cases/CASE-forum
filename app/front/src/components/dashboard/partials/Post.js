@@ -15,7 +15,7 @@ export const Post = ({ post, setShowWriteComment, setCommentPost_id }) => {
   const [showComments, setShowComments] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const [certainHashtag, setCertainHashtag] = useState(null);
+  // const [certainHashtag, setCertainHashtag] = useState(null);
 
   const fetchLikePost = async () => {
     let res = await POST(`/reaction/create_reaction`, {
@@ -28,16 +28,16 @@ export const Post = ({ post, setShowWriteComment, setCommentPost_id }) => {
     console.log(res);
   };
 
-  // const fetchCertainHashtags = async (signal) => {
-  //   // console.log(hashtag, hashtag.slice(1));
-  //   // const abortController = new AbortController();
-  //   let res = await get(
-  //     `/hashtags/get_certain_hashtags/?input=${certainHashtag}`,
-  //     signal
-  //   );
-  //   console.log(res);
-  //   // return () => abortController.abort();
-  // };
+  const fetchCertainHashtags = async (hashtag) => {
+    // console.log(hashtag, hashtag.slice(1));
+    const abortController = new AbortController();
+    let res = await get(
+      `/hashtags/get_certain_hashtags/?input=${hashtag}`,
+      abortController.signal
+    );
+    console.log(res);
+    return () => abortController.abort();
+  };
 
   // useEffect(async () => {
   //   if (certainHashtag) {
@@ -102,8 +102,8 @@ export const Post = ({ post, setShowWriteComment, setCommentPost_id }) => {
               {post.hashtags.map((h) => {
                 return (
                   <span
-                    // onClick={() => fetchCertainHashtags(h.content.slice(1))}
-                    onClick={() => setCertainHashtag(h.content.slice(1))}
+                    onClick={() => fetchCertainHashtags(h.content.slice(1))}
+                    // onClick={() => setCertainHashtag(h.content.slice(1))}
                     className="noshow-com post-hashtag"
                   >
                     {h.content}
