@@ -14,7 +14,11 @@ export const getDateAndTime = () => {
   } else {
     date = `${date[2]}/${date[1]}`;
   }
+  if (date.at(0) === "0") {
+    date = date.slice(1);
+  }
   let timeSplitted = new Date().toLocaleTimeString().split(":");
   let time = timeSplitted[0] + ":" + timeSplitted[1];
   return date + "-" + year + " " + time;
+  // return date + " " + time;
 };
