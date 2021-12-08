@@ -1,0 +1,908 @@
+CRITICAL - 2021-12-05 03:16:28 --> Array to string conversion
+#0 /app/app/Controllers/Home.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/app/app/Contro...', 25)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Home->index()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 03:51:58 --> Too few arguments to function App\Models\UserModel::create_user(), 0 passed in /app/app/Controllers/User.php on line 28 and exactly 1 expected
+#0 /app/app/Controllers/User.php(28): App\Models\UserModel->create_user()
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 03:56:58 --> syntax error, unexpected token "public", expecting end of file
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('user/create_use...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('user/create_use...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 03:58:45 --> syntax error, unexpected token "public", expecting end of file
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('user/create_use...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('user/create_use...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 04:01:21 --> syntax error, unexpected token "public", expecting end of file
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('user/create_use...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('user/create_use...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 04:02:00 --> Call to undefined function App\Controllers\consoleLog()
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-05 04:02:15 --> Too few arguments to function App\Models\UserModel::create_user(), 0 passed in /app/app/Controllers/User.php on line 36 and exactly 1 expected
+#0 /app/app/Controllers/User.php(36): App\Models\UserModel->create_user()
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 04:03:09 --> Too few arguments to function App\Controllers\User::create_user(), 0 passed in /app/system/CodeIgniter.php on line 824 and exactly 1 expected
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-05 04:11:21 --> Unclosed '{' on line 17
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('user/create_use...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('user/create_use...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 04:11:50 --> Too few arguments to function App\Controllers\User::create_user(), 0 passed in /app/system/CodeIgniter.php on line 824 and exactly 1 expected
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-05 04:12:12 --> Too few arguments to function App\Controllers\User::create_user(), 0 passed in /app/system/CodeIgniter.php on line 824 and exactly 1 expected
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-05 04:15:43 --> syntax error, unexpected token ",", expecting "]"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('user/create_use...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('user/create_use...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 04:16:23 --> syntax error, unexpected token ",", expecting "]"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('user/create_use...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('user/create_use...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 04:19:09 --> Undefined variable $result
+#0 /app/app/Controllers/User.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 51)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 04:19:26 --> Undefined variable $data
+#0 /app/app/Controllers/User.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 51)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 04:20:53 --> syntax error, unexpected variable "$query"
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\User...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\User...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\User...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'UserModel')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/User.php(32): model('UserModel')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-05 04:33:33 --> Undefined array key "name"
+#0 /app/app/Controllers/User.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 34)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 04:41:07 --> Undefined array key "name"
+#0 /app/app/Controllers/User.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 34)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 04:41:39 --> Undefined array key "name"
+#0 /app/app/Controllers/User.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 34)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 04:44:36 --> Undefined array key "name"
+#0 /app/app/Controllers/User.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 34)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 04:45:34 --> Undefined array key "name"
+#0 /app/app/Controllers/User.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 34)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 04:47:40 --> Undefined array key "name"
+#0 /app/app/Controllers/User.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 34)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 04:48:08 --> Undefined array key "name"
+#0 /app/app/Controllers/User.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 34)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 05:37:34 --> Undefined array key "user"
+#0 /app/app/Controllers/User.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 32)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->get_user('user=1')
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 05:37:35 --> Undefined array key "user"
+#0 /app/app/Controllers/User.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 32)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->get_user('user=1')
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 05:37:51 --> Undefined array key "user"
+#0 /app/app/Controllers/User.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 32)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->get_user('user=1')
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 05:37:51 --> Undefined array key "user"
+#0 /app/app/Controllers/User.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 32)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->get_user('user=1')
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 05:39:10 --> Undefined array key "user"
+#0 /app/app/Controllers/User.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 32)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->get_user('user=1')
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 05:41:58 --> Undefined variable $id
+#0 /app/app/Controllers/User.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 43)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->get_user('user=1')
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 05:42:30 --> Undefined variable $id
+#0 /app/app/Controllers/User.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 43)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->get_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 05:42:30 --> Undefined variable $id
+#0 /app/app/Controllers/User.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 43)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->get_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 05:42:35 --> Undefined variable $id
+#0 /app/app/Controllers/User.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 43)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->get_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 05:43:01 --> Undefined variable $id
+#0 /app/app/Controllers/User.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 43)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->get_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 05:43:01 --> Undefined variable $id
+#0 /app/app/Controllers/User.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 43)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->get_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 07:09:13 --> syntax error, unexpected variable "$user_model", expecting "function" or "const"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('user/get_user/')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('user/get_user/')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 07:09:13 --> syntax error, unexpected variable "$user_model", expecting "function" or "const"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('user/get_user/')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('user/get_user/')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 07:17:48 --> Undefined variable $name
+#0 /app/app/Controllers/User.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 67)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 07:19:44 --> Array to string conversion
+#0 /app/app/Controllers/User.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/app/app/Contro...', 53)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 07:26:47 --> Array to string conversion
+#0 /app/app/Controllers/User.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/app/app/Contro...', 60)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 07:27:48 --> Call to undefined function App\Controllers\setJSON()
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-05 07:28:12 --> Undefined variable $name
+#0 /app/app/Controllers/User.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 75)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 07:28:27 --> Undefined constant "App\Controllers\body"
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-05 07:29:24 --> Undefined variable $name
+#0 /app/app/Controllers/User.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 75)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 07:30:36 --> Undefined variable $name
+#0 /app/app/Controllers/User.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 75)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 07:31:28 --> Cannot use [] for reading
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-12-05 07:32:00 --> Undefined array key "name"
+#0 /app/app/Controllers/User.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 62)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 07:33:54 --> Undefined array key "body"
+#0 /app/app/Controllers/User.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 60)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 07:35:22 --> Undefined variable $name
+#0 /app/app/Controllers/User.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 78)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 07:35:59 --> Undefined variable $name
+#0 /app/app/Controllers/User.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 80)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-05 07:37:35 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@ehhe.com, 0, hahfdaig)' at line 1
+CRITICAL - 2021-12-05 07:37:35 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@ehhe.com, 0, hahfdaig)' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO use...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO use...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO use...')
+#3 /app/app/Models/UserModel.php(59): CodeIgniter\Database\BaseConnection->query('INSERT INTO use...')
+#4 /app/app/Controllers/User.php(80): App\Models\UserModel->create_user(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-05 07:38:43 --> Cannot use object of type stdClass as array
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2021-12-05 07:39:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@ehhe.com, 0, hahfdaig)' at line 1
+CRITICAL - 2021-12-05 07:39:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@ehhe.com, 0, hahfdaig)' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO use...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO use...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO use...')
+#3 /app/app/Models/UserModel.php(59): CodeIgniter\Database\BaseConnection->query('INSERT INTO use...')
+#4 /app/app/Controllers/User.php(80): App\Models\UserModel->create_user(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-05 07:39:23 --> Attempt to read property "value" on string
+#0 /app/app/Controllers/User.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Contro...', 64)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-05 07:39:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@ehhe.com, 0, hahfdaig)' at line 1
+CRITICAL - 2021-12-05 07:39:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@ehhe.com, 0, hahfdaig)' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO use...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO use...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO use...')
+#3 /app/app/Models/UserModel.php(59): CodeIgniter\Database\BaseConnection->query('INSERT INTO use...')
+#4 /app/app/Controllers/User.php(80): App\Models\UserModel->create_user(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-05 07:42:07 --> Unknown column 'haakon' in 'field list'
+CRITICAL - 2021-12-05 07:42:07 --> Unknown column 'haakon' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO use...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO use...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO use...')
+#3 /app/app/Models/UserModel.php(59): CodeIgniter\Database\BaseConnection->query('INSERT INTO use...')
+#4 /app/app/Controllers/User.php(80): App\Models\UserModel->create_user(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-05 07:43:39 --> Undefined property: stdClass::$password
+#0 /app/app/Models/UserModel.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/app/app/Models...', 59)
+#1 /app/app/Controllers/User.php(80): App\Models\UserModel->create_user(Object(stdClass))
+#2 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2021-12-05 07:44:06 --> Unknown column 'haakon' in 'field list'
+CRITICAL - 2021-12-05 07:44:06 --> Unknown column 'haakon' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO use...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO use...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO use...')
+#3 /app/app/Models/UserModel.php(59): CodeIgniter\Database\BaseConnection->query('INSERT INTO use...')
+#4 /app/app/Controllers/User.php(80): App\Models\UserModel->create_user(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-05 07:45:10 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@ehhe.com, 0)' at line 1
+CRITICAL - 2021-12-05 07:45:10 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@ehhe.com, 0)' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO use...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO use...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO use...')
+#3 /app/app/Models/UserModel.php(59): CodeIgniter\Database\BaseConnection->query('INSERT INTO use...')
+#4 /app/app/Controllers/User.php(80): App\Models\UserModel->create_user(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-05 07:48:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@ehhe.com, 0)' at line 1
+CRITICAL - 2021-12-05 07:48:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@ehhe.com, 0)' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO use...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO use...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO use...')
+#3 /app/app/Models/UserModel.php(59): CodeIgniter\Database\BaseConnection->query('INSERT INTO use...')
+#4 /app/app/Controllers/User.php(80): App\Models\UserModel->create_user(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-05 07:52:27 --> syntax error, unexpected variable "$query"
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\User...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\User...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\User...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'UserModel')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/User.php(27): model('UserModel')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\User->get_all_users()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-05 07:52:32 --> syntax error, unexpected variable "$query"
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\User...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\User...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\User...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'UserModel')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/User.php(58): model('UserModel')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2021-12-05 07:54:18 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@ehhe.com, 0)' at line 1
+CRITICAL - 2021-12-05 07:54:18 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@ehhe.com, 0)' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO use...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO use...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO use...')
+#3 /app/app/Models/UserModel.php(60): CodeIgniter\Database\BaseConnection->query('INSERT INTO use...')
+#4 /app/app/Controllers/User.php(80): App\Models\UserModel->create_user(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-05 07:54:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@ehhe.com, 0)' at line 1
+CRITICAL - 2021-12-05 07:54:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@ehhe.com, 0)' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO use...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO use...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO use...')
+#3 /app/app/Models/UserModel.php(60): CodeIgniter\Database\BaseConnection->query('INSERT INTO use...')
+#4 /app/app/Controllers/User.php(80): App\Models\UserModel->create_user(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-05 07:58:11 --> syntax error, unexpected identifier "name", expecting ")"
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\User...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\User...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\User...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'UserModel')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/User.php(58): model('UserModel')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-05 07:58:43 --> syntax error, unexpected identifier "email", expecting ")"
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\User...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\User...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\User...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'UserModel')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/User.php(58): model('UserModel')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-05 07:59:00 --> Undefined constant "App\Models\name"
+#0 /app/app/Controllers/User.php(80): App\Models\UserModel->create_user(Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-05 08:02:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@ehhe.com, 0)' at line 1
+CRITICAL - 2021-12-05 08:02:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@ehhe.com, 0)' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO use...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO use...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO use...')
+#3 /app/app/Models/UserModel.php(60): CodeIgniter\Database\BaseConnection->query('INSERT INTO use...')
+#4 /app/app/Controllers/User.php(80): App\Models\UserModel->create_user(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-05 08:05:12 --> Attempt to read property "name" on array
+#0 /app/app/Models/UserModel.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Models...', 60)
+#1 /app/app/Controllers/User.php(82): App\Models\UserModel->create_user(Array)
+#2 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-05 08:06:57 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::insert()
+#0 /app/app/Controllers/User.php(82): App\Models\UserModel->create_user(Array)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 08:07:15 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::create_user()
+#0 /app/app/Controllers/User.php(82): App\Models\UserModel->create_user(Array)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 08:08:37 --> Attempt to read property "name" on array
+#0 /app/app/Models/UserModel.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Models...', 60)
+#1 /app/app/Controllers/User.php(82): App\Models\UserModel->create_user(Array)
+#2 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2021-12-05 08:09:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@ehhe.com, 0)' at line 1
+CRITICAL - 2021-12-05 08:09:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@ehhe.com, 0)' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO use...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO use...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO use...')
+#3 /app/app/Models/UserModel.php(60): CodeIgniter\Database\BaseConnection->query('INSERT INTO use...')
+#4 /app/app/Controllers/User.php(82): App\Models\UserModel->create_user(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-05 08:10:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@ehhe.com, 0)' at line 1
+CRITICAL - 2021-12-05 08:10:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@ehhe.com, 0)' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO use...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO use...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO use...')
+#3 /app/app/Models/UserModel.php(60): CodeIgniter\Database\BaseConnection->query('INSERT INTO use...')
+#4 /app/app/Controllers/User.php(82): App\Models\UserModel->create_user(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-05 08:11:40 --> Call to a member function getResult() on bool
+#0 /app/app/Controllers/User.php(82): App\Models\UserModel->create_user(Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 08:14:36 --> Attempt to read property "name" on null
+#0 /app/app/Models/UserModel.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Models...', 60)
+#1 /app/app/Controllers/User.php(82): App\Models\UserModel->create_user(NULL)
+#2 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-05 08:15:45 --> Attempt to read property "name" on null
+#0 /app/app/Models/UserModel.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Models...', 60)
+#1 /app/app/Controllers/User.php(82): App\Models\UserModel->create_user(NULL)
+#2 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-05 08:19:47 --> Attempt to read property "name" on null
+#0 /app/app/Models/UserModel.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Models...', 60)
+#1 /app/app/Controllers/User.php(82): App\Models\UserModel->create_user(NULL)
+#2 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-05 08:21:09 --> Attempt to read property "name" on null
+#0 /app/app/Models/UserModel.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Models...', 60)
+#1 /app/app/Controllers/User.php(82): App\Models\UserModel->create_user(NULL)
+#2 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-05 08:22:41 --> Attempt to read property "name" on null
+#0 /app/app/Models/UserModel.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Models...', 60)
+#1 /app/app/Controllers/User.php(82): App\Models\UserModel->create_user(NULL)
+#2 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-05 09:04:10 --> Call to undefined method CodeIgniter\HTTP\Response::json_encode()
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-05 09:04:58 --> Call to undefined method CodeIgniter\HTTP\Response::json_decode()
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-05 09:11:36 --> Call to a member function getResult() on bool
+#0 /app/app/Controllers/User.php(77): App\Models\UserModel->create_user(Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 09:13:26 --> Undefined variable $id
+#0 /app/app/Models/UserModel.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Models...', 52)
+#1 /app/app/Controllers/User.php(62): App\Models\UserModel->get_user('1')
+#2 /app/system/CodeIgniter.php(824): App\Controllers\User->get_user()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-05 09:13:26 --> Undefined variable $id
+#0 /app/app/Models/UserModel.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Models...', 52)
+#1 /app/app/Controllers/User.php(62): App\Models\UserModel->get_user('1')
+#2 /app/system/CodeIgniter.php(824): App\Controllers\User->get_user()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2021-12-05 09:25:15 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '13:45)' at line 1
+CRITICAL - 2021-12-05 09:25:15 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '13:45)' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pos...')
+#3 /app/app/Models/PostModel.php(24): CodeIgniter\Database\BaseConnection->query('INSERT INTO pos...')
+#4 /app/app/Controllers/Post.php(38): App\Models\UserModel->create_post(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-05 09:32:59 --> Attempt to read property "user_id" on null
+#0 /app/app/Models/PostModel.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Models...', 24)
+#1 /app/app/Controllers/Post.php(38): App\Models\UserModel->create_post(NULL)
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2021-12-05 10:14:12 --> Duplicate entry '#Skola' for key 'content_UNIQUE'
+ERROR - 2021-12-05 10:14:12 --> Duplicate entry '#Deltagare' for key 'content_UNIQUE'
+CRITICAL - 2021-12-05 10:14:12 --> Duplicate entry '#Deltagare' for key 'content_UNIQUE'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO has...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO has...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO has...')
+#3 /app/app/Models/HashtagModel.php(24): CodeIgniter\Database\BaseConnection->query('INSERT INTO has...')
+#4 /app/app/Controllers/Hashtag.php(51): App\Models\HashtagModel->create_hashtag(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->create_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-05 10:14:12 --> Duplicate entry '#Skola' for key 'content_UNIQUE'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO has...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO has...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO has...')
+#3 /app/app/Models/HashtagModel.php(24): CodeIgniter\Database\BaseConnection->query('INSERT INTO has...')
+#4 /app/app/Controllers/Hashtag.php(51): App\Models\HashtagModel->create_hashtag(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->create_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-05 12:41:03 --> You must set the database table to be used with your query.
+#0 /app/system/Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 /app/system/Model.php(717): CodeIgniter\Model->builder()
+#2 /app/app/Controllers/Post.php(55): CodeIgniter\Model->__call('get_post', Array)
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-12-05 12:48:31 --> syntax error, unexpected token "echo", expecting ";"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('hashtag/handle_...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('hashtag/handle_...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 12:48:44 --> Object of class stdClass could not be converted to string
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-05 12:50:30 --> Call to undefined function App\Controllers\get_all_hashtags()
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-05 12:53:06 --> Attempt to read property "hashtags" on array
+#0 /app/app/Controllers/Hashtag.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Contro...', 56)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 12:54:24 --> syntax error, unexpected token "=>", expecting ")"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('hashtag/handle_...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('hashtag/handle_...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 12:54:54 --> Call to a member function foreach() on array
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-05 12:58:39 --> Object of class stdClass could not be converted to string
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-05 13:02:17 --> Attempt to read property "content" on string
+#0 /app/app/Controllers/Hashtag.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Contro...', 51)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 13:03:43 --> Array to string conversion
+#0 /app/app/Controllers/Hashtag.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/app/app/Contro...', 57)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 13:05:14 --> in_array(): Argument #2 ($haystack) must be of type array, string given
+#0 /app/app/Controllers/Hashtag.php(59): in_array('#hashtagFTW', '[{"hashtag_id":...')
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 13:06:32 --> Attempt to read property "content" on array
+#0 /app/app/Controllers/Hashtag.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Contro...', 59)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 13:10:42 --> Attempt to read property "content" on array
+#0 /app/app/Controllers/Hashtag.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Contro...', 59)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 13:33:11 --> Call to undefined function App\Models\SCOPE_IDENTITY()
+#0 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-05 13:33:33 --> syntax error, unexpected identifier "SCOPE_IDENTITY", expecting ";"
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Post...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Post...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\Post...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'PostModel')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/Post.php(64): model('PostModel')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-05 13:35:59 --> syntax error, unexpected identifier "SCOPE_IDENTITY"
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Post...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Post...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\Post...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'PostModel')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/Post.php(64): model('PostModel')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-05 13:36:12 --> Call to undefined function App\Models\SCOPE_IDENTITY()
+#0 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-05 13:39:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[SCOPE_IDENTITY]' at line 1
+CRITICAL - 2021-12-05 13:39:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[SCOPE_IDENTITY]' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT SCOPE_ID...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SCOPE_ID...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SCOPE_ID...')
+#3 /app/app/Models/PostModel.php(31): CodeIgniter\Database\BaseConnection->query('SELECT SCOPE_ID...')
+#4 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-05 13:39:43 --> FUNCTION glimradb.SCOPE_IDENTITY does not exist
+CRITICAL - 2021-12-05 13:39:43 --> FUNCTION glimradb.SCOPE_IDENTITY does not exist
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT SCOPE_ID...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SCOPE_ID...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SCOPE_ID...')
+#3 /app/app/Models/PostModel.php(31): CodeIgniter\Database\BaseConnection->query('SELECT SCOPE_ID...')
+#4 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-05 13:40:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[@@IDENTITY]' at line 1
+CRITICAL - 2021-12-05 13:40:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[@@IDENTITY]' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT @@IDENTI...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT @@IDENTI...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT @@IDENTI...')
+#3 /app/app/Models/PostModel.php(31): CodeIgniter\Database\BaseConnection->query('SELECT @@IDENTI...')
+#4 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-05 13:40:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[IDENT_CURRENT]' at line 1
+CRITICAL - 2021-12-05 13:40:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[IDENT_CURRENT]' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT IDENT_CU...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT IDENT_CU...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT IDENT_CU...')
+#3 /app/app/Models/PostModel.php(31): CodeIgniter\Database\BaseConnection->query('SELECT IDENT_CU...')
+#4 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-05 13:41:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[IDENT_CURRENT]' at line 1
+CRITICAL - 2021-12-05 13:41:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[IDENT_CURRENT]' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT IDENT_CU...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT IDENT_CU...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT IDENT_CU...')
+#3 /app/app/Models/PostModel.php(31): CodeIgniter\Database\BaseConnection->query('SELECT IDENT_CU...')
+#4 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

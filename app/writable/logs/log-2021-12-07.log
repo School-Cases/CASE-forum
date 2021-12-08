@@ -1,0 +1,336 @@
+CRITICAL - 2021-12-07 03:39:48 --> Undefined array key "user"
+#0 /app/app/Controllers/Post.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 53)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 03:40:14 --> Undefined array key "user"
+#0 /app/app/Controllers/Post.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 53)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 03:43:45 --> Undefined array key "data"
+#0 /app/app/Controllers/Post.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 54)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 03:43:50 --> Undefined array key "data"
+#0 /app/app/Controllers/Post.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 54)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 03:44:30 --> Undefined variable $user_id
+#0 /app/app/Controllers/Post.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 59)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 03:46:06 --> Call to undefined function App\Controllers\split()
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-07 03:46:20 --> Array to string conversion
+#0 /app/app/Controllers/Post.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/app/app/Contro...', 56)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 03:47:08 --> Array to string conversion
+#0 /app/app/Controllers/Post.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/app/app/Contro...', 56)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 03:47:20 --> Array to string conversion
+#0 /app/app/Controllers/Post.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/app/app/Contro...', 56)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 03:47:29 --> Array to string conversion
+#0 /app/app/Controllers/Post.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/app/app/Contro...', 56)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 03:48:42 --> Undefined variable $user_id
+#0 /app/app/Controllers/Post.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 62)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 03:49:28 --> Undefined variable $user_id
+#0 /app/app/Controllers/Post.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 62)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 03:52:01 --> Undefined variable $user_id
+#0 /app/app/Controllers/Post.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 63)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 03:56:44 --> syntax error, unexpected token "}"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_post_h...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_post_h...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 04:00:08 --> syntax error, unexpected token "}"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_post_h...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_post_h...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 04:00:47 --> Call to undefined function App\Controllers\setJSON()
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-07 04:02:58 --> array_push(): Argument #1 ($array) must be of type array, null given
+#0 /app/app/Controllers/Post.php(63): array_push(NULL, Array)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 05:35:10 --> syntax error, unexpected token "}"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_post_h...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_post_h...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 05:44:40 --> Undefined variable $post_id
+#0 /app/app/Controllers/Post.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 61)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 05:45:07 --> Undefined variable $post_id
+#0 /app/app/Controllers/Post.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 61)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 05:45:21 --> Undefined variable $post_id
+#0 /app/app/Controllers/Post.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 61)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 05:45:43 --> Call to undefined method CodeIgniter\HTTP\Response::json_encode()
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-07 05:48:25 --> syntax error, unexpected token "=>", expecting ")"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_post_h...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_post_h...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 05:48:44 --> syntax error, unexpected token "=>", expecting ")"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_post_h...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_post_h...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 05:49:37 --> syntax error, unexpected token "=>", expecting ")"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_post_h...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_post_h...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 05:50:03 --> syntax error, unexpected token "=>"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_post_h...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_post_h...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 05:50:14 --> syntax error, unexpected token "=>"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_post_h...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_post_h...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 05:50:46 --> syntax error, unexpected token "{", expecting ")"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_post_h...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_post_h...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 05:50:58 --> syntax error, unexpected token "=>"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_post_h...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_post_h...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 05:51:31 --> syntax error, unexpected token "=>"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_post_h...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_post_h...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 05:56:58 --> syntax error, unexpected token "=>", expecting ")"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_post_h...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_post_h...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 05:57:49 --> Array to string conversion
+#0 /app/app/Controllers/Post.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/app/app/Contro...', 67)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 05:58:07 --> syntax error, unexpected token ","
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_post_h...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_post_h...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 05:58:33 --> syntax error, unexpected token ","
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_post_h...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_post_h...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 06:30:54 --> syntax error, unexpected token ";", expecting "]"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('comment/get_all...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('comment/get_all...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 06:31:27 --> syntax error, unexpected token ";", expecting "]"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('comment/get_all...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('comment/get_all...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 08:09:17 --> Array to string conversion
+#0 /app/app/Models/CommentModel.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/app/app/Models...', 24)
+#1 /app/app/Controllers/Comment.php(53): App\Models\HashtagModel->get_post_comments(Array)
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Comment->get_post_comments()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-07 08:17:56 --> Cannot declare class App\Models\HashtagModel, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-12-07 08:18:39 --> Undefined variable $post_id
+#0 /app/app/Controllers/Post.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 64)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_user_comments()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 08:18:58 --> Undefined constant "App\Controllers\post_id"
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_user_comments()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-07 08:19:19 --> Undefined variable $post_id
+#0 /app/app/Controllers/Post.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 67)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_user_comments()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 08:47:43 --> Cannot use object of type stdClass as array
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_user_comments()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-07 08:48:02 --> Can't use function return value in write context
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-12-07 09:00:29 --> syntax error, unexpected variable "$comments"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_post_h...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_post_h...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 09:02:21 --> Undefined array key 0
+#0 /app/app/Controllers/Post.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 80)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_user_comments()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 09:08:10 --> Cannot use object of type stdClass as array
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_user_comments()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-07 09:09:09 --> array_push(): Argument #1 ($array) must be of type array, null given
+#0 /app/app/Controllers/Post.php(76): array_push(NULL, Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_user_comments()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 09:09:57 --> Call to undefined function App\Controllers\object()
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_user_comments()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-07 09:10:52 --> syntax error, unexpected token ";"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_post_h...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_post_h...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-07 09:11:07 --> array_push(): Argument #1 ($array) must be of type array, stdClass given
+#0 /app/app/Controllers/Post.php(74): array_push(Object(stdClass), Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_user_comments()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

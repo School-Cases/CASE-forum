@@ -1,0 +1,212 @@
+CRITICAL - 2021-12-04 08:56:04 --> Array to string conversion
+#0 /app/app/Controllers/Home.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/app/app/Contro...', 53)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Home->test2()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-04 08:56:57 --> Error connecting to the database: No such file or directory
+CRITICAL - 2021-12-04 08:56:57 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+#0 /app/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /app/app/Models/UserModel.php(46): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#2 /app/app/Controllers/Home.php(49): App\Models\UserModel->get_all_users()
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Home->test2()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2021-12-04 08:57:43 --> Error connecting to the database: Connection refused
+CRITICAL - 2021-12-04 08:57:44 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+#0 /app/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /app/app/Models/UserModel.php(46): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#2 /app/app/Controllers/Home.php(49): App\Models\UserModel->get_all_users()
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Home->test2()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2021-12-04 08:57:52 --> Error connecting to the database: Connection refused
+CRITICAL - 2021-12-04 08:57:52 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+#0 /app/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /app/app/Models/UserModel.php(46): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#2 /app/app/Controllers/Home.php(49): App\Models\UserModel->get_all_users()
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Home->test2()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2021-12-04 08:58:09 --> Error connecting to the database: Connection refused
+CRITICAL - 2021-12-04 08:58:09 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+#0 /app/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /app/app/Models/UserModel.php(46): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#2 /app/app/Controllers/Home.php(49): App\Models\UserModel->get_all_users()
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Home->test2()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2021-12-04 08:58:19 --> Error connecting to the database: Connection refused
+CRITICAL - 2021-12-04 08:58:19 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+#0 /app/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /app/app/Models/UserModel.php(46): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#2 /app/app/Controllers/Home.php(49): App\Models\UserModel->get_all_users()
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Home->test2()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2021-12-04 08:59:15 --> Error connecting to the database: Connection refused
+CRITICAL - 2021-12-04 08:59:15 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+#0 /app/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /app/app/Models/UserModel.php(46): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#2 /app/app/Controllers/Home.php(49): App\Models\UserModel->get_all_users()
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Home->test2()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2021-12-04 08:59:34 --> Error connecting to the database: Connection refused
+CRITICAL - 2021-12-04 08:59:34 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+#0 /app/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /app/app/Models/UserModel.php(46): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#2 /app/app/Controllers/Home.php(49): App\Models\UserModel->get_all_users()
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Home->test2()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2021-12-04 09:02:56 --> Error connecting to the database: Connection refused
+CRITICAL - 2021-12-04 09:02:56 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+#0 /app/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /app/app/Models/UserModel.php(46): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#2 /app/app/Controllers/Home.php(49): App\Models\UserModel->get_all_users()
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Home->test2()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2021-12-04 09:05:05 --> Error connecting to the database: No such file or directory
+CRITICAL - 2021-12-04 09:05:05 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+#0 /app/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /app/app/Models/UserModel.php(46): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#2 /app/app/Controllers/Home.php(49): App\Models\UserModel->get_all_users()
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Home->test2()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2021-12-04 09:06:01 --> Error connecting to the database: No such file or directory
+CRITICAL - 2021-12-04 09:06:01 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+#0 /app/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /app/app/Models/UserModel.php(46): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#2 /app/app/Controllers/Home.php(49): App\Models\UserModel->get_all_users()
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Home->test2()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-12-04 09:23:03 --> mysqli_connect(): (HY000/1044): Access denied for user 'user'@'%' to database 'mydb'
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli_connect(...', '/app/app/Contro...', 21)
+#1 /app/app/Controllers/Home.php(21): mysqli_connect('mysql', 'user', 'pass', 'mydb')
+#2 /app/app/Controllers/Home.php(16): App\Controllers\Home->testDatabase('mysql', 'user', 'pass', 'mydb')
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Home->index()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-12-04 09:24:50 --> mysqli_connect(): (HY000/1045): Access denied for user 'user'@'172.27.0.3' (using password: YES)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli_connect(...', '/app/app/Contro...', 21)
+#1 /app/app/Controllers/Home.php(21): mysqli_connect('mysql', 'user', 'root', 'mydb')
+#2 /app/app/Controllers/Home.php(16): App\Controllers\Home->testDatabase('mysql', 'user', 'root', 'mydb')
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Home->index()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-12-04 09:25:29 --> mysqli_connect(): (HY000/1044): Access denied for user 'user'@'%' to database 'mydb'
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli_connect(...', '/app/app/Contro...', 21)
+#1 /app/app/Controllers/Home.php(21): mysqli_connect('mysql', 'user', 'pass', 'mydb')
+#2 /app/app/Controllers/Home.php(16): App\Controllers\Home->testDatabase('mysql', 'user', 'pass', 'mydb')
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Home->index()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-12-04 09:27:36 --> mysqli_connect(): (HY000/2002): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli_connect(...', '/app/app/Contro...', 21)
+#1 /app/app/Controllers/Home.php(21): mysqli_connect('localhost', 'user', 'pass', 'mydb')
+#2 /app/app/Controllers/Home.php(16): App\Controllers\Home->testDatabase('localhost', 'user', 'pass', 'mydb')
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Home->index()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-12-04 09:27:58 --> mysqli_connect(): (HY000/2002): Connection refused
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli_connect(...', '/app/app/Contro...', 21)
+#1 /app/app/Controllers/Home.php(21): mysqli_connect('0.0.0.0', 'user', 'pass', 'mydb')
+#2 /app/app/Controllers/Home.php(16): App\Controllers\Home->testDatabase('0.0.0.0', 'user', 'pass', 'mydb')
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Home->index()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-12-04 09:28:13 --> mysqli_connect(): (HY000/2002): Connection refused
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli_connect(...', '/app/app/Contro...', 21)
+#1 /app/app/Controllers/Home.php(21): mysqli_connect('127.0.0.1', 'user', 'pass', 'mydb')
+#2 /app/app/Controllers/Home.php(16): App\Controllers\Home->testDatabase('127.0.0.1', 'user', 'pass', 'mydb')
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Home->index()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-12-04 09:28:24 --> mysqli_connect(): (HY000/1044): Access denied for user 'user'@'%' to database 'mydb'
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli_connect(...', '/app/app/Contro...', 21)
+#1 /app/app/Controllers/Home.php(21): mysqli_connect('mysql', 'user', 'pass', 'mydb')
+#2 /app/app/Controllers/Home.php(16): App\Controllers\Home->testDatabase('mysql', 'user', 'pass', 'mydb')
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Home->index()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-12-04 09:32:15 --> mysqli_connect(): (HY000/1044): Access denied for user 'user'@'%' to database 'mydb'
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli_connect(...', '/app/app/Contro...', 21)
+#1 /app/app/Controllers/Home.php(21): mysqli_connect('mysql', 'user', 'pass', 'mydb')
+#2 /app/app/Controllers/Home.php(16): App\Controllers\Home->testDatabase('mysql', 'user', 'pass', 'mydb')
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Home->index()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-12-04 09:33:11 --> mysqli_connect(): (HY000/1044): Access denied for user 'user'@'%' to database 'mydb'
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli_connect(...', '/app/app/Contro...', 21)
+#1 /app/app/Controllers/Home.php(21): mysqli_connect('mysql', 'user', 'pass', 'mydb')
+#2 /app/app/Controllers/Home.php(16): App\Controllers\Home->testDatabase('mysql', 'user', 'pass', 'mydb')
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Home->index()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-12-04 10:02:23 --> Call to undefined function App\Controllers\dump()
+#0 /app/app/Controllers/Home.php(16): App\Controllers\Home->testDatabase('mysql', 'user', 'pass', 'glimradb')
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Home->index()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-04 10:03:23 --> syntax error, unexpected identifier "user"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('home')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('home')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
