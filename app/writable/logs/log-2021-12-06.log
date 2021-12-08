@@ -1,0 +1,831 @@
+CRITICAL - 2021-12-06 03:17:28 --> Call to undefined function App\Models\mysql_insert_id()
+#0 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 03:18:14 --> mysqli_insert_id() expects exactly 1 argument, 0 given
+#0 /app/app/Models/PostModel.php(31): mysqli_insert_id()
+#1 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-06 03:19:56 --> Undefined constant "App\Models\mysqli"
+#0 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 03:20:17 --> Attempt to read property "insert_id" on bool
+#0 /app/app/Models/PostModel.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Models...', 31)
+#1 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-06 03:22:31 --> Attempt to read property "insert_id" on bool
+#0 /app/app/Models/PostModel.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Models...', 31)
+#1 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-06 03:23:46 --> Undefined variable $mysqli
+#0 /app/app/Models/PostModel.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Models...', 34)
+#1 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-06 03:25:10 --> Undefined variable $mysqli
+#0 /app/app/Models/PostModel.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Models...', 34)
+#1 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-06 03:25:58 --> Unclosed '{' on line 8
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Post...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Post...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\Post...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'PostModel')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/Post.php(64): model('PostModel')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-06 03:26:13 --> Undefined variable $db
+#0 /app/app/Models/PostModel.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Models...', 31)
+#1 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-06 03:29:08 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::insert_id()
+#0 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 03:32:18 --> Attempt to read property "insert_id" on null
+#0 /app/app/Models/PostModel.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Models...', 31)
+#1 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-06 03:34:27 --> Call to undefined function App\Controllers\setJSON()
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-06 03:34:57 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::insert_id()
+#0 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 03:35:20 --> Call to undefined function App\Models\insert_id()
+#0 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 03:36:41 --> Call to a member function insert_id() on bool
+#0 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 03:38:16 --> Call to a member function insert_id() on bool
+#0 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 03:38:45 --> Call to a member function getResult() on bool
+#0 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-06 03:42:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Output Inserted.post_id VALUES (1, 'postpostpost', '1/5 13:45')' at line 1
+CRITICAL - 2021-12-06 03:42:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Output Inserted.post_id VALUES (1, 'postpostpost', '1/5 13:45')' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pos...')
+#3 /app/app/Models/PostModel.php(30): CodeIgniter\Database\BaseConnection->query('INSERT INTO pos...')
+#4 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 03:43:40 --> Table 'glimradb.files' doesn't exist
+CRITICAL - 2021-12-06 03:43:40 --> Table 'glimradb.files' doesn't exist
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM f...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM f...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM f...')
+#3 /app/app/Models/PostModel.php(32): CodeIgniter\Database\BaseConnection->query('SELECT * FROM f...')
+#4 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 03:44:00 --> Table 'glimradb.files' doesn't exist
+CRITICAL - 2021-12-06 03:44:00 --> Table 'glimradb.files' doesn't exist
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM f...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM f...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM f...')
+#3 /app/app/Models/PostModel.php(32): CodeIgniter\Database\BaseConnection->query('SELECT * FROM f...')
+#4 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-06 03:45:58 --> Call to undefined function App\Models\query()
+#0 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-06 03:46:21 --> Unknown column 'id' in 'where clause'
+CRITICAL - 2021-12-06 03:46:21 --> Unknown column 'id' in 'where clause'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM p...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM p...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM p...')
+#3 /app/app/Models/PostModel.php(32): CodeIgniter\Database\BaseConnection->query('SELECT * FROM p...')
+#4 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 03:46:39 --> FUNCTION glimradb.SCOPE_IDENTITY does not exist
+CRITICAL - 2021-12-06 03:46:39 --> FUNCTION glimradb.SCOPE_IDENTITY does not exist
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM p...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM p...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM p...')
+#3 /app/app/Models/PostModel.php(32): CodeIgniter\Database\BaseConnection->query('SELECT * FROM p...')
+#4 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-06 03:47:51 --> syntax error, unexpected double-quoted string "SELECT * FROM post WHERE post_...", expecting ")"
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Post...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Post...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\Post...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'PostModel')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/Post.php(64): model('PostModel')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-06 03:49:56 --> syntax error, unexpected double-quoted string "SELECT * FROM post WHERE post_...", expecting ")"
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Post...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Post...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\Post...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'PostModel')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/Post.php(64): model('PostModel')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2021-12-06 03:50:36 --> FUNCTION glimradb.SCOPE_IDENTITY does not exist
+CRITICAL - 2021-12-06 03:50:36 --> FUNCTION glimradb.SCOPE_IDENTITY does not exist
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM p...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM p...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM p...')
+#3 /app/app/Models/PostModel.php(34): CodeIgniter\Database\BaseConnection->query('SELECT * FROM p...')
+#4 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 03:50:59 --> FUNCTION glimradb.SCOPE_IDENTITY does not exist
+CRITICAL - 2021-12-06 03:50:59 --> FUNCTION glimradb.SCOPE_IDENTITY does not exist
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM p...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM p...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM p...')
+#3 /app/app/Models/PostModel.php(34): CodeIgniter\Database\BaseConnection->query('SELECT * FROM p...')
+#4 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 03:53:16 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[SCOPE_IDENTITY]' at line 1
+CRITICAL - 2021-12-06 03:53:16 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[SCOPE_IDENTITY]' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT SCOPE_ID...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SCOPE_ID...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SCOPE_ID...')
+#3 /app/app/Models/PostModel.php(34): CodeIgniter\Database\BaseConnection->query('SELECT SCOPE_ID...')
+#4 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 03:53:35 --> FUNCTION glimradb.SCOPE_IDENTITY does not exist
+CRITICAL - 2021-12-06 03:53:35 --> FUNCTION glimradb.SCOPE_IDENTITY does not exist
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT SCOPE_ID...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SCOPE_ID...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SCOPE_ID...')
+#3 /app/app/Models/PostModel.php(34): CodeIgniter\Database\BaseConnection->query('SELECT SCOPE_ID...')
+#4 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 03:54:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[@@IDENTITY]' at line 1
+CRITICAL - 2021-12-06 03:54:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[@@IDENTITY]' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT @@IDENTI...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT @@IDENTI...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT @@IDENTI...')
+#3 /app/app/Models/PostModel.php(34): CodeIgniter\Database\BaseConnection->query('SELECT @@IDENTI...')
+#4 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-06 04:02:35 --> Attempt to read property "insert_id" on bool
+#0 /app/app/Models/PostModel.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Models...', 30)
+#1 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-06 04:03:56 --> You must set the database table to be used with your query.
+#0 /app/system/Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 /app/system/Model.php(688): CodeIgniter\Model->builder()
+#2 /app/app/Controllers/Post.php(73): CodeIgniter\Model->__get('insert_id')
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-12-06 04:06:34 --> Call to a member function getResult() on null
+#0 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 04:12:25 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::insert_id()
+#0 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 04:14:11 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::insert_id()
+#0 /app/app/Controllers/Post.php(70): App\Models\PostModel->create_post(Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 04:25:49 --> Call to a member function getResult() on bool
+#0 /app/app/Controllers/Post.php(79): App\Models\PostModel->delete_all_posts()
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 04:37:13 --> Object of class stdClass could not be converted to string
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-06 04:43:34 --> syntax error, unexpected token "public", expecting end of file
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Hash...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Hash...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\Hash...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'HashtagModel')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/Hashtag.php(45): model('HashtagModel')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-06 05:00:11 --> Undefined variable $hashtag_id
+#0 /app/app/Controllers/Hashtag.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 61)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 05:01:44 --> Attempt to read property "hashtag_id" on array
+#0 /app/app/Controllers/Hashtag.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Contro...', 57)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 05:02:13 --> Attempt to read property "hashtag_id" on string
+#0 /app/app/Controllers/Hashtag.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Contro...', 57)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 05:05:19 --> Call to undefined function App\Controllers\setJSON()
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-06 05:07:12 --> json_decode(): Argument #1 ($json) must be of type string, array given
+#0 /app/app/Controllers/Hashtag.php(58): json_decode(Array)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 05:07:43 --> json_decode(): Argument #1 ($json) must be of type string, array given
+#0 /app/app/Controllers/Hashtag.php(58): json_decode(Array)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 05:08:50 --> Attempt to read property "hashtag_id" on array
+#0 /app/app/Controllers/Hashtag.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Contro...', 62)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 05:10:29 --> Undefined constant "App\Controllers\hashtag_id"
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-06 05:10:40 --> Undefined array key "hashtag_id"
+#0 /app/app/Controllers/Hashtag.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 62)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 05:11:26 --> Attempt to read property "hashtag_id" on string
+#0 /app/app/Controllers/Hashtag.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Contro...', 62)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 05:11:51 --> Attempt to read property "hashtag_id" on array
+#0 /app/app/Controllers/Hashtag.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Contro...', 58)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 05:12:04 --> Attempt to read property "hashtag_id" on string
+#0 /app/app/Controllers/Hashtag.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Contro...', 58)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-06 05:13:25 --> Cannot add or update a child row: a foreign key constraint fails (`glimradb`.`post_hashtag`, CONSTRAINT `fk_post_hashtag_hashtag1` FOREIGN KEY (`hashtag_id`) REFERENCES `hashtag` (`hashtag_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+CRITICAL - 2021-12-06 05:13:25 --> Cannot add or update a child row: a foreign key constraint fails (`glimradb`.`post_hashtag`, CONSTRAINT `fk_post_hashtag_hashtag1` FOREIGN KEY (`hashtag_id`) REFERENCES `hashtag` (`hashtag_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pos...')
+#3 /app/app/Models/HashtagModel.php(44): CodeIgniter\Database\BaseConnection->query('INSERT INTO pos...')
+#4 /app/app/Controllers/Hashtag.php(62): App\Models\HashtagModel->create_post_hashtag('"6"', '71')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 05:15:21 --> Duplicate entry '6-71' for key 'PRIMARY'
+CRITICAL - 2021-12-06 05:15:21 --> Duplicate entry '6-71' for key 'PRIMARY'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pos...')
+#3 /app/app/Models/HashtagModel.php(44): CodeIgniter\Database\BaseConnection->query('INSERT INTO pos...')
+#4 /app/app/Controllers/Hashtag.php(62): App\Models\HashtagModel->create_post_hashtag('"6"', '71')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 05:15:47 --> Cannot add or update a child row: a foreign key constraint fails (`glimradb`.`post_hashtag`, CONSTRAINT `fk_post_hashtag_post1` FOREIGN KEY (`post_id`) REFERENCES `post` (`post_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+CRITICAL - 2021-12-06 05:15:47 --> Cannot add or update a child row: a foreign key constraint fails (`glimradb`.`post_hashtag`, CONSTRAINT `fk_post_hashtag_post1` FOREIGN KEY (`post_id`) REFERENCES `post` (`post_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pos...')
+#3 /app/app/Models/HashtagModel.php(44): CodeIgniter\Database\BaseConnection->query('INSERT INTO pos...')
+#4 /app/app/Controllers/Hashtag.php(62): App\Models\HashtagModel->create_post_hashtag('"6"', '72')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 06:05:20 --> Duplicate entry '3-72' for key 'PRIMARY'
+CRITICAL - 2021-12-06 06:05:20 --> Duplicate entry '3-72' for key 'PRIMARY'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pos...')
+#3 /app/app/Models/HashtagModel.php(44): CodeIgniter\Database\BaseConnection->query('INSERT INTO pos...')
+#4 /app/app/Controllers/Hashtag.php(63): App\Models\HashtagModel->create_post_hashtag('"3"', '72')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 06:05:49 --> Duplicate entry '3-72' for key 'PRIMARY'
+CRITICAL - 2021-12-06 06:05:49 --> Duplicate entry '3-72' for key 'PRIMARY'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pos...')
+#3 /app/app/Models/HashtagModel.php(44): CodeIgniter\Database\BaseConnection->query('INSERT INTO pos...')
+#4 /app/app/Controllers/Hashtag.php(63): App\Models\HashtagModel->create_post_hashtag('"3"', '72')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 06:07:05 --> Duplicate entry '3-72' for key 'PRIMARY'
+CRITICAL - 2021-12-06 06:07:05 --> Duplicate entry '3-72' for key 'PRIMARY'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pos...')
+#3 /app/app/Models/HashtagModel.php(44): CodeIgniter\Database\BaseConnection->query('INSERT INTO pos...')
+#4 /app/app/Controllers/Hashtag.php(63): App\Models\HashtagModel->create_post_hashtag('"3"', '72')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 06:12:34 --> Duplicate entry '3-72' for key 'PRIMARY'
+CRITICAL - 2021-12-06 06:12:34 --> Duplicate entry '3-72' for key 'PRIMARY'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pos...')
+#3 /app/app/Models/HashtagModel.php(44): CodeIgniter\Database\BaseConnection->query('INSERT INTO pos...')
+#4 /app/app/Controllers/Hashtag.php(62): App\Models\HashtagModel->create_post_hashtag('"3"', '72')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 06:15:56 --> Duplicate entry '3-72' for key 'PRIMARY'
+CRITICAL - 2021-12-06 06:15:56 --> Duplicate entry '3-72' for key 'PRIMARY'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pos...')
+#3 /app/app/Models/HashtagModel.php(44): CodeIgniter\Database\BaseConnection->query('INSERT INTO pos...')
+#4 /app/app/Controllers/Hashtag.php(62): App\Models\HashtagModel->create_post_hashtag('"3"', '72')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 06:19:32 --> Duplicate entry '3-72' for key 'PRIMARY'
+CRITICAL - 2021-12-06 06:19:32 --> Duplicate entry '3-72' for key 'PRIMARY'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pos...')
+#3 /app/app/Models/HashtagModel.php(44): CodeIgniter\Database\BaseConnection->query('INSERT INTO pos...')
+#4 /app/app/Controllers/Hashtag.php(62): App\Models\HashtagModel->create_post_hashtag('"3"', '72')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 06:20:54 --> Duplicate entry '3-72' for key 'PRIMARY'
+CRITICAL - 2021-12-06 06:20:54 --> Duplicate entry '3-72' for key 'PRIMARY'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pos...')
+#3 /app/app/Models/HashtagModel.php(44): CodeIgniter\Database\BaseConnection->query('INSERT INTO pos...')
+#4 /app/app/Controllers/Hashtag.php(62): App\Models\HashtagModel->create_post_hashtag('"3"', '72')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 06:21:47 --> Duplicate entry '3-72' for key 'PRIMARY'
+CRITICAL - 2021-12-06 06:21:47 --> Duplicate entry '3-72' for key 'PRIMARY'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pos...')
+#3 /app/app/Models/HashtagModel.php(44): CodeIgniter\Database\BaseConnection->query('INSERT INTO pos...')
+#4 /app/app/Controllers/Hashtag.php(62): App\Models\HashtagModel->create_post_hashtag('"3"', '72')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 06:22:05 --> Duplicate entry '3-72' for key 'PRIMARY'
+CRITICAL - 2021-12-06 06:22:05 --> Duplicate entry '3-72' for key 'PRIMARY'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pos...')
+#3 /app/app/Models/HashtagModel.php(44): CodeIgniter\Database\BaseConnection->query('INSERT INTO pos...')
+#4 /app/app/Controllers/Hashtag.php(62): App\Models\HashtagModel->create_post_hashtag('"3"', '72')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 06:26:10 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`post_hashtag`, CONSTRAINT `fk_post_hashtag_hashtag1` FOREIGN KEY (`hashtag_id`) REFERENCES `hashtag` (`hashtag_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+CRITICAL - 2021-12-06 06:26:10 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`post_hashtag`, CONSTRAINT `fk_post_hashtag_hashtag1` FOREIGN KEY (`hashtag_id`) REFERENCES `hashtag` (`hashtag_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM has...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM has...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM has...')
+#3 /app/app/Models/HashtagModel.php(41): CodeIgniter\Database\BaseConnection->query('DELETE FROM has...')
+#4 /app/app/Controllers/Hashtag.php(88): App\Models\HashtagModel->delete_all_hashtags()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->delete_all_hashtags()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 06:28:39 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`post_hashtag`, CONSTRAINT `fk_post_hashtag_hashtag1` FOREIGN KEY (`hashtag_id`) REFERENCES `hashtag` (`hashtag_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+CRITICAL - 2021-12-06 06:28:39 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`post_hashtag`, CONSTRAINT `fk_post_hashtag_hashtag1` FOREIGN KEY (`hashtag_id`) REFERENCES `hashtag` (`hashtag_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM has...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM has...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM has...')
+#3 /app/app/Models/HashtagModel.php(41): CodeIgniter\Database\BaseConnection->query('DELETE FROM has...')
+#4 /app/app/Controllers/Hashtag.php(88): App\Models\HashtagModel->delete_all_hashtags()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->delete_all_hashtags()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-06 06:29:20 --> Undefined variable $data
+#0 /app/app/Controllers/Hashtag.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 89)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->delete_all_hashtags()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 06:29:48 --> Undefined array key 0
+#0 /app/app/Controllers/Hashtag.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 62)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-06 06:38:42 --> Duplicate entry '7-72' for key 'PRIMARY'
+CRITICAL - 2021-12-06 06:38:42 --> Duplicate entry '7-72' for key 'PRIMARY'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pos...')
+#3 /app/app/Models/HashtagModel.php(50): CodeIgniter\Database\BaseConnection->query('INSERT INTO pos...')
+#4 /app/app/Controllers/Hashtag.php(60): App\Models\HashtagModel->create_post_hashtag('"7"', '72')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 06:45:18 --> Duplicate entry '7-71' for key 'PRIMARY'
+CRITICAL - 2021-12-06 06:45:18 --> Duplicate entry '7-71' for key 'PRIMARY'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pos...')
+#3 /app/app/Models/HashtagModel.php(56): CodeIgniter\Database\BaseConnection->query('INSERT INTO pos...')
+#4 /app/app/Controllers/Hashtag.php(64): App\Models\HashtagModel->create_post_hashtag('"7"', '71')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 06:50:16 --> Duplicate entry '7-8' for key 'PRIMARY'
+CRITICAL - 2021-12-06 06:50:16 --> Duplicate entry '7-8' for key 'PRIMARY'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO use...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO use...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO use...')
+#3 /app/app/Models/HashtagModel.php(76): CodeIgniter\Database\BaseConnection->query('INSERT INTO use...')
+#4 /app/app/Controllers/Hashtag.php(75): App\Models\HashtagModel->create_user_hashtag('"7"', '8')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 07:19:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE hashtag_id="7" AND user_id=8' at line 1
+CRITICAL - 2021-12-06 07:19:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE hashtag_id="7" AND user_id=8' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE user_has...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE user_has...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE user_has...')
+#3 /app/app/Models/HashtagModel.php(88): CodeIgniter\Database\BaseConnection->query('UPDATE user_has...')
+#4 /app/app/Controllers/Hashtag.php(77): App\Models\HashtagModel->update_user_hashtag_interactions('"7"', '8')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-06 07:23:51 --> syntax error, unexpected variable "$hashtag_id", expecting ")"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('hashtag/handle_...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('hashtag/handle_...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 07:24:58 --> Call to undefined function App\Controllers\int()
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-06 07:26:32 --> Call to undefined function App\Controllers\int()
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-06 07:27:44 --> Call to undefined function App\Controllers\int()
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2021-12-06 07:53:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE hashtag_id=7 AND user_id=8' at line 1
+CRITICAL - 2021-12-06 07:53:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE hashtag_id=7 AND user_id=8' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE user_has...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE user_has...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE user_has...')
+#3 /app/app/Models/HashtagModel.php(88): CodeIgniter\Database\BaseConnection->query('UPDATE user_has...')
+#4 /app/app/Controllers/Hashtag.php(80): App\Models\HashtagModel->update_user_hashtag_interactions('7', '8')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 07:54:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE hashtag_id = 7 AND user_id = 8' at line 1
+CRITICAL - 2021-12-06 07:54:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE hashtag_id = 7 AND user_id = 8' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE user_has...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE user_has...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE user_has...')
+#3 /app/app/Models/HashtagModel.php(88): CodeIgniter\Database\BaseConnection->query('UPDATE user_has...')
+#4 /app/app/Controllers/Hashtag.php(80): App\Models\HashtagModel->update_user_hashtag_interactions('7', '8')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-06 07:58:39 --> Unclosed '(' on line 88
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Hash...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Hash...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\Hash...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'HashtagModel')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/Hashtag.php(49): model('HashtagModel')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2021-12-06 07:58:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+CRITICAL - 2021-12-06 07:58:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE user_has...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE user_has...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE user_has...')
+#3 /app/app/Models/HashtagModel.php(88): CodeIgniter\Database\BaseConnection->query('UPDATE user_has...')
+#4 /app/app/Controllers/Hashtag.php(80): App\Models\HashtagModel->update_user_hashtag_interactions('7', '8')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 07:59:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '++ WHERE hashtag_id = 7 AND user_id = 8' at line 1
+CRITICAL - 2021-12-06 07:59:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '++ WHERE hashtag_id = 7 AND user_id = 8' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE user_has...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE user_has...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE user_has...')
+#3 /app/app/Models/HashtagModel.php(88): CodeIgniter\Database\BaseConnection->query('UPDATE user_has...')
+#4 /app/app/Controllers/Hashtag.php(80): App\Models\HashtagModel->update_user_hashtag_interactions('7', '8')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 08:01:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '+= 1 WHERE hashtag_id = 7 AND user_id = 8' at line 1
+CRITICAL - 2021-12-06 08:01:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '+= 1 WHERE hashtag_id = 7 AND user_id = 8' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE user_has...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE user_has...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE user_has...')
+#3 /app/app/Models/HashtagModel.php(88): CodeIgniter\Database\BaseConnection->query('UPDATE user_has...')
+#4 /app/app/Controllers/Hashtag.php(80): App\Models\HashtagModel->update_user_hashtag_interactions('7', '8')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 08:04:08 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '+= 1 WHERE hashtag_id = 7 AND user_id = 8' at line 1
+CRITICAL - 2021-12-06 08:04:08 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '+= 1 WHERE hashtag_id = 7 AND user_id = 8' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE user_has...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE user_has...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE user_has...')
+#3 /app/app/Models/HashtagModel.php(88): CodeIgniter\Database\BaseConnection->query('UPDATE user_has...')
+#4 /app/app/Controllers/Hashtag.php(80): App\Models\HashtagModel->update_user_hashtag_interactions('7', '8')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-06 08:16:48 --> Cannot add or update a child row: a foreign key constraint fails (`glimradb`.`user_hashtag`, CONSTRAINT `fk_user_hashtag_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+CRITICAL - 2021-12-06 08:16:49 --> Cannot add or update a child row: a foreign key constraint fails (`glimradb`.`user_hashtag`, CONSTRAINT `fk_user_hashtag_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO use...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO use...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO use...')
+#3 /app/app/Models/HashtagModel.php(82): CodeIgniter\Database\BaseConnection->query('INSERT INTO use...')
+#4 /app/app/Controllers/Hashtag.php(75): App\Models\HashtagModel->create_user_hashtag('7', '32')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-06 13:32:01 --> syntax error, unexpected token ")", expecting "->" or "?->" or "{" or "["
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_post_h...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_post_h...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 13:32:47 --> syntax error, unexpected token ")", expecting "->" or "?->" or "{" or "["
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_post_h...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_post_h...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 13:35:34 --> syntax error, unexpected token "}"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_post_h...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_post_h...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 13:36:29 --> syntax error, unexpected token "}"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_post_h...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_post_h...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 13:36:58 --> Undefined variable $post_id
+#0 /app/app/Controllers/Post.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 56)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 13:38:05 --> Undefined variable $user_id
+#0 /app/app/Controllers/Post.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 57)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-06 13:38:37 --> Undefined array key "user"
+#0 /app/app/Controllers/Post.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 53)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_hashtags_and_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
