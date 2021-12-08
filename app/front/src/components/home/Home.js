@@ -8,7 +8,7 @@ import { Signup } from "./Signup";
 export const Home = () => {
   const [mainState, setMainState] = useState("login");
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   if (loading) {
     return <h3>loading ..</h3>;

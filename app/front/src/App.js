@@ -18,9 +18,9 @@ import { useState } from "react";
 //   return next();
 // };
 
-const Loading = () => {
-  return <p>Loading...</p>;
-};
+// const Loading = () => {
+//   return <p>Loading...</p>;
+// };
 
 const NotFound = () => {
   return <p>Not Found</p>;
@@ -42,7 +42,7 @@ function App() {
           <Route
             path="/"
             exact
-            element={<Dashboard theme={theme} setTheme={setTheme} />}
+            element={<Home theme={theme} setTheme={setTheme} />}
             // meta={{ auth: false }}
           />
           <Route

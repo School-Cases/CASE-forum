@@ -1,24 +1,31 @@
 export const Login = ({ setMainState }) => {
   return (
     <>
-      <h2>Välkommen</h2>
+      <section className="flex login-top">
+        <div className="glimra-logo"></div>
+      </section>
+
+      <section className="flex login-container">
+      <h2 className="login-welcome">Välkommen!</h2>
 
       <div>
-        <label htmlFor="email">email</label>
-        <input type="email" name="" placeholder="email" />
+        <label className="login-text" htmlFor="email">mejl:</label>
+        <input className="login-input" type="email" name="" placeholder="mejl" />
       </div>
 
       <div>
-        <label htmlFor="password">password</label>
-        <input type="password" name="" placeholder="password" />
+        <label className="login-text" htmlFor="password">lösenord:</label>
+        <input className="login-input" type="password" name="" placeholder="lösenord" />
       </div>
 
-      <button>logga in</button>
+      <button className="login-btn">logga in</button>
 
-      <div>
+      <div className="login-create-user">
         Ny användare?{" "}
-        <span onClick={() => setMainState("signup")}>skapa konto</span>
+        <span className="create-user-link" onClick={() => setMainState("signup")}>skapa konto</span>
       </div>
+      <div className="login-tree"></div>
+      </section>
     </>
   );
 };

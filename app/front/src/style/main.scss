@@ -1,8 +1,14 @@
 @import './components/colors.scss';
+@import './components/animations.scss';
+@import './components/flex.scss';
+
 @import './light.scss';
 @import './dark.scss';
-@import './comments.scss';
-@import './animations.scss';
+
+@import './pages/comments.scss';
+@import './pages/login.scss';
+@import './pages/create-user.scss';
+
 @import url("https://use.typekit.net/vry6uzm.css");
 
 * {
@@ -20,38 +26,6 @@
 .hidden {
   display: none;
 }
-
-// FLEX //////////////////////////////////////////////////////////////////////
-
-.flex {
-  display: flex;
-}
-
-.JC-SB {
-  justify-content: space-between;
-}
-
-.JC-SA {
-  justify-content: space-around;
-}
-
-.JC-SE {
-  justify-content: space-evenly;
-}
-
-.JC-C {
-  justify-content: center;
-}
-
-.JC-E {
-  justify-content: flex-end;
-}
-
-.FW-wrap {
-  flex-wrap: wrap;
-}
-
-// STYLE //////////////////////////////////////////////////////////////////////
 
 .App {
   max-height: 100vh;
@@ -130,7 +104,7 @@
       height: calc(90vh - 2rem);
     }
 
-    // POST USER IMG
+   // AUTHOR-USER-IMG //////////////////////////////////////////////////////////////
 
     .author-img-container {
       padding-right: 0.5rem;
@@ -168,7 +142,7 @@
       }
     }
 
-    // POST TOP
+    // POST TOP //////////////////////////////////////////////////////////////
 
     .post-top {
 
@@ -196,7 +170,7 @@
       filter: invert(57%) sepia(78%) saturate(342%) hue-rotate(31deg) brightness(120%) contrast(86%);
     }
 
-    // POST
+    // POST //////////////////////////////////////////////////////////////
 
     .post-content {
       padding-bottom: 0.5rem;
@@ -206,7 +180,7 @@
       }
     }
 
-    // POST BOT
+    // POST BOT //////////////////////////////////////////////////////////////
 
     .post-bot {
       border-top: 1px solid $greyD;
@@ -215,7 +189,7 @@
 
       .post-hashtag {
         padding-right: 0.2rem;
-        font-size: 0.9rem;
+        font-size: 1rem;
         font-weight: 300;
       }
 
@@ -225,18 +199,20 @@
       }
 
       .comment-number {
-        padding: 0 0.5rem 0 0.2rem;
+        padding: 0 0.8rem 0 0.4rem;
       }
 
       .fa-comment {
+        transform: scale(1.4);
         filter: invert(66%) sepia(9%) saturate(3545%) hue-rotate(340deg) brightness(99%) contrast(86%);
       }
 
       .reaction-number {
-        padding-left: 0.2rem;
+        padding-left: 0.4rem;
       }
 
       .fa-smile {
+        transform: scale(1.4);
         filter: invert(94%) sepia(12%) saturate(4832%) hue-rotate(329deg) brightness(122%) contrast(98%);
       }
     }

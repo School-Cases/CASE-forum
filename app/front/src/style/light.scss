@@ -1,73 +1,71 @@
 @import './components/colors.scss';
 
 .light {
-    .post-pic {
-      background-image: url(./images/Temp.jpg);
-      background-size: cover;
-      border-radius: 15px;
-      width: 100%;
-      height: 7rem;
-    }
-  
-    &.App {
-      background-color: $greenM;
-      background-image: url(./images/Pattern2.svg);
-    }
+  .post-pic {
+    background-image: url(./images/Temp.jpg);
+    background-size: cover;
+    border-radius: 15px;
+    width: 100%;
+    height: 7rem;
+  }
 
-    .header-stars {
-      background-image: url(./images/stars.svg);
-      background-repeat: no-repeat;
-    }
+  &.App {
+    background-color: $greenM;
+    background-image: url(./images/Pattern2.svg);
+  }
 
-    .write-post-btn {
-        border: 7px solid white;
-      }
-  
-      .fa-pencil-alt,
-      .fa-bars,
-      .fa-search {
-        filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(32deg) brightness(115%) contrast(100%);
-      }
+  .header-stars {
+    background-image: url(./images/stars.svg);
+    background-repeat: no-repeat;
+  }
 
-    .container {
-      background-image: url(./images/container.svg);
-      background-size: 100%;
-      background-repeat: no-repeat;
-  
-      .author-username,
-      .likes,
-      .likes-svg {
-        color: $greenD;
-      }
-  
-      .post-timestamp {
-        color: $greyD;
-      }
-  
-      .post-text-content {
-       color: $darkM; 
-      }
-  
-      .post-hashtag {
-        color: $greenM;
-      }
-    }
+  .write-post-btn {
+    border: 7px solid white;
+  }
 
+  .fa-pencil-alt,
+  .fa-bars,
+  .fa-search {
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(32deg) brightness(115%) contrast(100%);
+  }
 
+  .container {
+    background-image: url(./images/container.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
 
-    .commentator-username {
+    .author-username,
+    .likes,
+    .likes-svg {
       color: $greenD;
+    }
+
+    .post-timestamp {
+      color: $greyD;
+    }
+
+    .post-text-content {
+      color: $darkM;
+    }
+
+    .post-hashtag {
+      color: $greenM;
+    }
+  }
+
+  .commentator-username {
+    color: $greenD;
   }
 
   .comment-number,
   .reaction-number,
   .comment-content {
-    color: $darkM;
+    color: $greyD;
   }
 
   .comment-timestamp {
-      color: $greyD;
+    color: $greyD;
   }
 
 
-  }
+}
