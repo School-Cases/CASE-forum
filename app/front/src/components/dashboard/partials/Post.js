@@ -7,6 +7,7 @@ import { POST } from "../../../utils/http";
 import { WriteComment } from "./WriteComment";
 
 export const Post = ({ post, setShowWriteComment, setCommentPost_id }) => {
+  console.log(post);
   let postLikes = post.reactions.filter((l) => l.type === "0" && l.post_id);
   let postReactions = post.reactions.filter((l) => l.type === "1" && l.post_id);
 
