@@ -42,7 +42,7 @@ function App() {
           <Route
             path="/"
             exact
-            element={<Dashboard theme={theme} setTheme={setTheme} />}
+            element={<Home theme={theme} setTheme={setTheme} />}
             // meta={{ auth: false }}
           />
           <Route

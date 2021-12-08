@@ -9,6 +9,11 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
 
+// header('Access-Control-Allow-Origin: *');
+// header("Access-Control-Allow-Methods: GET, OPTIONS");
+// header("Sec-Fetch-Site: cross-site");
+// header('Content-Type: application/json');
+
 /**
  * Class BaseController
  *

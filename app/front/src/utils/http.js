@@ -15,14 +15,18 @@ export const get = async (endpoint, signal) => {
   // }).then((res) => console.log(res));
 };
 
-export const post = async (endpoint, data) => {
+export const POST = async (endpoint, data) => {
   console.log(data);
   return await fetch(api_address + endpoint, {
     method: "POST",
     headers: {
+      // "Content-Type": "*",
       "Content-Type": "application/json",
+      // "Access-Control-Allow-Origin": "*",
+      // "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, DELETE",
       // authorization: localStorage.getItem("token") || "",
     },
     body: JSON.stringify(data),
+    // body: data,
   }).then((res) => res.json());
 };

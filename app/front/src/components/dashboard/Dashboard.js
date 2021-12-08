@@ -1,3 +1,7 @@
+// image DB
+// session / token henry-session prolly
+// pagination
+
 import { useState, useEffect, useCallback } from "react";
 import { Header } from "./partials/Header";
 import { Post } from "./partials/Post";
@@ -7,42 +11,30 @@ import { Menu } from "./partials/Menu";
 import { If } from "../../utils/If";
 
 import { get } from "../../utils/http";
+import { WriteComment } from "./partials/WriteComment";
 
 export const Dashboard = ({ theme, setTheme }) => {
   // const [showFeed, setShowFeed] = useState(true);
   const [showWritePost, setShowWritePost] = useState(false);
+  const [showWriteComment, setShowWriteComment] = useState(false);
+  const [commentPost_id, setCommentPost_id] = useState(null);
   const [showSearch, setShowSearch] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
 
-  const [adata, setaData] = useState("hej");
+  const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const fetchData = async (signal) => {
-    let res = await get(`/home/test`, signal);
-    // setaData(res.data);
-    setaData("hejhejhjeh");
+  const fetchPosts = async (signal) => {
+    let res = await get(`/post/get_posts_data`, signal);
     console.log(res);
+    setPosts(res);
     setLoading(false);
   };
 
   useEffect(async () => {
-    // const abortController = new AbortController();
-    // await fetchData(abortController.signal);
-    // return () => abortController.abort();
-    // await fetch("http://localhost:8080/home/test")
-    //   .then((res) => res.json())
-    //   .then((data) => console.log(data));
-
-    await fetch(`http://localhost:8080/home/test`, {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((messages) => {
-        console.log(messages);
-      });
+    const abortController = new AbortController();
+    await fetchPosts(abortController.signal);
+    return () => abortController.abort();
   }, []);
 
   if (loading) {
@@ -51,10 +43,13 @@ export const Dashboard = ({ theme, setTheme }) => {
 
   return (
     <>
-      <If condition={!showWritePost && !showSearch && !showMenu}>
+      <If
+        condition={
+          !showWritePost && !showSearch && !showMenu && !showWriteComment
+        }
+      >
         <header className="flex JC-SB">
           <div>pr.img</div>
-          <div>{adata}</div>
           <div onClick={() => setTheme(!theme)}>stars</div>
         </header>
 
@@ -64,7 +59,16 @@ export const Dashboard = ({ theme, setTheme }) => {
           <div onClick={() => setShowSearch(true)}>sök</div>
         </section>
 
-        <Post />
+        {posts.map((post) => {
+          console.log(post);
+          return (
+            <Post
+              post={post}
+              setShowWriteComment={setShowWriteComment}
+              setCommentPost_id={setCommentPost_id}
+            />
+          );
+        })}
       </If>
 
       <If condition={showWritePost}>
@@ -75,6 +79,13 @@ export const Dashboard = ({ theme, setTheme }) => {
       </If>
       <If condition={showMenu}>
         <Menu setShowMenu={setShowMenu} />
+      </If>
+
+      <If condition={showWriteComment}>
+        <WriteComment
+          post_id={commentPost_id}
+          setShowWriteComment={setShowWriteComment}
+        />
       </If>
     </>
   );
