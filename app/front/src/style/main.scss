@@ -30,6 +30,17 @@
 .App {
   max-height: 100vh;
   overflow: hidden;
+}
+
+.w100 {
+  width: 100%;
+}
+
+// flex
+
+.flex {
+  display: flex;
+}
 
   .header {
     z-index: 100;
@@ -218,4 +229,3 @@
     }
 
   }
-}

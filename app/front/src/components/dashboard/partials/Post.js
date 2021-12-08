@@ -2,8 +2,41 @@ import { useEffect, useState } from "react";
 
 import { If } from "../../../utils/If";
 
-export const Post = () => {
+import { POST } from "../../../utils/http";
+
+import { WriteComment } from "./WriteComment";
+
+export const Post = ({ post, setShowWriteComment, setCommentPost_id }) => {
+  let postLikes = post.reactions.filter((l) => l.type === "0" && l.post_id);
+  let postReactions = post.reactions.filter((l) => l.type === "1" && l.post_id);
+
   const [showComments, setShowComments] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const fetchLikePost = async () => {
+    let res = await POST(`/reaction/create_reaction`, {
+      post_id: post.post.post_id,
+      user_id: 9,
+      type: 0,
+      reaction: 0,
+      comment_id: "null",
+    });
+    console.log(res);
+  };
+
+  // const fetchCertainHashtags = async (signal) => {
+  //   const abortController = new AbortController();
+  //   let res = await get(
+  //     `/hashtags/get_certain_hashtags/?input=${}`,
+  //     abortController.signal
+  //   );
+  //   console.log(res);
+  //   return () => abortController.abort();
+  // };
+
+  if (loading) {
+    return <h3>loading ..</h3>;
+  }
 
   return (
     <section className="container">
@@ -11,7 +44,6 @@ export const Post = () => {
       <section
         className="flex single-post"
         onClick={(e) => {
-          console.log(e.target.classList.value.includes("flex"));
           if (!e.target.classList.value.includes("noshow-com")) {
             setShowComments(!showComments);
           }
@@ -25,43 +57,56 @@ export const Post = () => {
           </div>
         </div>
 
-        <div>
+        <div className="w100">
           <div className="flex JC-SB post-top">
             <div>
-              <span className="author-username">Pink Girl</span>
-              <span className="post-timestamp">4 jan 11:04</span>
+              <span className="author-username">{post.user.name}</span>
+              <span className="post-timestamp">{post.post.time}</span>
             </div>
 
-            <div className="flex noshow-com likes">
-              <div className="noshow-com likes-number">3</div>
-              {/* <div className="noshow-com likes-title">likes</div> */}
-              <div className="likes-svg"></div>
+            <div className="noshow-com likes">
+              <span className="noshow-com" onClick={() => fetchLikePost()}>
+                LIKEIT
+              </span>
+              <span className="noshow-com likes-number">{postLikes.length}</span>
+              <span className="noshow-com likes-svg"></span>
             </div>
           </div>
 
           <div className="post-content">
           {/* text */}
-          <p className="post-text-content">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          </p>
+          <p className="post-text-content">{post.post.text}</p>
 
           {/* bild */}
-          <div className="post-pic"></div>
-          </div>
+          {/* <div className="post-pic"></div> */}
 
           <div className="flex JC-SB post-bot">
             <div className="flex FW-wrap">
-              <span className="noshow-com post-hashtag">#Deltagare</span>
-              <span className="noshow-com post-hashtag">#Hej</span>
-              <span className="noshow-com post-hashtag">#Bajs</span>
-              <span className="noshow-com post-hashtag">#Del</span>
+              {post.hashtags.map((h) => {
+                return (
+                  <span
+                    // onClick={() => fetchCertainHashtags()}
+                    className="noshow-com post-hashtag"
+                  >
+                    {h.content}
+                  </span>
+                );
+              })}
             </div>
 
             <div className="flex">
-              <span><i class="fas fa-comment"></i></span>
-              <span className="comment-number">4</span>
+              <span
+                className="noshow-com"
+                onClick={() => {
+                  setCommentPost_id(post.post.post_id);
+                  setShowWriteComment(true);
+                }}
+              >
+                <i class="fas fa-comment"></i>
+              </span>
+              <span  className="comment-number">{post.comments.length}</span>
               <span><i class="fas fa-smile"></i></span>
-              <span className="reaction-number">12</span>
+              <span className="reaction-number">{postReactions.length}</span>
             </div>
           </div>
         </div>
@@ -69,38 +114,46 @@ export const Post = () => {
        
       </section>
 
- {/* comment */}
- <If condition={showComments}>
-        <Comment />
+      {/* comment */}
+      <If condition={showComments}>
+        {post.comments.map((c) => {
+          return <Comment comment={c} />;
+        })}
       </If>
       </div>
     </section>
   );
 };
 
-const Comment = () => {
+const Comment = ({ comment }) => {
+  console.log(comment);
+
+  let commentLikes = comment.reactions.filter(
+    (l) => l.type === "0" && l.comment_id
+  );
+  let commentReactions = comment.reactions.filter(
+    (l) => l.type === "1" && l.comment_id
+  );
+
   return (
     <section className={`flex comment-container`}>
       <div className="comment-img-container">
       <div className="commentator-user-img"></div>
       </div>
 
-      <div>
+      <div className="w100">
         <div className="comment-top">
-          <span className="commentator-username">Red Dude</span>
-          <span className="comment-timestamp">4 jan 13:37</span>
+          <span className="commentator-username">{comment.name}</span>
+          <span className="comment-timestamp">{comment.time}</span>
         </div>
 
-        <p className="comment-content">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum neque
-          doloribus sunt pariatur perspiciatis architecto!
-        </p>
+        <p className="comment-content">{comment.text}</p>
 
         <div className="flex JC-E comment-bot">
           <span><i class="fas fa-comment"></i></span>
-          <span className="comment-number">4</span>
+          <span className="comment-number">{commentLikes.length}</span>
           <span><i class="fas fa-smile"></i></span>
-          <span className="reaction-number">12</span>
+          <span className="reaction-number">{commentReactions.length}</span>
         </div>
       </div>
     </section>
