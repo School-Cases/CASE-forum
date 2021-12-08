@@ -79,6 +79,7 @@ export const Post = ({ post, setShowWriteComment, setCommentPost_id }) => {
 
           {/* bild */}
           {/* <div className="post-pic"></div> */}
+          </div>
 
           <div className="flex JC-SB post-bot">
             <div className="flex FW-wrap">
