@@ -8,6 +8,8 @@
 @import './pages/comments.scss';
 @import './pages/login.scss';
 @import './pages/create-user.scss';
+@import './pages/menu.scss';
+@import './pages/write-post.scss';
 
 @import url("https://use.typekit.net/vry6uzm.css");
 
@@ -100,7 +102,6 @@
         transform: scale(2.3);
       }
     }
-
   }
 
   .container {
@@ -136,7 +137,7 @@
 
         .line {
           background-image: url(./images/line.png);
-          background-size: contain;
+          background-size: cover;
           width: 80%;
           height: calc(100% - 30px);
           filter: invert(90%) sepia(13%) saturate(4695%) hue-rotate(15deg) brightness(94%) contrast(58%);
@@ -171,14 +172,15 @@
       .post-timestamp {
         font-size: 0.9rem;
       }
-    }
 
-    .likes-svg {
-      background-image: url(./images/star.svg);
-      background-size: cover;
-      width: 19px;
-      height: 22px;
-      filter: invert(57%) sepia(78%) saturate(342%) hue-rotate(31deg) brightness(120%) contrast(86%);
+      .likes-svg {
+        background-image: url(./images/star.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 1.4rem;
+        height: 1.4rem;
+        filter: invert(57%) sepia(78%) saturate(342%) hue-rotate(31deg) brightness(120%) contrast(86%);
+      }
     }
 
     // POST //////////////////////////////////////////////////////////////
@@ -187,7 +189,7 @@
       padding-bottom: 0.5rem;
 
       .post-text-content {
-        font-size: 0.9rem;
+        font-size: 1rem;
       }
     }
 

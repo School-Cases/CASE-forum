@@ -1,0 +1,24 @@
+@import '../components/colors.scss';
+@import '../components/flex.scss';
+
+@import '../light.scss';
+@import '../dark.scss';
+
+.menu-container {
+    background-color: white;
+    min-height: 100vh;
+
+    .menu-header {
+        padding: 0.7rem 0 0 0.5rem;
+        border-bottom: 1px solid $greyM;
+
+        .fa-arrow-left {
+            color: $orange;
+        }
+
+        .menu-header-text {
+            color: $orange;
+            padding-left: 0.5rem;
+        }
+    }
+}

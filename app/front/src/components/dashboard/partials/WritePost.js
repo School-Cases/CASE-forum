@@ -42,28 +42,40 @@ export const WritePost = ({ setShowWritePost }) => {
 
   return (
     <>
+      <section className="menu-container">
+        <section className="menu-header">
       <h5 onClick={() => setShowWritePost(false)}>
-        <span>pil</span>
-        <span>cancel</span>
+        <span><i class="fas fa-arrow-left"></i></span>
+        <span className="menu-header-text">cancel</span>
       </h5>
+      </section>
 
-      <div>
-        <label htmlFor="">upload img: </label>
-        <input type="file" name="" id="" />
-      </div>
-
+      <section className="write-post-container">
+      
       <div>
         <textarea
+        className="write-post"
           name=""
           id=""
           cols="30"
-          rows="10"
+          rows="8"
           placeholder="What are you thinking..?"
           onChange={(e) => setText(e.target.value)}
-        ></textarea>
-
-        <button onClick={() => fetchCreatePost()}>send</button>
+        >
+        </textarea>
       </div>
+
+      <div className="flex JC-SB write-post-bot">
+        {/* <label htmlFor="">upload img: </label> */}
+        <input className="file-upload write-post-file" type="file" name="" id="" />
+
+        <div></div>
+      </div>
+
+      <div className="flex send-container">
+      <button className="send-post-btn" onClick={() => fetchCreatePost()}><i class="fas fa-pencil-alt"></i></button>
+      </div>
+
 
       <section className="flex">
         <div
@@ -141,6 +153,8 @@ export const WritePost = ({ setShowWritePost }) => {
           );
         })}
       </If>
+      </section>
+      </section>
     </>
   );
 };

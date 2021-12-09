@@ -1,0 +1,56 @@
+@import '../components/colors.scss';
+@import '../components/flex.scss';
+
+@import '../pages/menu.scss';
+
+@import '../light.scss';
+@import '../dark.scss';
+
+.write-post-container {
+    // padding: 1rem;
+
+.write-post {
+    width: 100%;
+    border: none;
+    // border-top: 3px solid $greyL;
+    padding: 1rem;
+}
+
+.write-post-bot {
+    border-bottom: 3px solid $greyL;
+    padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+    align-items: flex-end;
+
+    .write-post-file {
+        
+    }
+}
+
+.send-container {
+    padding: 0 0.5rem;
+    width: 100%;
+    height: 0.5rem;
+
+.send-post-btn {
+    position: absolute;
+    right: 0.5rem;
+    border: none;
+    color: white;
+    background-color: $greenM;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    transform: translateY(-2rem);
+}
+
+.fa-pencil-alt {
+    transform: scale(1.4);
+}
+
+}
+
+textarea {
+    resize: none;
+    outline: none;
+}
+}

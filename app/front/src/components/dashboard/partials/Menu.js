@@ -1,11 +1,17 @@
 export const Menu = ({ setShowMenu }) => {
   return (
     <>
-      <h4>menu</h4>
+    <section className="menu-container">
+      <section className="menu-header">
       <h5 onClick={() => setShowMenu(false)}>
-        <span>pil</span>
-        <span>cancel</span>
+        <span><i class="fas fa-arrow-left"></i></span>
+        <span className="menu-header-text">tillbaka</span>
       </h5>
+      </section>
+
+      {/* menu items go here */}
+
+      </section>
     </>
   );
 };

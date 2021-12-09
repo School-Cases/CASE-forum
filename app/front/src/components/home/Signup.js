@@ -62,7 +62,7 @@ export const Signup = ({ setMainState }) => {
       <div>
         <label className="login-text" htmlFor="">Deltagare</label>{" "}
         <input type="checkbox" name="" onClick={() => setType(0)} />
-        <label className="login-text" htmlFor="">Personal</label>{" "}
+        <label className="login-text PD-LL" htmlFor="">Personal</label>{" "}
         <input type="checkbox" name="" onClick={() => setType(1)} />
       </div>
 

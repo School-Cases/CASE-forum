@@ -65,12 +65,10 @@ export const Post = ({ post, setShowWriteComment, setCommentPost_id }) => {
               <span className="post-timestamp">{post.post.time}</span>
             </div>
 
-            <div className="noshow-com likes">
-              <span className="noshow-com" onClick={() => fetchLikePost()}>
-                LIKEIT
-              </span>
-              <span className="noshow-com likes-number">{postLikes.length}</span>
-              <span className="noshow-com likes-svg"></span>
+            <div className="flex noshow-com likes">
+              <div className="noshow-com likes-number">{postLikes.length}</div>
+              <div className="noshow-com likes-svg" onClick={() => fetchLikePost()}>
+              </div>
             </div>
           </div>
 
@@ -141,6 +139,9 @@ const Comment = ({ comment }) => {
     <section className={`flex comment-container`}>
       <div className="comment-img-container">
       <div className="commentator-user-img"></div>
+      <div className="comment-line">
+      <div className="line"> </div>
+      </div>
       </div>
 
       <div className="w100">
