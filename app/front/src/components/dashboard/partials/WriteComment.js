@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 
 import { get, POST } from "../../../utils/http";
 import { If } from "../../../utils/If";
+import { getDateAndTime } from "../../../utils/getDate&Time";
 
 export const WriteComment = ({ setShowWriteComment, post_id }) => {
   console.log(post_id);
@@ -15,7 +16,7 @@ export const WriteComment = ({ setShowWriteComment, post_id }) => {
       post_id: post_id,
       user_id: user_id,
       text: text,
-      time: time,
+      time: getDateAndTime(),
     });
     console.log(res);
   };

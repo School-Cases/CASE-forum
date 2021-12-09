@@ -14,6 +14,8 @@ namespace App\Controllers;
 //     'console.log(' . $msg . ');</script>';
 // }
 
+
+
 class Hashtag extends BaseController
 {
     public function __construct()

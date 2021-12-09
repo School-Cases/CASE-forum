@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 
 import { get, POST } from "../../../utils/http";
 import { If } from "../../../utils/If";
+import { getDateAndTime } from "../../../utils/getDate&Time";
 
 export const WritePost = ({ setShowWritePost }) => {
   const [user_id, setUser_id] = useState(7);
@@ -14,10 +15,21 @@ export const WritePost = ({ setShowWritePost }) => {
   const [searchedHashtagsResult, setSearchedHashtagsResult] = useState([]);
 
   const fetchCreatePost = async () => {
+    // let date = new Date().getFullYear();
+    // console.log(date);
+    // let date = "8/12-21 16:26";
+    // let splitted1 = date.split("-");
+    // let splitted2 = splitted1[1].split(" ");
+    // let year = splitted2[0];
+    // console.log(year);
+    // let curYear = new Date().getFullYear();
+    // console.log(curYear.toString().slice(2));
+    // let checkYear = curYear.toString().slice(2);
+    // console.log(checkYear === year);
     let res = await POST(`/post/create_post`, {
       user_id: user_id,
       text: text,
-      time: time,
+      time: getDateAndTime(),
     });
     let post_id = res;
     hashtags.forEach(async (hashtag) => {

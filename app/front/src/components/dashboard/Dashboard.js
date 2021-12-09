@@ -37,9 +37,9 @@ export const Dashboard = ({ theme, setTheme }) => {
     return () => abortController.abort();
   }, []);
 
-  // if (loading) {
-  //   return <h3>loading ..</h3>;
-  // }
+  if (loading) {
+    return <h3>loading ..</h3>;
+  }
 
   return (
     <>
@@ -57,24 +57,32 @@ export const Dashboard = ({ theme, setTheme }) => {
           <div className="menu-btn flex" onClick={() => setShowMenu(true)}>
             <i class="fas fa-bars"></i>
           </div>
-          <div className="write-post-btn flex" onClick={() => setShowWritePost(true)}>
-          <i class="fas fa-pencil-alt"></i>
+          <div
+            className="write-post-btn flex"
+            onClick={() => setShowWritePost(true)}
+          >
+            <i class="fas fa-pencil-alt"></i>
           </div>
           <div className="search-btn flex" onClick={() => setShowSearch(true)}>
-          <i class="fas fa-search"></i>
+            <i class="fas fa-search"></i>
           </div>
         </section>
 
-        {posts.map((post) => {
-          console.log(post);
-          return (
-            <Post
-              post={post}
-              setShowWriteComment={setShowWriteComment}
-              setCommentPost_id={setCommentPost_id}
-            />
-          );
-        })}
+        <section className="container">
+          <div className="posts">
+            {posts.map((post, i) => {
+              console.log(post);
+              return (
+                <Post
+                  key={i}
+                  post={post}
+                  setShowWriteComment={setShowWriteComment}
+                  setCommentPost_id={setCommentPost_id}
+                />
+              );
+            })}
+          </div>
+        </section>
       </If>
 
       <If condition={showWritePost}>
