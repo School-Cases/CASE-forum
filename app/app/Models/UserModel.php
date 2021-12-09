@@ -41,6 +41,11 @@ class UserModel extends Model
         $this->db = db_connect();
     }
 
+    public function index()
+    {
+        echo view('home');
+    }
+
     public function get_all_users()
     {
         $query = $this->db->query('SELECT * FROM user');
@@ -54,11 +59,36 @@ class UserModel extends Model
         // getRow()
     }
 
+    public function get_user_by_name($name)
+    {
+        $query = $this->db->query("SELECT * FROM user WHERE name='$name'");
+        return $query->getResult();
+        // getRow()
+    }
+
+    public function user_login($data)
+    {
+        $query = $this->db->query("SELECT * FROM user WHERE user_id=$id");
+        return $query->getResult();
+        // getRow()
+    }
+
     public function create_user($data)
     {
         // var_dump($data)
         // $sql = "INSERT INTO user (name, email, type) VALUES ($data->name, $data->email, $data->type)"
-        $query = $this->db->query("INSERT INTO user (name , email , type) VALUES ('$data->name', '$data->email', $data->type)");
+        $query = $this->db->query("INSERT INTO user (name , email , type , password) VALUES ('$data->name', '$data->email', $data->type, '$data->password')");
+
+        if ($query) {
+            $id = $this->db->insertid();
+        };
+
+        return $id;
+    }
+
+    public function delete_all_users()
+    {
+        $query = $this->db->query('DELETE FROM user');
         return $query;
     }
 }

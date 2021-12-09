@@ -7,7 +7,12 @@ import { checkYear } from "../../../utils/checkYear";
 
 import { WriteComment } from "./WriteComment";
 
-export const Post = ({ post, setShowWriteComment, setCommentPost_id }) => {
+export const Post = ({
+  post,
+  setShowWriteComment,
+  setCommentPost_id,
+  user,
+}) => {
   console.log(post);
   let postLikes = post.reactions.filter((l) => l.type === "0" && l.post_id);
   let postReactions = post.reactions.filter((l) => l.type === "1" && l.post_id);
@@ -20,7 +25,7 @@ export const Post = ({ post, setShowWriteComment, setCommentPost_id }) => {
   const fetchLikePost = async () => {
     let res = await POST(`/reaction/create_reaction`, {
       post_id: post.post.post_id,
-      user_id: 9,
+      user_id: user.user_id,
       type: 0,
       reaction: 0,
       comment_id: "null",
@@ -32,7 +37,7 @@ export const Post = ({ post, setShowWriteComment, setCommentPost_id }) => {
     // console.log(hashtag, hashtag.slice(1));
     const abortController = new AbortController();
     let res = await get(
-      `/hashtags/get_certain_hashtags/?input=${hashtag}`,
+      `/hashtags/get_certain_hashtags/?hashtag=${hashtag}`,
       abortController.signal
     );
     console.log(res);

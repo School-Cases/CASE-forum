@@ -4,17 +4,14 @@ import { get, POST } from "../../../utils/http";
 import { If } from "../../../utils/If";
 import { getDateAndTime } from "../../../utils/getDate&Time";
 
-export const WriteComment = ({ setShowWriteComment, post_id }) => {
+export const WriteComment = ({ setShowWriteComment, post_id, user }) => {
   console.log(post_id);
-  //   const [post_id, setPost_id] = useState(71);
-  const [user_id, setUser_id] = useState(7);
   const [text, setText] = useState("post lalalal post posst");
-  const [time, setTime] = useState("13/6 12.04");
 
   const fetchCreateComment = async () => {
     let res = await POST(`/comment/create_comment`, {
       post_id: post_id,
-      user_id: user_id,
+      user_id: user.user_id,
       text: text,
       time: getDateAndTime(),
     });

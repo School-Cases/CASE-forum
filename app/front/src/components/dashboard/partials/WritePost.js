@@ -4,10 +4,8 @@ import { get, POST } from "../../../utils/http";
 import { If } from "../../../utils/If";
 import { getDateAndTime } from "../../../utils/getDate&Time";
 
-export const WritePost = ({ setShowWritePost }) => {
-  const [user_id, setUser_id] = useState(7);
-  const [text, setText] = useState("post lalalal post posst");
-  const [time, setTime] = useState("13/6 12.04");
+export const WritePost = ({ setShowWritePost, user }) => {
+  const [text, setText] = useState("");
 
   const [hashtags, setHashtags] = useState([]);
 
@@ -15,19 +13,9 @@ export const WritePost = ({ setShowWritePost }) => {
   const [searchedHashtagsResult, setSearchedHashtagsResult] = useState([]);
 
   const fetchCreatePost = async () => {
-    // let date = new Date().getFullYear();
-    // console.log(date);
-    // let date = "8/12-21 16:26";
-    // let splitted1 = date.split("-");
-    // let splitted2 = splitted1[1].split(" ");
-    // let year = splitted2[0];
-    // console.log(year);
-    // let curYear = new Date().getFullYear();
-    // console.log(curYear.toString().slice(2));
-    // let checkYear = curYear.toString().slice(2);
-    // console.log(checkYear === year);
+    // if (user) {
     let res = await POST(`/post/create_post`, {
-      user_id: user_id,
+      user_id: user.user_id,
       text: text,
       time: getDateAndTime(),
     });
@@ -36,9 +24,10 @@ export const WritePost = ({ setShowWritePost }) => {
       let res2 = await POST(`/hashtag/handle_hashtag`, {
         content: hashtag,
         post_id: post_id,
-        user_id: user_id,
+        user_id: user.user_id,
       });
     });
+    // }
   };
 
   const fetchCertainHashtags = async () => {

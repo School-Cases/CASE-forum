@@ -13,7 +13,8 @@ import { If } from "../../utils/If";
 import { get } from "../../utils/http";
 import { WriteComment } from "./partials/WriteComment";
 
-export const Dashboard = ({ theme, setTheme }) => {
+export const Dashboard = ({ theme, setTheme, user }) => {
+  console.log(user);
   // const [showFeed, setShowFeed] = useState(true);
   const [showWritePost, setShowWritePost] = useState(false);
   const [showWriteComment, setShowWriteComment] = useState(false);
@@ -78,6 +79,7 @@ export const Dashboard = ({ theme, setTheme }) => {
                   post={post}
                   setShowWriteComment={setShowWriteComment}
                   setCommentPost_id={setCommentPost_id}
+                  user={user}
                 />
               );
             })}
@@ -86,7 +88,7 @@ export const Dashboard = ({ theme, setTheme }) => {
       </If>
 
       <If condition={showWritePost}>
-        <WritePost setShowWritePost={setShowWritePost} />
+        <WritePost setShowWritePost={setShowWritePost} user={user} />
       </If>
       <If condition={showSearch}>
         <Search setShowSearch={setShowSearch} />
@@ -97,6 +99,7 @@ export const Dashboard = ({ theme, setTheme }) => {
 
       <If condition={showWriteComment}>
         <WriteComment
+          user={user}
           post_id={commentPost_id}
           setShowWriteComment={setShowWriteComment}
         />

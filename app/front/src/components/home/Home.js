@@ -5,7 +5,7 @@ import { If } from "../../utils/If";
 import { Login } from "./Login";
 import { Signup } from "./Signup";
 
-export const Home = () => {
+export const Home = ({ theme, setTheme, setPage, setUser }) => {
   const [mainState, setMainState] = useState("login");
 
   const [loading, setLoading] = useState(false);
@@ -17,11 +17,19 @@ export const Home = () => {
   return (
     <>
       <If condition={mainState === "login"}>
-        <Login setMainState={setMainState} />
+        <Login
+          setMainState={setMainState}
+          setPage={setPage}
+          setUser={setUser}
+        />
       </If>
 
       <If condition={mainState === "signup"}>
-        <Signup setMainState={setMainState} />
+        <Signup
+          setMainState={setMainState}
+          setPage={setPage}
+          setUser={setUser}
+        />
       </If>
     </>
   );

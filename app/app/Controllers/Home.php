@@ -12,17 +12,17 @@ class Home extends BaseController
 {
     public function index()
     {
-        // return view('home');
+        return view('home');
         // $this->testDatabase('mysql', 'user', 'pass', 'glimradb');
         
-        $user_model = model('UserModel');
+        // $user_model = model('UserModel');
 
-        $data = [
-            'users' => $user_model->get_all_users()
-        ];
+        // $data = [
+        //     'users' => $user_model->get_all_users()
+        // ];
 
-        // echo view('show_users', $data);
-        return $this->response->setJSON($data);
+        // // echo view('show_users', $data);
+        // return $this->response->setJSON($data);
     
     }
 
