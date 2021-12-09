@@ -83,7 +83,7 @@ export const Post = ({
               </span>
             </div>
 
-            <div className="noshow-com likes">
+            <div className="flex noshow-com likes">
               <span className="noshow-com" onClick={() => fetchLikePost()}>
                 LIKEIT
               </span>
@@ -160,7 +160,10 @@ const Comment = ({ comment }) => {
   return (
     <section className={`flex comment-container`}>
       <div className="comment-img-container">
-        <div className="commentator-user-img"></div>
+      <div className="commentator-user-img"></div>
+      <div className="comment-line">
+      <div className="line"> </div>
+      </div>
       </div>
 
       <div className="w100">
