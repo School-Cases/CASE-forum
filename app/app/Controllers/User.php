@@ -33,36 +33,52 @@ namespace App\Controllers;
 //     'console.log(' . $msg . ');</script>';
 // }
 
+// header('Access-Control-Allow-Origin: *');
+//         header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization");
+//         header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+//         $method = $_SERVER['REQUEST_METHOD'];
+//         if ($method == "OPTIONS") {
+//             die();
+//         }
+
+
+
+
 class User extends BaseController
 {
 
     public function __construct()
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
         header('Access-Control-Allow-Origin: *');
-        header('Access-Control-Allow-Methods: POST, GET, DELETE, PUT, PATCH, OPTIONS');
-        header('Access-Control-Allow-Headers: token, Content-Type');
-        header('Access-Control-Max-Age: 1728000');
-        header('Content-Length: 0');
-        header('Content-Type: text/plain');
-        die();
+        header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization");
+        header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+        $method = $_SERVER['REQUEST_METHOD'];
+        if ($method == "OPTIONS") {
+            die();
         }
 
-        header('Access-Control-Allow-Origin: *');
-        header('Content-Type: application/json');
+    // if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    //     header('Access-Control-Allow-Origin: *');
+    //     header('Access-Control-Allow-Methods: POST, GET, DELETE, PUT, PATCH, OPTIONS');
+    //     header('Access-Control-Allow-Headers: token, Content-Type');
+    //     header('Access-Control-Max-Age: 1728000');
+    //     header('Content-Length: 0');
+    //     header('Content-Type: text/plain');
+    //     die();
+    // }
 
-        $this->session = session();
+    // header('Access-Control-Allow-Origin: *');
+    // header('Content-Type: application/json');
+
+    $this->session = session();
     }
 
     public function get_all_users()
     {
         $user_model = model('UserModel');
-
         $data = [
             'users' => $user_model->get_all_users()
         ];
-
-        // echo view('show_users', $data);
         return $this->response->setJSON($data);
     }
 
@@ -74,19 +90,22 @@ class User extends BaseController
         } else {
             echo "bajs";
         }
-        
-        
-
         $data = [
             'user' => $user_model->get_user($id)
         ];
-
-        $this->session->set($data);
-
-        print_r($this->session->get('user'));
-
-        // echo view('show_users', $data);
         return $this->response->setJSON($data);
+    }
+
+    public function is_loggedin()
+    {
+        $fail = array();
+        if ($this->session->has('user_data')) {
+            array_push($fail, ['fail' => false, 'user' => $this->session->get('user_data')]);
+            return $this->response->setJSON($fail[0]);
+        } else {
+            array_push($fail, ['fail' => true]);
+            return $this->response->setJSON($fail[0]);
+        }
     }
 
     public function user_login()
@@ -106,11 +125,11 @@ class User extends BaseController
             array_push($fail, ['fail' => "Fel namn!"]);
             return $this->response->setJSON($fail[0]);
         }
-{}
+
         if ($correct) {
             $res[0]->password = null;
             $res[0]->fail = false;
-            $this->session->set('user_data',$res[0]);
+            $this->session->set('user_data', $res[0]);
             return $this->response->setJSON($this->session->get('user_data'));
             // $this->response->setJSON($res[0]);
         } else {
@@ -120,66 +139,127 @@ class User extends BaseController
         }
     }
 
+    public function user_logout()
+    {
+        $fail = array();
+        if ($this->session->has('user_data')) {
+            $this->session->remove('user_data');
+            array_push($fail, ['fail' => false]);
+            return $this->response->setJSON($fail[0]);
+        } else {
+            array_push($fail, ['fail' => true]);
+            return $this->response->setJSON($fail[0]);
+        }
+    }
+
+    public function user_update()
+    {
+        $user_model = model('UserModel');
+        $json = file_get_contents('php://input');
+        $data = json_decode($json);
+
+        $user = $user_model->get_user($data->user_id);
+        $correct = password_verify($data->current_password, $user[0]->password);
+
+        $res = array();
+        if ($correct) {
+            $data->new_password = password_hash($data->new_password, PASSWORD_DEFAULT);
+            $change = $user_model->user_update($data);
+            array_push($res, ['fail' => false]);
+        } else {
+            array_push($res, ['fail' => true]);
+        }
+        return $this->response->setJSON($res[0]);
+    }
+
+    // public function create_user_image()
+    // {
+    //     // $user_model = model('UserModel');
+
+
+
+    //     $file = $this->request->getFile('image');
+    //     if (! $file->isValid()) {
+    //         throw new \RuntimeException($file->getErrorString().'('.$file->getError().')');
+    //     };
+    //     $newName = $file->getRandomName();
+    //     $file->move(WRITEPATH.'uploads/profile_pics', $newName);
+
+    // }
+
     public function create_user()
     {
         $user_model = model('UserModel');
 
-        $json = file_get_contents('php://input');
+        // $json = file_get_contents('php://input');
 
-        $data = json_decode($json);
+        
 
-        $user_name_exists = $user_model->get_user_by_name($data->name);
+        // $data = json_decode($json);
+
+        // print_r($this->request->getFile('image'));
+
+        // print_r($_POST['name']);
+        $datadata = array();
+
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $type = $_POST['type'];
+
+        // print_r($this->request->getVar('name'));
+
+        $user_name_exists = $user_model->get_user_by_name($name);
 
         if ($user_name_exists) {
             $fail = array();
-            array_push($fail, ['fail' => "$data->name finns redan!"]);
+            array_push($fail, ['fail' => "$name finns redan!"]);
             return $this->response->setJSON($fail[0]);
         }
 
         // $password = $data->password;
         // print_r($password);
-        $data->password = password_hash($data->password, PASSWORD_DEFAULT);
+        // $data->password = password_hash($data->password, PASSWORD_DEFAULT);
+        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
         // print_r($hash);
 
         // $data->password = $hash;
 
 
-        // $file = $this->request->getFile('profilepic');
-        // print_r($file);
-        // if (! $file->isValid()) {
-        //     throw new \RuntimeException($file->getErrorString().'('.$file->getError().')');
-        // }
-
-        // $newName = $file->getRandomName();
-        // $file->move(WRITEPATH.'uploads/profile_pics', $newName);
-
+        $file = $this->request->getFile('image');
+        if (! $file->isValid()) {
+            throw new \RuntimeException($file->getErrorString().'('.$file->getError().')');
+        };
+        $newName = $file->getRandomName();
+        $file->move(WRITEPATH.'uploads/profile_pics', $newName);
         
-        $id = $user_model->create_user($data);
+        array_push($datadata, ['name' => $name, 'password' => $password, 'email' => $email, 'type' => $type, 'image' => $newName]);
+
+        print_r($datadata[0]);
+
+        $id = $user_model->create_user($datadata[0]);
 
         // $res = [
         //     'user' => $user_model->get_user($id)
         // ];
 
         $user = $user_model->get_user($id);
-        // print_r($user[0]->password);
+        // // print_r($user[0]->password);
+
+        
 
         $user[0]->password = null;
         $user[0]->fail = false;
 
-        $res = [
-            'user' => $user[0]
-        ];
+        // $this->session->set('user_data', $user[0]);
+
+        // $res = [
+        //     'user' => $user[0]
+        // ];
 
 
 
         // $res->user[0]->password = null;
 
-
-        // if ($result) {
-        return $this->response->setJSON($res);
-        // } 
-        
-        // // consoleLog("hej");
         // $user_model = model('UserModel');
 
         // $data = [
@@ -187,7 +267,7 @@ class User extends BaseController
         // ];
 
         // // echo view('show_users', $data);
-        // return $this->response->setJSON($data);
+        return $this->response->setJSON($user[0]);
     }
 
     public function delete_all_users()

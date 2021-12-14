@@ -73,11 +73,18 @@ class UserModel extends Model
         // getRow()
     }
 
+    public function user_update($data)
+    {
+        $query = $this->db->query("UPDATE user SET password = '$data->new_password' WHERE user_id=$data->user_id");
+        return $query;
+        // getRow()
+    }
+
     public function create_user($data)
     {
         // var_dump($data)
         // $sql = "INSERT INTO user (name, email, type) VALUES ($data->name, $data->email, $data->type)"
-        $query = $this->db->query("INSERT INTO user (name , email , type , password) VALUES ('$data->name', '$data->email', $data->type, '$data->password')");
+        $query = $this->db->query("INSERT INTO user (name , email , type , password, image) VALUES ('$data[name]', '$data[email]', $data[type], '$data[password]', '$data[image]')");
 
         if ($query) {
             $id = $this->db->insertid();

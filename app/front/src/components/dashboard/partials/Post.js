@@ -9,6 +9,9 @@ import { WriteComment } from "./WriteComment";
 
 export const Post = ({
   post,
+  chosenPost,
+  showPostView,
+  setShowPostView,
   setShowWriteComment,
   setCommentPost_id,
   user,
@@ -58,6 +61,9 @@ export const Post = ({
 
   return (
     <>
+      <If condition={chosenPost === post.post_id}>
+        <div onClick={() => setShowPostView(false)}>back</div>
+      </If>
       <section
         className="flex single-post"
         onClick={(e) => {
@@ -68,10 +74,14 @@ export const Post = ({
       >
         <div className="author-img-container">
           <div className="author-img"></div>
-          <div className="comment-line">
-            <div className="line"></div>
-            <div className="corner"></div>
-          </div>
+          <If
+            condition={chosenPost === post.post_id && post.comments.length > 0}
+          >
+            <div className="comment-line">
+              <div className="line"></div>
+              <div className="corner"></div>
+            </div>
+          </If>
         </div>
 
         <div className="w100">
@@ -84,9 +94,14 @@ export const Post = ({
             </div>
 
             <div className="flex noshow-com likes">
-              <span className="noshow-com" onClick={() => fetchLikePost()}>
-                LIKEIT
-              </span>
+              <If
+                condition={!postLikes.some((l) => l.user_id === user.user_id)}
+              >
+                <span className="noshow-com" onClick={() => fetchLikePost()}>
+                  LIKEIT
+                </span>
+              </If>
+
               <span className="noshow-com likes-number">
                 {postLikes.length}
               </span>
@@ -109,7 +124,9 @@ export const Post = ({
                   <span
                     onClick={() => fetchCertainHashtags(h.content.slice(1))}
                     // onClick={() => setCertainHashtag(h.content.slice(1))}
-                    className="noshow-com post-hashtag"
+                    className={`noshow-com post-hashtag ${
+                      h.searched ? "searched" : ""
+                    }`}
                   >
                     {h.content}
                   </span>
@@ -138,17 +155,22 @@ export const Post = ({
       </section>
 
       {/* comment */}
-      <If condition={showComments}>
-        {post.comments.map((c) => {
-          return <Comment comment={c} />;
+      {/* <If condition={showComments}> */}
+      <If condition={chosenPost === post.post_id}>
+        {post.comments.map((c, i) => {
+          return (
+            <Comment comment={c} index={i} length={post.comments.length - 1} />
+          );
         })}
       </If>
     </>
   );
 };
 
-const Comment = ({ comment }) => {
+const Comment = ({ comment, index, length }) => {
   console.log(comment);
+  console.log(index);
+  console.log(length);
 
   let commentLikes = comment.reactions.filter(
     (l) => l.type === "0" && l.comment_id
@@ -160,10 +182,12 @@ const Comment = ({ comment }) => {
   return (
     <section className={`flex comment-container`}>
       <div className="comment-img-container">
-      <div className="commentator-user-img"></div>
-      <div className="comment-line">
-      <div className="line"> </div>
-      </div>
+        <div className="commentator-user-img"></div>
+        <If condition={index !== length}>
+          <div className="comment-line">
+            <div className="line"> </div>
+          </div>
+        </If>
       </div>
 
       <div className="w100">

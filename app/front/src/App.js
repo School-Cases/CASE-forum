@@ -6,10 +6,11 @@ import "./style/main.scss";
 
 import { Home } from "./components/home/Home";
 import { Dashboard } from "./components/dashboard/Dashboard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { If } from "./utils/If";
 
+import { get } from "./utils/http";
 // const requireLogin = async (to, from, next) => {
 //   const res = await get("/logged-in");
 
@@ -35,13 +36,22 @@ function App() {
   const [theme, setTheme] = useState(true);
   const [loggedIn, setLoggedIn] = useState(false);
 
-  const isLoggedIn = () => {
-    if (loggedIn) {
-      return true;
+  const isLoggedIn = async (signal) => {
+    let res = await get(`/user/is_loggedin`, signal);
+    console.log(res);
+    if (res.fail) {
+      setLoggedIn(false);
     } else {
-      return false;
+      setUser(res.user);
+      setLoggedIn(true);
     }
   };
+
+  // useEffect(async () => {
+  //   const abortController = new AbortController();
+  //   await isLoggedIn(abortController.signal);
+  //   return () => abortController.abort();
+  // }, []);
 
   return (
     <div className={`App ${theme ? "light" : "dark"}`}>
@@ -70,8 +80,10 @@ function App() {
         </GuardProvider>
       </BrowserRouter> */}
 
-      <If condition={page === "home"}>
+      {/* <If condition={page === "home"}> */}
+      <If condition={!loggedIn}>
         <Home
+          setLoggedIn={setLoggedIn}
           theme={theme}
           setTheme={setTheme}
           setPage={setPage}
@@ -79,8 +91,10 @@ function App() {
         />
       </If>
 
-      <If condition={page === "dashboard"}>
+      {/* <If condition={page === "dashboard"}> */}
+      <If condition={loggedIn}>
         <Dashboard
+          setLoggedIn={setLoggedIn}
           theme={theme}
           setTheme={setTheme}
           setPage={setPage}

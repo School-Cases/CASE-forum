@@ -67,6 +67,52 @@ class Post extends BaseController
         return $this->response->setJSON($data);
     }
 
+    public function get_certain_posts_data()
+    {
+        $post_model = model('PostModel');
+        $hashtag_model = model('HashtagModel');
+        $user_model = model('UserModel');
+        $comment_model = model('CommentModel');
+        $reaction_model = model('ReactionModel');
+
+        if (isset($_GET['input'])) {
+            $post_filter = $_GET['input'];
+        } else {
+            echo "bajs";
+        }
+        // get hastags where hashtag Content
+        $hashtag = $hashtag_model->get_certain_hashtags($post_filter);
+        // get post_hashtags
+        $post_hashtagses = $hashtag_model->get_certain_post_hashtags($hashtag[0]->hashtag_id);
+
+        // $data = array();
+        $posts = array();
+        foreach ($post_hashtagses as $postHash) {
+            array_push($posts, $post_model->get_post($postHash->post_id));
+        }
+
+        $data = array();
+        foreach ($posts as $post) {
+            // hashtag
+            $post_hashtags = $hashtag_model->get_post_hashtags($post[0]->post_id);
+            $hashtags = array();
+            foreach ($post_hashtags as $ph) {
+                $thisHash = $hashtag_model->get_hashtag($ph->hashtag_id)[0];
+                if (in_array($thisHash, $hashtag)) {
+                    $thisHash->searched = true;
+                }
+                array_push($hashtags, $thisHash);
+            };
+            // comment
+            $comments = $comment_model->get_post_comments($post[0]->post_id);
+            // reaction
+            $reactions = $reaction_model->get_post_reactions($post[0]->post_id);
+
+            array_push($data, (object)['post' => $post[0], 'hashtags' => $hashtags, 'user' => $user_model->get_user($post[0]->user_id)[0], 'comments' => $comments, 'reactions' => $reactions]);
+        };
+        return $this->response->setJSON($data);
+    }
+
     public function get_post()
     {
         $post_model = model('PostModel');

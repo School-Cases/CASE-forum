@@ -81,6 +81,12 @@ class HashtagModel extends Model
         return $query->getResult();
     }
 
+    public function get_certain_post_hashtags($hashtag_id)
+    {
+        $query = $this->db->query("SELECT * FROM post_hashtag WHERE hashtag_id = $hashtag_id");
+        return $query->getResult();
+    }
+
     public function get_post_hashtags($post_id)
     {
         $query = $this->db->query("SELECT * FROM post_hashtag WHERE post_id = $post_id");
@@ -104,6 +110,12 @@ class HashtagModel extends Model
     public function get_all_user_hashtags()
     {
         $query = $this->db->query('SELECT * FROM user_hashtag');
+        return $query->getResult();
+    }
+
+    public function get_user_main_hashtags($user_id)
+    {
+        $query = $this->db->query("SELECT * FROM user_hashtag WHERE user_id = $user_id ORDER BY interactions DESC LIMIT 2");
         return $query->getResult();
     }
 

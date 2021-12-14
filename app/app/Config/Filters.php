@@ -4,6 +4,7 @@ namespace Config;
 
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Filters\CSRF;
+// use App\Filters\Options;
 use CodeIgniter\Filters\DebugToolbar;
 use CodeIgniter\Filters\Honeypot;
 
@@ -19,6 +20,10 @@ class Filters extends BaseConfig
         'csrf'     => CSRF::class,
         'toolbar'  => DebugToolbar::class,
         'honeypot' => Honeypot::class,
+        // 'csrf'     => \CodeIgniter\Filters\CSRF::class,
+        // 'toolbar'  => \CodeIgniter\Filters\DebugToolbar::class,
+        // 'honeypot' => \CodeIgniter\Filters\Honeypot::class,
+        // 'options' => \App\Filters\Options::class,
     ];
 
     /**
@@ -29,6 +34,7 @@ class Filters extends BaseConfig
      */
     public $globals = [
         'before' => [
+            // 'options' //register option CORS
             // 'honeypot',
             // 'csrf',
         ],

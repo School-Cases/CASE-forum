@@ -130,4 +130,33 @@ class Hashtag extends BaseController
         // echo view('show_users', $data);
         return $this->response->setJSON($data);
     }
+
+    public function get_user_main_hashtags()
+    {
+        $hashtag_model = model('HashtagModel');
+
+        if (isset($_GET['user_id'])) {
+            $user_id = $_GET['user_id'];
+        } else {
+            echo "bajs";
+        }
+
+        $hashtags = $hashtag_model->get_user_main_hashtags($user_id);
+
+        // print_r($hashtags);
+
+        $main_hashtags = array();
+        foreach ($hashtags as $hashtag) {
+            $hash = $hashtag_model->get_hashtag($hashtag->hashtag_id);
+            // print_r($hash);
+            array_push($main_hashtags, $hash[0]);
+        }
+
+        // print_r($main_hashtags);
+        $data = [
+            'main_hashtags' => $main_hashtags
+        ];
+
+        return $this->response->setJSON($data);
+    }
 }

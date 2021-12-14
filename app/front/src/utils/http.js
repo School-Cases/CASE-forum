@@ -30,3 +30,19 @@ export const POST = async (endpoint, data) => {
     // body: data,
   }).then((res) => res.json());
 };
+
+export const POSTFORMDATA = async (endpoint, data) => {
+  console.log(data);
+  return await fetch(api_address + endpoint, {
+    method: "POST",
+    // headers: {
+    //   // "Content-Type": "*",
+    //   // "Content-Type": "multipart/form-data",
+    //   // "Access-Control-Allow-Origin": "*",
+    //   // "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, DELETE",
+    //   // authorization: localStorage.getItem("token") || "",
+    // },
+    // body: JSON.stringify(data),
+    body: data,
+  }).then((res) => res.json());
+};

@@ -1,0 +1,44 @@
+CRITICAL - 2021-12-12 05:41:31 --> Attempt to read property "password" on array
+#0 /app/app/Controllers/User.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Contro...', 146)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->user_update()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-12 05:55:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.uaoxcacm5XZDg5OKedxYd8jU2 WHERE user_id=38' at line 1
+CRITICAL - 2021-12-12 05:55:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.uaoxcacm5XZDg5OKedxYd8jU2 WHERE user_id=38' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE user SET...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE user SET...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE user SET...')
+#3 /app/app/Models/UserModel.php(78): CodeIgniter\Database\BaseConnection->query('UPDATE user SET...')
+#4 /app/app/Controllers/User.php(150): App\Models\UserModel->user_update(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\User->user_update()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-12 05:56:03 --> Call to a member function getResult() on bool
+#0 /app/app/Controllers/User.php(150): App\Models\UserModel->user_update(Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->user_update()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-12 06:40:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+CRITICAL - 2021-12-12 06:40:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM u...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM u...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM u...')
+#3 /app/app/Models/HashtagModel.php(118): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#4 /app/app/Controllers/Hashtag.php(144): App\Models\HashtagModel->get_user_main_hashtags('38')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->get_user_main_hashtags()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-12 06:52:00 --> Undefined constant "App\Controllers\hashtag_id"
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->get_user_main_hashtags()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}

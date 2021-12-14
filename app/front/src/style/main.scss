@@ -1,17 +1,23 @@
-@import './components/colors.scss';
-@import './components/animations.scss';
-@import './components/flex.scss';
+@import "./components/colors.scss";
+@import "./components/animations.scss";
+@import "./components/flex.scss";
 
-@import './light.scss';
-@import './dark.scss';
+@import "./light.scss";
+@import "./dark.scss";
 
-@import './pages/comments.scss';
-@import './pages/login.scss';
-@import './pages/create-user.scss';
-@import './pages/menu.scss';
-@import './pages/write-post.scss';
+@import "./pages/comments.scss";
+@import "./pages/login.scss";
+@import "./pages/create-user.scss";
+@import "./pages/menu.scss";
+@import "./pages/write-post.scss";
 
 @import url("https://use.typekit.net/vry6uzm.css");
+
+// afffffffffffffffffffffffffffffffffffffffffffffffffffffff
+
+.filter {
+  color: red;
+}
 
 * {
   // border: 1px solid black;
@@ -44,190 +50,196 @@
   display: flex;
 }
 
-  .header {
-    z-index: 100;
-    padding: 0.4rem;
-    height: 10vh;
+.header {
+  z-index: 100;
+  padding: 0.4rem;
+  height: 10vh;
 
-    .header-user-img {
-      width: 55px;
-      height: 55px;
+  .header-user-img {
+    width: 55px;
+    height: 55px;
+    background-image: url(./images/Temp.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 0px 3px 6px #00000029;
+  }
+
+  .header-stars {
+    height: 3.7rem;
+    width: 3.5rem;
+    z-index: 100;
+  }
+}
+
+.top-btns {
+  position: absolute;
+  width: 100%;
+  transform: translateY(-3.7rem);
+  gap: 0.5rem;
+  z-index: 99;
+
+  .menu-btn,
+  .search-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: $orange;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(50%);
+
+    .fa-bars,
+    .fa-search {
+      transform: scale(1.3);
+    }
+  }
+
+  .write-post-btn {
+    width: 5rem;
+    height: 5rem;
+    background-color: $orange;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+
+    .fa-pencil-alt {
+      transform: scale(2.3);
+    }
+  }
+}
+
+.container {
+  transform: translateY(-1.4rem);
+  min-height: calc(90vh + 1.4rem);
+  padding-top: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  .posts {
+    overflow: scroll;
+    height: calc(90vh - 2rem);
+  }
+
+  // AUTHOR-USER-IMG //////////////////////////////////////////////////////////////
+
+  .author-img-container {
+    padding-right: 0.5rem;
+
+    .author-img {
       background-image: url(./images/Temp.jpg);
       background-size: cover;
       background-position: center;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
-      box-shadow: 0px 3px 6px #00000029;
-
     }
 
-    .header-stars {
-      height: 3.7rem;
-      width: 3.5rem;
-      z-index: 100;
-    }
-  }
+    .comment-line {
+      padding-top: 0.5rem;
+      width: 100%;
+      height: calc(100% - 50px);
 
-  .top-btns {
-    position: absolute;
-    width: 100%;
-    transform: translateY(-3.7rem);
-    gap: 0.5rem;
-    z-index: 99;
-
-    .menu-btn,
-    .search-btn {
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 50%;
-      background-color: $orange;
-      justify-content: center;
-      align-items: center;
-      transform: translateY(50%);
-
-      .fa-bars,
-      .fa-search {
-        transform: scale(1.3);
-      }
-    }
-
-    .write-post-btn {
-      width: 5rem;
-      height: 5rem;
-      background-color: $orange;
-      border-radius: 50%;
-      justify-content: center;
-      align-items: center;
-
-      .fa-pencil-alt {
-        transform: scale(2.3);
-      }
-    }
-  }
-
-  .container {
-    transform: translateY(-1.4rem);
-    min-height: calc(90vh + 1.4rem);
-    padding-top: 3rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-    .posts {
-      overflow: scroll;
-      height: calc(90vh - 2rem);
-    }
-
-   // AUTHOR-USER-IMG //////////////////////////////////////////////////////////////
-
-    .author-img-container {
-      padding-right: 0.5rem;
-
-      .author-img {
-        background-image: url(./images/Temp.jpg);
+      .line {
+        background-image: url(./images/line.png);
         background-size: cover;
-        background-position: center;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
+        width: 80%;
+        height: calc(100% - 30px);
+        filter: invert(90%) sepia(13%) saturate(4695%) hue-rotate(15deg)
+          brightness(94%) contrast(58%);
       }
 
-      .comment-line {
-        padding-top: 0.5rem;
-        width: 100%;
-        height: calc(100% - 50px);
-
-        .line {
-          background-image: url(./images/line.png);
-          background-size: cover;
-          width: 80%;
-          height: calc(100% - 30px);
-          filter: invert(90%) sepia(13%) saturate(4695%) hue-rotate(15deg) brightness(94%) contrast(58%);
-        }
-
-        .corner {
-          background-image: url(./images/corner.png);
-          background-size: contain;
-          background-repeat: no-repeat;
-          width: 80%;
-          height: 30px;
-          filter: invert(90%) sepia(13%) saturate(4695%) hue-rotate(15deg) brightness(94%) contrast(58%);
-        }
-      }
-    }
-
-    // POST TOP //////////////////////////////////////////////////////////////
-
-    .post-top {
-
-      .author-username {
-        font-size: 1.5rem;
-        padding-right: 0.25rem;
-        font-weight: 700;
-      }
-
-      .likes-number,
-      .likes-title {
-        padding-right: 0.2rem;
-      }
-
-      .post-timestamp {
-        font-size: 0.9rem;
-      }
-
-      .likes-svg {
-        background-image: url(./images/star.svg);
+      .corner {
+        background-image: url(./images/corner.png);
         background-size: contain;
         background-repeat: no-repeat;
-        width: 1.4rem;
-        height: 1.4rem;
-        filter: invert(57%) sepia(78%) saturate(342%) hue-rotate(31deg) brightness(120%) contrast(86%);
+        width: 80%;
+        height: 30px;
+        filter: invert(90%) sepia(13%) saturate(4695%) hue-rotate(15deg)
+          brightness(94%) contrast(58%);
       }
     }
-
-    // POST //////////////////////////////////////////////////////////////
-
-    .post-content {
-      padding-bottom: 0.5rem;
-
-      .post-text-content {
-        font-size: 1rem;
-      }
-    }
-
-    // POST BOT //////////////////////////////////////////////////////////////
-
-    .post-bot {
-      border-top: 1px solid $greyD;
-      padding-top: 0.2rem;
-      padding-bottom: 0.5rem;
-
-      .post-hashtag {
-        padding-right: 0.2rem;
-        font-size: 1rem;
-        font-weight: 300;
-      }
-
-      .comment-number,
-      .reaction-number {
-        font-size: 0.8rem;
-      }
-
-      .comment-number {
-        padding: 0 0.8rem 0 0.4rem;
-      }
-
-      .fa-comment {
-        transform: scale(1.4);
-        filter: invert(66%) sepia(9%) saturate(3545%) hue-rotate(340deg) brightness(99%) contrast(86%);
-      }
-
-      .reaction-number {
-        padding-left: 0.4rem;
-      }
-
-      .fa-smile {
-        transform: scale(1.4);
-        filter: invert(94%) sepia(12%) saturate(4832%) hue-rotate(329deg) brightness(122%) contrast(98%);
-      }
-    }
-
   }
+
+  // POST TOP //////////////////////////////////////////////////////////////
+
+  .post-top {
+    .author-username {
+      font-size: 1.5rem;
+      padding-right: 0.25rem;
+      font-weight: 700;
+    }
+
+    .likes-number,
+    .likes-title {
+      padding-right: 0.2rem;
+    }
+
+    .post-timestamp {
+      font-size: 0.9rem;
+    }
+
+    .likes-svg {
+      background-image: url(./images/star.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 1.4rem;
+      height: 1.4rem;
+      filter: invert(57%) sepia(78%) saturate(342%) hue-rotate(31deg)
+        brightness(120%) contrast(86%);
+    }
+  }
+
+  // POST //////////////////////////////////////////////////////////////
+
+  .post-content {
+    padding-bottom: 0.5rem;
+
+    .post-text-content {
+      font-size: 1rem;
+    }
+  }
+
+  // POST BOT //////////////////////////////////////////////////////////////
+
+  .post-bot {
+    border-top: 1px solid $greyD;
+    padding-top: 0.2rem;
+    padding-bottom: 0.5rem;
+
+    .post-hashtag {
+      padding-right: 0.2rem;
+      font-size: 1rem;
+      font-weight: 300;
+
+      &.searched {
+        font-weight: 600;
+      }
+    }
+
+    .comment-number,
+    .reaction-number {
+      font-size: 0.8rem;
+    }
+
+    .comment-number {
+      padding: 0 0.8rem 0 0.4rem;
+    }
+
+    .fa-comment {
+      transform: scale(1.4);
+      filter: invert(66%) sepia(9%) saturate(3545%) hue-rotate(340deg)
+        brightness(99%) contrast(86%);
+    }
+
+    .reaction-number {
+      padding-left: 0.4rem;
+    }
+
+    .fa-smile {
+      transform: scale(1.4);
+      filter: invert(94%) sepia(12%) saturate(4832%) hue-rotate(329deg)
+        brightness(122%) contrast(98%);
+    }
+  }
+}

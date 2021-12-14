@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1639408232;_ci_previous_url|s:50:"http://localhost:8080/index.php/user/get_all_users";user_data|O:8:"stdClass":8:{s:7:"user_id";s:1:"5";s:4:"name";s:7:"haakon2";s:5:"email";s:13:"haha@ehhe.com";s:4:"type";s:1:"0";s:5:"image";N;s:6:"course";N;s:8:"password";N;s:4:"fail";b:0;}

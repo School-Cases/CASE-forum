@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 
 import { get, POST } from "../../utils/http";
 
-export const Login = ({ setMainState, setPage, setUser }) => {
+export const Login = ({ setLoggedIn, setMainState, setPage, setUser }) => {
   const [name, setName] = useState(null);
   const [password, setPassword] = useState(null);
 
@@ -20,7 +20,7 @@ export const Login = ({ setMainState, setPage, setUser }) => {
       setResMessage(res.fail);
     } else {
       setUser(res);
-      setPage("dashboard");
+      setLoggedIn(true);
     }
   };
 

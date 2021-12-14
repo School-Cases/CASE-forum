@@ -1,8 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
 
-import { get, POST } from "../../utils/http";
+import { get, POST, POSTFORMDATA } from "../../utils/http";
 
-export const Signup = ({ setMainState, setPage, setUser }) => {
+export const Signup = ({ setLoggedIn, setMainState, setPage, setUser }) => {
   const [name, setName] = useState(null);
   const [email, setEmail] = useState("test@test.com");
   const [type, setType] = useState(0);
@@ -12,22 +12,58 @@ export const Signup = ({ setMainState, setPage, setUser }) => {
   const [resMessage, setResMessage] = useState(null);
 
   const fetchCreateUser = async () => {
-    let res = await POST(`/user/create_user`, {
-      name: name,
-      email: email,
-      type: type,
-      password: password,
-      // image: image,
-    });
-    console.log(res);
+    let formData = new FormData();
+    // console.log(image);
+    formData.append("image", image);
 
-    if (res.fail) {
-      console.log("hej");
-      setResMessage(res.fail);
-    } else {
-      setUser(res.user);
-      setPage("dashboard");
-    }
+    formData.append("name", name);
+    formData.append("password", password);
+    formData.append("email", email);
+    formData.append("type", type);
+
+    // console.log(formData);
+    // let res = await POST(`/user/create_user`, {
+    //   // name: name,
+    //   // password: password,
+    //   // email: email,
+    //   // type: type,
+    //   image: formData,
+    // });
+    // console.log(res);
+    // let res = await POSTFORMDATA(`/user/create_user_image`, {
+    //   // name: name,
+    //   // password: password,
+    //   // email: email,
+    //   // type: type,
+    //   image: formData,
+    // });
+    // console.log(res);
+
+    await fetch(`http://localhost:8080/user/create_user`, {
+      method: "POST",
+      // headers: {
+      //   "Content-Type": "multipart/form-data;  boundary=------42g24h2sd",
+      // },
+      // name: name,
+      // password: password,
+      // email: email,
+      // type: type,
+      // image: formData,
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((err) => console.log(err));
+    // })
+    // .then((res) => res.json())
+    // .then((data) => console.log(data));
+
+    // if (res.fail) {
+    //   console.log("hej");
+    //   setResMessage(res.fail);
+    // } else {
+    //   setUser(res.user);
+    //   setLoggedIn(true);
+    // }
   };
 
   return (
@@ -48,6 +84,15 @@ export const Signup = ({ setMainState, setPage, setUser }) => {
           <span></span>
         </section>
 
+        <input
+          hidden
+          className="login-input"
+          type="text"
+          name="email"
+          placeholder="name"
+          value={email}
+        />
+
         <div>
           <label className="login-text" htmlFor="">
             name:{" "}
@@ -55,7 +100,7 @@ export const Signup = ({ setMainState, setPage, setUser }) => {
           <input
             className="login-input"
             type="text"
-            name=""
+            name="name"
             placeholder="name"
             onChange={(e) => setName(e.target.value)}
           />
@@ -68,7 +113,7 @@ export const Signup = ({ setMainState, setPage, setUser }) => {
           <input
             className="login-input"
             type="password"
-            name=""
+            name="password"
             placeholder="password"
             onChange={(e) => setPassword(e.target.value)}
           />
@@ -78,11 +123,11 @@ export const Signup = ({ setMainState, setPage, setUser }) => {
           <label className="login-text" htmlFor="">
             Deltagare
           </label>{" "}
-          <input type="checkbox" name="" onClick={() => setType(0)} />
+          <input type="checkbox" name="type" onClick={() => setType(0)} />
           <label className="login-text" htmlFor="">
             Personal
           </label>{" "}
-          <input type="checkbox" name="" onClick={() => setType(1)} />
+          <input type="checkbox" name="type" onClick={() => setType(1)} />
         </div>
 
         <div className="user-img-upload">
@@ -92,11 +137,14 @@ export const Signup = ({ setMainState, setPage, setUser }) => {
             </label>
             <input
               className="file-upload"
-              name="profilepic"
+              name="image"
               type="file"
               src=""
               alt=""
-              onChange={(e) => console.log(e.target.value)}
+              onChange={(e) => {
+                console.log(e.target.files[0]);
+                setImage(e.target.files[0]);
+              }}
             />
           </section>
         </div>

@@ -19,6 +19,12 @@ class PostModel extends Model
         return $query->getResult();
     }
 
+    // public function get_certain_posts($data)
+    // {
+    //     $query = $this->db->query('SELECT * FROM post WHERE');
+    //     return $query->getResult();
+    // }
+
     public function get_post($id)
     {
         $query = $this->db->query("SELECT * FROM post WHERE post_id=$id");
