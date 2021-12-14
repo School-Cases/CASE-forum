@@ -10,8 +10,14 @@ import { Search } from "./partials/Search";
 import { Menu } from "./partials/Menu";
 import { If } from "../../utils/If";
 
+import styled from "styled-components";
+
 import { get } from "../../utils/http";
 import { WriteComment } from "./partials/WriteComment";
+
+const StyledDiv = styled("div")`
+  background-image: url(../../writable/profile_pics/${(props) => props.img});
+`;
 
 export const Dashboard = ({ setLoggedIn, theme, setTheme, user }) => {
   console.log(user);
@@ -85,7 +91,7 @@ export const Dashboard = ({ setLoggedIn, theme, setTheme, user }) => {
         }
       >
         <header className="flex JC-SB header">
-          <div className="header-user-img"></div>
+          <StyledDiv img={user.image} className="header-user-img"></StyledDiv>
           <div className="header-stars" onClick={() => setTheme(!theme)}></div>
         </header>
 
