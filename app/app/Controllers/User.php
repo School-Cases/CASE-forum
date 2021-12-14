@@ -230,7 +230,8 @@ class User extends BaseController
             throw new \RuntimeException($file->getErrorString().'('.$file->getError().')');
         };
         $newName = $file->getRandomName();
-        $file->move(WRITEPATH.'uploads/profile_pics', $newName);
+        // $file->move(WRITEPATH.'uploads/profile_pics', $newName);
+        $file->move(WRITEPATH.'../public/static/media', $newName);
         
         array_push($datadata, ['name' => $name, 'password' => $password, 'email' => $email, 'type' => $type, 'image' => $newName]);
 

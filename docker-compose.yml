@@ -32,6 +32,7 @@ services:
       MARIADB_USER: user
     volumes:
       - ./docker/mysql/db:/var/lib/mysql
+      - ./docker/mysql/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
   phpmyadmin:
     image: phpmyadmin
     restart: always

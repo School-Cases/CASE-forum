@@ -16,7 +16,7 @@ import { get } from "../../utils/http";
 import { WriteComment } from "./partials/WriteComment";
 
 const StyledDiv = styled("div")`
-  background-image: url(../../writable/profile_pics/${(props) => props.img});
+  background-image: url(./static/media/${(props) => props.img});
 `;
 
 export const Dashboard = ({ setLoggedIn, theme, setTheme, user }) => {
