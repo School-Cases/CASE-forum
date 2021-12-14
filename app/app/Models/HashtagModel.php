@@ -39,7 +39,7 @@ class HashtagModel extends Model
 
     public function create_hashtag($data)
     {
-        $query = $this->db->query("INSERT INTO hashtag (content) VALUES ('$data->content')");
+        $query = $this->db->query("INSERT INTO hashtag (content) VALUES ('$data')");
         
         if ($query) {
             $id = $this->db->insertid();

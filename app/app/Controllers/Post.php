@@ -135,14 +135,51 @@ class Post extends BaseController
     public function create_post()
     {
         $post_model = model('PostModel');
+        $hashtag_model = model('HashtagModel');
+        $user_model = model('UserModel');
+        $comment_model = model('CommentModel');
+        $reaction_model = model('ReactionModel');
 
         $json = file_get_contents('php://input');
         $data = json_decode($json);
+        print_r($data);
 
-        $result = $post_model->create_post($data);
-        if ($result) {
-            return $this->response->setJSON($result);
+        $post_id = $post_model->create_post($data);
+        if ($post_id) {
+            // return $this->response->setJSON($result);
+            foreach ($data->hashtags as $hashtag) {
+                print_r($hashtag);
+                $hashtag_exists = $hashtag_model->check_if_hashtag_exists($hashtag);
+
+                if (!$hashtag_exists) {
+                    echo "true";
+                    $hashtag_response_id = $hashtag_model->create_hashtag($hashtag);
+                    $hashtag_id = $hashtag_response_id;
+                } else {
+                    $hashtag_id = $hashtag_exists[0]->hashtag_id;
+                    $hashtag_updated_int = $hashtag_model->update_hashtag_interactions($hashtag_id);
+                }
+
+                $post_hashtag_exists = $hashtag_model->check_if_posthashtag_exists($hashtag_id, $post_id);
+
+                if (!$post_hashtag_exists) {
+                    $post_hashtag = $hashtag_model->create_post_hashtag($hashtag_id, $post_id);
+                    print_r($post_hashtag);
+                }
+
+                $user_hashtag_exists = $hashtag_model->check_if_userhashtag_exists($hashtag_id, $data->user_id);
+
+                if (!$user_hashtag_exists) {
+                    $user_hashtag = $hashtag_model->create_user_hashtag($hashtag_id, $data->user_id);
+                    print_r($user_hashtag);
+                } else {
+                    $user_hashtag_updated_int = $hashtag_model->update_user_hashtag_interactions($hashtag_id, $data->user_id);
+                    print_r($user_hashtag_updated_int);
+                };
+            }
         } 
+
+        
     }
 
     public function delete_all_posts()

@@ -35,14 +35,15 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `glimradb`.`post` (
   `post_id` INT NOT NULL AUTO_INCREMENT,
   `user_id` INT NOT NULL,
-  `text` VARCHAR(200) NULL,
+  `text` VARCHAR(200) NOT NULL,
+  `time` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`post_id`, `user_id`),
   INDEX `fk_post_user_idx` (`user_id` ASC) VISIBLE,
   CONSTRAINT `fk_post_user`
     FOREIGN KEY (`user_id`)
     REFERENCES `glimradb`.`user` (`user_id`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -60,13 +61,13 @@ CREATE TABLE IF NOT EXISTS `glimradb`.`comment` (
   CONSTRAINT `fk_comment_post1`
     FOREIGN KEY (`post_id`)
     REFERENCES `glimradb`.`post` (`post_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_comment_user1`
     FOREIGN KEY (`user_id`)
     REFERENCES `glimradb`.`user` (`user_id`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -79,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `glimradb`.`reaction` (
   `type` TINYINT(1) NOT NULL,
   `post_id` INT NOT NULL,
   `comment_id` INT NOT NULL,
-  `reaction` INT NULL DEFAULT 0,
+  `reaction` INT NOT NULL DEFAULT 0,
   PRIMARY KEY (`reaction_id`, `user_id`),
   INDEX `fk_like_user1_idx` (`user_id` ASC) VISIBLE,
   INDEX `fk_like_post1_idx` (`post_id` ASC) VISIBLE,
@@ -87,18 +88,18 @@ CREATE TABLE IF NOT EXISTS `glimradb`.`reaction` (
   CONSTRAINT `fk_like_user1`
     FOREIGN KEY (`user_id`)
     REFERENCES `glimradb`.`user` (`user_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_like_post1`
     FOREIGN KEY (`post_id`)
     REFERENCES `glimradb`.`post` (`post_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_like_comment1`
     FOREIGN KEY (`comment_id`)
     REFERENCES `glimradb`.`comment` (`comment_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -108,6 +109,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `glimradb`.`hashtag` (
   `hashtag_id` INT NOT NULL AUTO_INCREMENT,
   `content` VARCHAR(200) NOT NULL,
+  `interactions` INT NOT NULL DEFAULT 1,
   PRIMARY KEY (`hashtag_id`))
 ENGINE = InnoDB;
 
@@ -128,7 +130,7 @@ CREATE TABLE IF NOT EXISTS `glimradb`.`post_hashtag` (
   CONSTRAINT `fk_post_hashtag_post1`
     FOREIGN KEY (`post_id`)
     REFERENCES `glimradb`.`post` (`post_id`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
@@ -145,12 +147,12 @@ CREATE TABLE IF NOT EXISTS `glimradb`.`user_hashtag` (
   CONSTRAINT `fk_user_hashtag_user1`
     FOREIGN KEY (`user_id`)
     REFERENCES `glimradb`.`user` (`user_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_user_hashtag_hashtag1`
     FOREIGN KEY (`hashtag_id`)
     REFERENCES `glimradb`.`hashtag` (`hashtag_id`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
