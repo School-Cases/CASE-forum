@@ -1,0 +1,195 @@
+CRITICAL - 2021-12-17 11:38:20 --> Call to a member function isValid() on null
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->user_update()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-17 11:39:01 --> Undefined variable $file
+#0 /app/app/Controllers/User.php(187): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 187)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->user_update()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-17 11:39:28 --> Undefined variable $file
+#0 /app/app/Controllers/User.php(187): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 187)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->user_update()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-17 11:40:04 --> Undefined variable $file
+#0 /app/app/Controllers/User.php(190): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 190)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->user_update()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-17 11:40:12 --> Undefined variable $file
+#0 /app/app/Controllers/User.php(190): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 190)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->user_update()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-17 11:40:33 --> Call to a member function isValid() on null
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->user_update()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-17 12:12:34 --> Undefined constant "App\Controllers\new_password"
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->user_update()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-17 12:18:16 --> Undefined constant "App\Controllers\image"
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->user_update()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-17 12:18:53 --> Undefined constant "App\Controllers\image"
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->user_update()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-17 12:19:08 --> Undefined array key "image"
+#0 /app/app/Controllers/User.php(221): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 221)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->user_update()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-17 12:20:51 --> Undefined array key "image"
+#0 /app/app/Controllers/User.php(221): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 221)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->user_update()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-17 12:50:53 --> syntax error, unexpected token "{", expecting ")"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('user/user_updat...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('user/user_updat...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-17 12:51:15 --> syntax error, unexpected token "{", expecting ")"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('user/user_updat...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('user/user_updat...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-17 12:51:34 --> syntax error, unexpected token "=>", expecting ")"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('user/user_updat...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('user/user_updat...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-17 12:51:45 --> syntax error, unexpected token "=>", expecting ")"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('user/user_updat...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('user/user_updat...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-17 12:51:55 --> Call to undefined function App\Controllers\object()
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->user_update()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-17 12:54:26 --> Undefined array key "user_id"
+#0 /app/app/Models/UserModel.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Models...', 82)
+#1 /app/app/Controllers/User.php(226): App\Models\UserModel->user_update(Array)
+#2 /app/system/CodeIgniter.php(824): App\Controllers\User->user_update()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-17 14:03:20 --> Call to a member function isValid() on null
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Comment->create_comment()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-17 14:03:51 --> Call to a member function isValid() on null
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Comment->create_comment()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-17 14:07:30 --> Call to a member function isValid() on null
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Comment->create_comment()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-17 14:13:37 --> Call to a member function move() on null
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Comment->create_comment()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-17 14:19:36 --> Call to a member function move() on null
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Comment->create_comment()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2021-12-17 14:29:15 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`comment`, CONSTRAINT `fk_comment_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+CRITICAL - 2021-12-17 14:29:15 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`comment`, CONSTRAINT `fk_comment_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM use...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM use...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM use...')
+#3 /app/app/Models/UserModel.php(106): CodeIgniter\Database\BaseConnection->query('DELETE FROM use...')
+#4 /app/app/Controllers/User.php(306): App\Models\UserModel->delete_all_users()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\User->delete_all_users()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-17 14:29:31 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`post_hashtag`, CONSTRAINT `fk_post_hashtag_hashtag1` FOREIGN KEY (`hashtag_id`) REFERENCES `hashtag` (`hashtag_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+CRITICAL - 2021-12-17 14:29:31 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`post_hashtag`, CONSTRAINT `fk_post_hashtag_hashtag1` FOREIGN KEY (`hashtag_id`) REFERENCES `hashtag` (`hashtag_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM has...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM has...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM has...')
+#3 /app/app/Models/HashtagModel.php(53): CodeIgniter\Database\BaseConnection->query('DELETE FROM has...')
+#4 /app/app/Controllers/Hashtag.php(102): App\Models\HashtagModel->delete_all_hashtags()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->delete_all_hashtags()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-17 14:29:41 --> Undefined variable $data
+#0 /app/app/Controllers/Post.php(281): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 281)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-17 14:30:08 --> Undefined variable $data
+#0 /app/app/Controllers/Hashtag.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 103)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->delete_all_hashtags()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-17 14:32:56 --> foreach() argument must be of type array|object, string given
+#0 /app/app/Controllers/Post.php(242): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 242)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-17 14:35:07 --> Call to a member function isValid() on null
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}

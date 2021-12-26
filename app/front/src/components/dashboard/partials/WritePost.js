@@ -1,10 +1,16 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useContext } from "react";
 
 import { get, POST } from "../../../utils/http";
 import { If } from "../../../utils/If";
 import { getDateAndTime } from "../../../utils/getDate&Time";
+import { GoBack } from "./GoBack";
+import { ShowContext } from "../Dashboard";
+import { UserContext } from "../../../App";
 
-export const WritePost = ({ setShowWritePost, user }) => {
+export const WritePost = ({}) => {
+  const { dispatch } = useContext(ShowContext);
+  const { user } = useContext(UserContext);
+
   const [text, setText] = useState("");
 
   const [hashtags, setHashtags] = useState([]);
@@ -12,23 +18,48 @@ export const WritePost = ({ setShowWritePost, user }) => {
   const [searchHashtagsInput, setSearchHashtagsInput] = useState("");
   const [searchedHashtagsResult, setSearchedHashtagsResult] = useState([]);
 
+  const [image, setImage] = useState(null);
+
+  // const fetchCreatePost = async () => {
+  //   // if (user) {
+  //   let res = await POST(`/post/create_post`, {
+  //     user_id: user.user_id,
+  //     text: text,
+  //     time: getDateAndTime(),
+  //     hashtags: hashtags,
+  //   });
+  //   let post_id = res;
+  //   // hashtags.forEach(async (hashtag) => {
+  //   //   let res2 = await POST(`/hashtag/handle_hashtag`, {
+  //   //     content: hashtag,
+  //   //     post_id: post_id,
+  //   //     user_id: user.user_id,
+  //   //   });
+  //   // });
+  //   // }
+  // };
+
   const fetchCreatePost = async () => {
-    // if (user) {
-    let res = await POST(`/post/create_post`, {
-      user_id: user.user_id,
-      text: text,
-      time: getDateAndTime(),
-      hashtags: hashtags,
-    });
-    let post_id = res;
-    // hashtags.forEach(async (hashtag) => {
-    //   let res2 = await POST(`/hashtag/handle_hashtag`, {
-    //     content: hashtag,
-    //     post_id: post_id,
-    //     user_id: user.user_id,
-    //   });
-    // });
-    // }
+    if (text === "") {
+      return;
+    }
+    let formData = new FormData();
+    console.log(JSON.stringify(hashtags));
+
+    formData.append("user_id", user.user_id);
+    formData.append("text", text);
+    formData.append("time", getDateAndTime());
+    // formData.append("hashtags", hashtags);
+    formData.append("hashtags", JSON.stringify(hashtags));
+    formData.append("image", image);
+
+    await fetch(`http://localhost:8080/post/create_post`, {
+      method: "POST",
+
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((err) => console.log(err));
   };
 
   const fetchCertainHashtags = async () => {
@@ -45,14 +76,7 @@ export const WritePost = ({ setShowWritePost, user }) => {
   return (
     <>
       <section className="menu-container">
-        <section className="menu-header">
-          <h5 onClick={() => setShowWritePost(false)}>
-            <span>
-              <i class="fas fa-arrow-left"></i>
-            </span>
-            <span className="menu-header-text">cancel</span>
-          </h5>
-        </section>
+        <GoBack show={"showPosts"} />
 
         <section className="write-post-container">
           <div>
@@ -72,8 +96,11 @@ export const WritePost = ({ setShowWritePost, user }) => {
             <input
               className="file-upload write-post-file"
               type="file"
-              name=""
-              id=""
+              name="image"
+              onChange={(e) => {
+                console.log(e.target.files[0]);
+                setImage(e.target.files[0]);
+              }}
             />
 
             <div></div>
@@ -122,7 +149,17 @@ export const WritePost = ({ setShowWritePost, user }) => {
                 onChange={(e) => setSearchHashtagsInput(e.target.value)}
               />
               <button onClick={() => fetchCertainHashtags()}>sök</button>
-              <button>add</button>
+              <button
+                onClick={() => {
+                  if (!hashtags.includes("#" + searchHashtagsInput)) {
+                    setHashtags((prev) => {
+                      return [...prev, "#" + searchHashtagsInput];
+                    });
+                  }
+                }}
+              >
+                add
+              </button>
             </div>
 
             <div className="flex FW-wrap">

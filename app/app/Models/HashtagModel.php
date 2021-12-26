@@ -115,7 +115,7 @@ class HashtagModel extends Model
 
     public function get_user_main_hashtags($user_id)
     {
-        $query = $this->db->query("SELECT * FROM user_hashtag WHERE user_id = $user_id ORDER BY interactions DESC LIMIT 2");
+        $query = $this->db->query("SELECT * FROM user_hashtag WHERE user_id = $user_id ORDER BY interactions DESC LIMIT 3");
         return $query->getResult();
     }
 

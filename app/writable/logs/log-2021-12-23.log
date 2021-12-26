@@ -1,0 +1,40 @@
+CRITICAL - 2021-12-23 08:27:06 --> Too few arguments to function App\Models\PostModel::get_all_posts(), 0 passed in /app/app/Controllers/Post.php on line 60 and exactly 1 expected
+#0 /app/app/Controllers/Post.php(60): App\Models\PostModel->get_all_posts()
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_all_posts()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-23 08:27:42 --> Too few arguments to function App\Models\PostModel::get_all_posts(), 0 passed in /app/app/Controllers/Post.php on line 60 and exactly 1 expected
+#0 /app/app/Controllers/Post.php(60): App\Models\PostModel->get_all_posts()
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_all_posts()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-23 09:36:20 --> syntax error, unexpected token "=>"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_posts_...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_posts_...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-23 12:24:02 --> Too few arguments to function App\Models\PostModel::get_all_posts(), 0 passed in /app/app/Controllers/Post.php on line 60 and exactly 1 expected
+#0 /app/app/Controllers/Post.php(60): App\Models\PostModel->get_all_posts()
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_all_posts()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-23 12:34:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY post_id DESC' at line 1
+CRITICAL - 2021-12-23 12:34:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY post_id DESC' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM p...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM p...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM p...')
+#3 /app/app/Models/PostModel.php(19): CodeIgniter\Database\BaseConnection->query('SELECT * FROM p...')
+#4 /app/app/Controllers/Post.php(83): App\Models\PostModel->get_all_posts('0')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_posts_data()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

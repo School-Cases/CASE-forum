@@ -6,7 +6,7 @@ import "./style/main.scss";
 
 import { Home } from "./components/home/Home";
 import { Dashboard } from "./components/dashboard/Dashboard";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext, createContext } from "react";
 
 import { If } from "./utils/If";
 
@@ -20,6 +20,8 @@ import { get } from "./utils/http";
 
 //   return next();
 // };
+
+export const UserContext = createContext(null);
 
 const Loading = () => {
   return <p>Loading...</p>;
@@ -47,15 +49,16 @@ function App() {
     }
   };
 
-  // useEffect(async () => {
-  //   const abortController = new AbortController();
-  //   await isLoggedIn(abortController.signal);
-  //   return () => abortController.abort();
-  // }, []);
+  useEffect(async () => {
+    const abortController = new AbortController();
+    await isLoggedIn(abortController.signal);
+    return () => abortController.abort();
+  }, []);
 
   return (
     <div className={`App ${theme ? "light" : "dark"}`}>
-      {/* <BrowserRouter>
+      <UserContext.Provider value={{ user }}>
+        {/* <BrowserRouter>
         <GuardProvider
           guards={[requireLogin]}
           guards={[isLoggedIn]}
@@ -80,27 +83,27 @@ function App() {
         </GuardProvider>
       </BrowserRouter> */}
 
-      {/* <If condition={page === "home"}> */}
-      <If condition={!loggedIn}>
-        <Home
-          setLoggedIn={setLoggedIn}
-          theme={theme}
-          setTheme={setTheme}
-          setPage={setPage}
-          setUser={setUser}
-        />
-      </If>
+        {/* <If condition={page === "home"}> */}
+        <If condition={!loggedIn}>
+          <Home
+            setLoggedIn={setLoggedIn}
+            theme={theme}
+            setTheme={setTheme}
+            setPage={setPage}
+            setUser={setUser}
+          />
+        </If>
 
-      {/* <If condition={page === "dashboard"}> */}
-      <If condition={loggedIn}>
-        <Dashboard
-          setLoggedIn={setLoggedIn}
-          theme={theme}
-          setTheme={setTheme}
-          setPage={setPage}
-          user={user}
-        />
-      </If>
+        {/* <If condition={page === "dashboard"}> */}
+        <If condition={loggedIn}>
+          <Dashboard
+            setLoggedIn={setLoggedIn}
+            theme={theme}
+            setTheme={setTheme}
+            setPage={setPage}
+          />
+        </If>
+      </UserContext.Provider>
     </div>
   );
 }

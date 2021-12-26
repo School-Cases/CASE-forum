@@ -73,7 +73,6 @@ class Hashtag extends BaseController
         $hashtag_exists = $hashtag_model->check_if_hashtag_exists($data->content);
 
         if (!$hashtag_exists) {
-            echo "true";
             $hashtag_response_id = $hashtag_model->create_hashtag($data);
             $hashtag_id = $hashtag_response_id;
         } else {
@@ -85,17 +84,14 @@ class Hashtag extends BaseController
 
         if (!$post_hashtag_exists) {
             $post_hashtag = $hashtag_model->create_post_hashtag($hashtag_id, $data->post_id);
-            print_r($post_hashtag);
         }
 
         $user_hashtag_exists = $hashtag_model->check_if_userhashtag_exists($hashtag_id, $data->user_id);
 
         if (!$user_hashtag_exists) {
             $user_hashtag = $hashtag_model->create_user_hashtag($hashtag_id, $data->user_id);
-            print_r($user_hashtag);
         } else {
             $user_hashtag_updated_int = $hashtag_model->update_user_hashtag_interactions($hashtag_id, $data->user_id);
-            print_r($user_hashtag_updated_int);
         };
     }
 

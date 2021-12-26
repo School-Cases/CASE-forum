@@ -40,12 +40,24 @@ class Reaction extends BaseController
     public function create_reaction()
     {
         $reaction_model = model('ReactionModel');
+        $hashtag_model = model('HashtagModel');
 
         $json = file_get_contents('php://input');
         $data = json_decode($json);
 
         $result = $reaction_model->create_reaction($data);
+
         if ($result) {
+                foreach ($data->hashtags as $hashtag) {
+                    $user_hashtag_exists = $hashtag_model->check_if_userhashtag_exists($hashtag->hashtag_id, $data->user_id);
+
+                    if (!$user_hashtag_exists) {
+                        $user_hashtag = $hashtag_model->create_user_hashtag($hashtag->hashtag_id, $data->user_id);
+                    } else {
+                        $user_hashtag_updated_int = $hashtag_model->update_user_hashtag_interactions($hashtag->hashtag_id, $data->user_id);
+                    };
+                }
+            
             return $this->response->setJSON($result);
         } 
     }

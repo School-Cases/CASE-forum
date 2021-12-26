@@ -152,40 +152,69 @@ class User extends BaseController
         }
     }
 
+    // public function user_update()
+    // {
+    //     $user_model = model('UserModel');
+    //     $json = file_get_contents('php://input');
+    //     $data = json_decode($json);
+
+    //     $user = $user_model->get_user($data->user_id);
+    //     $correct = password_verify($data->current_password, $user[0]->password);
+
+    //     $res = array();
+    //     if ($correct) {
+    //         $data->new_password = password_hash($data->new_password, PASSWORD_DEFAULT);
+    //         $change = $user_model->user_update($data);
+    //         array_push($res, ['fail' => false]);
+    //     } else {
+    //         array_push($res, ['fail' => true]);
+    //     }
+    //     return $this->response->setJSON($res[0]);
+    // }
+
     public function user_update()
     {
         $user_model = model('UserModel');
-        $json = file_get_contents('php://input');
-        $data = json_decode($json);
-
-        $user = $user_model->get_user($data->user_id);
-        $correct = password_verify($data->current_password, $user[0]->password);
-
-        $res = array();
-        if ($correct) {
-            $data->new_password = password_hash($data->new_password, PASSWORD_DEFAULT);
-            $change = $user_model->user_update($data);
-            array_push($res, ['fail' => false]);
-        } else {
-            array_push($res, ['fail' => true]);
+        $user_id = $_POST['user_id'];
+        $current_password = $_POST['current_password'];
+        $new_password = $_POST['new_password'];
+        $file = $this->request->getFile('image');
+        $user = $user_model->get_user($user_id);
+        if ($user[0]) {
+            $res = array();
+            $data = array();
+            $data['user_id'] = $user_id;
+            if (!$file) {
+                $res['image_fail'] = true;
+            } else {
+                if (! $file->isValid()) {
+                $res['image_fail'] = true;
+                throw new \RuntimeException($file->getErrorString().'('.$file->getError().')');
+                } else {
+                    // unlink(WRITEPATH."../public/static/media/$user->image");
+                    // $files->removeFile(APPPATH . 'Filters/DevelopToolbar');
+                    $newName = $file->getRandomName();
+                    $file->move(WRITEPATH.'../public/static/media', $newName);
+                    $data['image'] = $newName;
+                    $res['image_fail'] = false;
+                }
+            }
+            if (!$new_password || !$current_password) {
+                $res['password_fail'] = true;
+            } else {
+                $correct = password_verify($current_password, $user[0]->password);
+                if ($correct) {
+                    $new_password = password_hash($new_password, PASSWORD_DEFAULT);
+                    $data['new_password'] = $new_password;
+                    $res['password_fail'] = false;
+                } else {
+                    $res['password_fail'] = true;
+                }
+            }
         }
-        return $this->response->setJSON($res[0]);
+        $user_model->user_update($data);
+        return $this->response->setJSON($res);
     }
-
-    // public function create_user_image()
-    // {
-    //     // $user_model = model('UserModel');
-
-
-
-    //     $file = $this->request->getFile('image');
-    //     if (! $file->isValid()) {
-    //         throw new \RuntimeException($file->getErrorString().'('.$file->getError().')');
-    //     };
-    //     $newName = $file->getRandomName();
-    //     $file->move(WRITEPATH.'uploads/profile_pics', $newName);
-
-    // }
 
     public function create_user()
     {

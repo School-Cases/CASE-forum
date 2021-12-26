@@ -37,12 +37,24 @@ class CommentModel extends Model
 
     public function create_comment($data)
     {
-        $query = $this->db->query("INSERT INTO comment (post_id, user_id, text, time) VALUES ($data->post_id, $data->user_id, '$data->text', '$data->time')");
+        $query = $this->db->query("INSERT INTO comment (post_id, user_id, text, time, comment_image) VALUES ($data[post_id], $data[user_id], '$data[text]', '$data[time]', '$data[image]')");
         
         if ($query) {
             $id = $this->db->insertid();
         };
 
         return $id;
+    }
+
+    public function delete_comment($id)
+    {
+        $query = $this->db->query("DELETE FROM comment WHERE comment_id=$id");
+        return $query;
+    }
+
+        public function delete_all_comments()
+    {
+        $query = $this->db->query('DELETE FROM comment');
+        return $query;
     }
 }

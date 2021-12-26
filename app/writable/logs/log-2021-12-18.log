@@ -1,0 +1,506 @@
+CRITICAL - 2021-12-18 04:32:34 --> foreach() argument must be of type array|object, string given
+#0 /app/app/Controllers/Post.php(247): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 247)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 04:41:15 --> Undefined variable $datadata
+#0 /app/app/Controllers/Post.php(242): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 242)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 04:41:58 --> foreach() argument must be of type array|object, string given
+#0 /app/app/Controllers/Post.php(245): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 245)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 04:42:20 --> foreach() argument must be of type array|object, string given
+#0 /app/app/Controllers/Post.php(246): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 246)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 04:44:10 --> foreach() argument must be of type array|object, string given
+#0 /app/app/Controllers/Post.php(246): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 246)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 04:45:38 --> foreach() argument must be of type array|object, string given
+#0 /app/app/Controllers/Post.php(246): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 246)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 04:49:41 --> foreach() argument must be of type array|object, string given
+#0 /app/app/Controllers/Post.php(247): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 247)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 04:49:56 --> foreach() argument must be of type array|object, string given
+#0 /app/app/Controllers/Post.php(247): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 247)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 04:50:31 --> Attempt to read property "[
+  "#deltagare",
+  "#haakon",
+  "#bajs",
+  "#bajsasomfan"
+]" on array
+#0 /app/app/Controllers/Post.php(243): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Contro...', 243)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 04:50:44 --> Attempt to read property "hashtags" on array
+#0 /app/app/Controllers/Post.php(243): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Contro...', 243)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 04:50:59 --> syntax error, unexpected token "[", expecting identifier or variable or "{" or "$"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/create_pos...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/create_pos...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 04:51:09 --> syntax error, unexpected single-quoted string "hashtags", expecting identifier or variable or "{" or "$"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/create_pos...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/create_pos...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 04:51:23 --> foreach() argument must be of type array|object, string given
+#0 /app/app/Controllers/Post.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 248)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 04:51:52 --> Undefined constant "App\Controllers\hashtags"
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-18 04:52:09 --> Undefined array key "[
+  "#deltagare",
+  "#haakon",
+  "#bajs",
+  "#bajsasomfan"
+]"
+#0 /app/app/Controllers/Post.php(242): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 242)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 04:52:46 --> Undefined array key "[
+  "#deltagare",
+  "#haakon",
+  "#bajs",
+  "#bajsasomfan"
+]"
+#0 /app/app/Controllers/Post.php(242): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 242)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 04:53:09 --> Undefined array key "[
+  "#deltagare",
+  "#haakon",
+  "#bajs",
+  "#bajsasomfan"
+]"
+#0 /app/app/Controllers/Post.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 248)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 04:54:55 --> syntax error, unexpected variable "$data"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/create_pos...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/create_pos...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 04:55:16 --> Undefined array key "[
+  "#deltagare",
+  "#haakon",
+  "#bajs",
+  "#bajsasomfan"
+]"
+#0 /app/app/Controllers/Post.php(251): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 251)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 04:56:18 --> Undefined array key "[
+  "#deltagare",
+  "#haakon",
+  "#bajs",
+  "#bajsasomfan"
+]"
+#0 /app/app/Controllers/Post.php(251): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 251)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-18 04:59:09 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`post_hashtag`, CONSTRAINT `fk_post_hashtag_hashtag1` FOREIGN KEY (`hashtag_id`) REFERENCES `hashtag` (`hashtag_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+CRITICAL - 2021-12-18 04:59:09 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`post_hashtag`, CONSTRAINT `fk_post_hashtag_hashtag1` FOREIGN KEY (`hashtag_id`) REFERENCES `hashtag` (`hashtag_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM has...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM has...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM has...')
+#3 /app/app/Models/HashtagModel.php(53): CodeIgniter\Database\BaseConnection->query('DELETE FROM has...')
+#4 /app/app/Controllers/Hashtag.php(102): App\Models\HashtagModel->delete_all_hashtags()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->delete_all_hashtags()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-18 04:59:17 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`post`, CONSTRAINT `fk_post_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+CRITICAL - 2021-12-18 04:59:17 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`post`, CONSTRAINT `fk_post_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM use...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM use...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM use...')
+#3 /app/app/Models/UserModel.php(106): CodeIgniter\Database\BaseConnection->query('DELETE FROM use...')
+#4 /app/app/Controllers/User.php(306): App\Models\UserModel->delete_all_users()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\User->delete_all_users()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-18 04:59:26 --> Undefined variable $data
+#0 /app/app/Controllers/Post.php(290): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 290)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 04:59:43 --> Undefined variable $data
+#0 /app/app/Controllers/Hashtag.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 103)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->delete_all_hashtags()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:10:42 --> foreach() argument must be of type array|object, null given
+#0 /app/app/Controllers/Post.php(246): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 246)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:13:09 --> foreach() argument must be of type array|object, string given
+#0 /app/app/Controllers/Post.php(247): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 247)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:15:01 --> foreach() argument must be of type array|object, string given
+#0 /app/app/Controllers/Post.php(247): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 247)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:15:10 --> foreach() argument must be of type array|object, string given
+#0 /app/app/Controllers/Post.php(247): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 247)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:16:36 --> foreach() argument must be of type array|object, null given
+#0 /app/app/Controllers/Post.php(247): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 247)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:18:33 --> foreach() argument must be of type array|object, string given
+#0 /app/app/Controllers/Post.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 248)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:19:04 --> foreach() argument must be of type array|object, string given
+#0 /app/app/Controllers/Post.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 248)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:19:39 --> foreach() argument must be of type array|object, null given
+#0 /app/app/Controllers/Post.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 248)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:21:35 --> Array to string conversion
+#0 /app/app/Models/HashtagModel.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/app/app/Models...', 36)
+#1 /app/app/Controllers/Post.php(249): App\Models\HashtagModel->check_if_hashtag_exists(Array)
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-18 05:24:51 --> foreach() argument must be of type array|object, null given
+#0 /app/app/Controllers/Post.php(247): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 247)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:25:52 --> foreach() argument must be of type array|object, string given
+#0 /app/app/Controllers/Post.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 248)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:26:04 --> foreach() argument must be of type array|object, null given
+#0 /app/app/Controllers/Post.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 248)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:26:55 --> Attempt to read property "hashtags" on array
+#0 /app/app/Controllers/Post.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Contro...', 248)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:27:03 --> Attempt to read property "hashtags" on array
+#0 /app/app/Controllers/Post.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Contro...', 248)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:27:41 --> Undefined constant "App\Controllers\hashtags"
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-18 05:28:00 --> Undefined constant "App\Controllers\hashtags"
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-18 05:28:13 --> foreach() argument must be of type array|object, string given
+#0 /app/app/Controllers/Post.php(247): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 247)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:31:34 --> Undefined array key "user_id"
+#0 /app/app/Models/PostModel.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Models...', 47)
+#1 /app/app/Controllers/Post.php(245): App\Models\PostModel->create_post(Array)
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-18 05:33:10 --> Attempt to read property "user_id" on array
+#0 /app/app/Models/PostModel.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Models...', 48)
+#1 /app/app/Controllers/Post.php(245): App\Models\PostModel->create_post(Array)
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-18 05:33:49 --> Attempt to read property "user_id" on array
+#0 /app/app/Models/PostModel.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Models...', 48)
+#1 /app/app/Controllers/Post.php(245): App\Models\PostModel->create_post(Array)
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-18 05:34:15 --> Attempt to read property "user_id" on array
+#0 /app/app/Models/PostModel.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Models...', 48)
+#1 /app/app/Controllers/Post.php(245): App\Models\PostModel->create_post(Array)
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-18 05:34:57 --> Attempt to read property "user_id" on array
+#0 /app/app/Models/PostModel.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Models...', 49)
+#1 /app/app/Controllers/Post.php(245): App\Models\PostModel->create_post(Array)
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-18 05:35:16 --> Attempt to read property "user_id" on array
+#0 /app/app/Controllers/Post.php(243): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Contro...', 243)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:35:33 --> Undefined constant "App\Controllers\user_id"
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-18 05:35:50 --> Attempt to read property "user_id" on array
+#0 /app/app/Models/PostModel.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Models...', 49)
+#1 /app/app/Controllers/Post.php(245): App\Models\PostModel->create_post(Array)
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-18 05:37:01 --> syntax error, unexpected string content "", expecting "-" or identifier or variable or number
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Post...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Post...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\Post...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'PostModel')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/Post.php(214): model('PostModel')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-18 05:37:44 --> Undefined array key "hashtags"
+#0 /app/app/Controllers/Post.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 248)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:38:18 --> Undefined constant "App\Controllers\hashtags"
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-18 05:39:22 --> foreach() argument must be of type array|object, null given
+#0 /app/app/Controllers/Post.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 248)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:43:23 --> foreach() argument must be of type array|object, null given
+#0 /app/app/Controllers/Post.php(250): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 250)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:44:03 --> foreach() argument must be of type array|object, null given
+#0 /app/app/Controllers/Post.php(250): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 250)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:44:13 --> foreach() argument must be of type array|object, null given
+#0 /app/app/Controllers/Post.php(250): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 250)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:44:46 --> Undefined variable $data
+#0 /app/app/Controllers/Post.php(288): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 288)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:45:08 --> foreach() argument must be of type array|object, null given
+#0 /app/app/Controllers/Post.php(250): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 250)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 05:50:05 --> Undefined variable $data
+#0 /app/app/Controllers/Post.php(288): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 288)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 06:05:19 --> Undefined variable $post_id
+#0 /app/app/Controllers/Post.php(155): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 155)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-18 07:01:40 --> Unknown column 'undefined' in 'where clause'
+CRITICAL - 2021-12-18 07:01:40 --> Unknown column 'undefined' in 'where clause'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM pos...')
+#3 /app/app/Models/PostModel.php(60): CodeIgniter\Database\BaseConnection->query('DELETE FROM pos...')
+#4 /app/app/Controllers/Post.php(293): App\Models\PostModel->delete_post('undefined')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-18 09:31:27 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`comment`, CONSTRAINT `fk_comment_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+CRITICAL - 2021-12-18 09:31:27 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`comment`, CONSTRAINT `fk_comment_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM use...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM use...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM use...')
+#3 /app/app/Models/UserModel.php(106): CodeIgniter\Database\BaseConnection->query('DELETE FROM use...')
+#4 /app/app/Controllers/User.php(306): App\Models\UserModel->delete_all_users()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\User->delete_all_users()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-18 09:31:34 --> Undefined variable $data
+#0 /app/app/Controllers/Post.php(302): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 302)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-18 09:31:52 --> Undefined variable $data
+#0 /app/app/Controllers/Hashtag.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 103)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->delete_all_hashtags()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

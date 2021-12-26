@@ -18,6 +18,18 @@
 .filter {
   color: red;
 }
+.reactions {
+  position: absolute;
+  font-size: 1rem;
+  right: 1rem;
+  top: -2rem;
+
+  gap: 2rem;
+
+  .picked {
+    background-color: aquamarine;
+  }
+}
 
 * {
   // border: 1px solid black;
@@ -127,7 +139,7 @@
     padding-right: 0.5rem;
 
     .author-img {
-      background-image: url(./images/Temp.jpg);
+      // background-image: url(./images/Temp.jpg);
       background-size: cover;
       background-position: center;
       width: 50px;
@@ -234,6 +246,7 @@
 
     .reaction-number {
       padding-left: 0.4rem;
+      position: relative;
     }
 
     .fa-smile {

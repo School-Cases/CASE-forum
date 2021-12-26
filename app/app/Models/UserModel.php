@@ -75,8 +75,16 @@ class UserModel extends Model
 
     public function user_update($data)
     {
-        $query = $this->db->query("UPDATE user SET password = '$data->new_password' WHERE user_id=$data->user_id");
-        return $query;
+        print_r($data);
+        
+        if (array_key_exists('image', $data)) {
+            print_r('finns bild');
+            $query = $this->db->query("UPDATE user SET image = '$data[image]' WHERE user_id=$data[user_id]");
+        };
+        if (array_key_exists('new_password', $data)) {
+            $query = $this->db->query("UPDATE user SET password = '$data[new_password]' WHERE user_id=$data[user_id]");
+        };
+        
         // getRow()
     }
 

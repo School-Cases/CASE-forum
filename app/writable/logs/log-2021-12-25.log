@@ -1,0 +1,26 @@
+CRITICAL - 2021-12-25 07:25:17 --> Too few arguments to function App\Models\NotificationModel::get_user_notifications(), 1 passed in /app/app/Controllers/Notification.php on line 53 and exactly 2 expected
+#0 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('40')
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-25 07:26:33 --> Too few arguments to function App\Models\NotificationModel::get_user_notifications(), 1 passed in /app/app/Controllers/Notification.php on line 53 and exactly 2 expected
+#0 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('41')
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-25 10:18:46 --> Cannot add or update a child row: a foreign key constraint fails (`glimradb`.`post`, CONSTRAINT `fk_post_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+CRITICAL - 2021-12-25 10:18:46 --> Cannot add or update a child row: a foreign key constraint fails (`glimradb`.`post`, CONSTRAINT `fk_post_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pos...')
+#3 /app/app/Models/PostModel.php(56): CodeIgniter\Database\BaseConnection->query('INSERT INTO pos...')
+#4 /app/app/Controllers/Post.php(304): App\Models\PostModel->create_post(Array)
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

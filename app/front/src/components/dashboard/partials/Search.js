@@ -1,10 +1,18 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useContext } from "react";
 
 import { If } from "../../../utils/If";
-
+import { GoBack } from "./GoBack";
 import { POST, get } from "../../../utils/http";
 
-export const Search = ({ setShowSearch, setPosts }) => {
+import { ShowContext } from "../Dashboard";
+
+export const Search = ({
+  // setPosts,
+  setCertainPosts,
+  setPostFilter,
+}) => {
+  const { dispatch } = useContext(ShowContext);
+
   const [searchHashtagsInput, setSearchHashtagsInput] = useState("");
   const [searchedHashtagsResult, setSearchedHashtagsResult] = useState([]);
 
@@ -26,22 +34,15 @@ export const Search = ({ setShowSearch, setPosts }) => {
       abortController.signal
     );
     console.log(res);
-    setPosts(res);
-    setShowSearch(false);
+    setCertainPosts(res);
+    dispatch({ type: "showPosts" });
     return () => abortController.abort();
   };
 
   return (
     <>
       <section className="menu-container">
-        <section className="menu-header">
-          <h5 onClick={() => setShowSearch(false)}>
-            <span>
-              <i class="fas fa-arrow-left"></i>
-            </span>
-            <span className="menu-header-text">tillbaka</span>
-          </h5>
-        </section>
+        <GoBack show={"showPosts"} />
 
         {/* search interaction goes here */}
 
@@ -58,6 +59,7 @@ export const Search = ({ setShowSearch, setPosts }) => {
               <div
                 key={i}
                 onClick={() => {
+                  setPostFilter(h.content);
                   fetchCertainPosts(h.content.slice(1));
                 }}
               >

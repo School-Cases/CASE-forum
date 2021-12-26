@@ -1,24 +1,46 @@
 import { get, POST } from "../../../utils/http";
 import { If } from "../../../utils/If";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useContext } from "react";
 
-export const Settings = ({ user, setShowSettings }) => {
+import { UserContext } from "../../../App";
+
+export const Settings = ({ setShowSettings }) => {
+  const { user } = useContext(UserContext);
   const [currentPassword, setCurrentPassword] = useState(null);
   const [newPassword, setNewPassword] = useState(null);
+  const [image, setImage] = useState(null);
 
-  const [resMessage, setResMessage] = useState(null);
+  const [resMessage, setResMessage] = useState("temp");
+
+  // const fetchUserUpdate = async () => {
+  //   let res = await POST(`/user/user_update`, {
+  //     user_id: user.user_id,
+  //     current_password: currentPassword,
+  //     new_password: newPassword,
+  //   });
+  //   if (res.fail) {
+  //     setResMessage("Fel current lösen");
+  //   } else {
+  //     setResMessage("Uppdatering success");
+  //   }
+  // };
 
   const fetchUserUpdate = async () => {
-    let res = await POST(`/user/user_update`, {
-      user_id: user.user_id,
-      current_password: currentPassword,
-      new_password: newPassword,
+    let formData = new FormData();
+    formData.append("image", image);
+    formData.append("user_id", user.user_id);
+    formData.append("current_password", currentPassword);
+    formData.append("new_password", newPassword);
+
+    await fetch(`/user/user_update`, {
+      method: "POST",
+      body: formData,
     });
-    if (res.fail) {
-      setResMessage("Fel current lösen");
-    } else {
-      setResMessage("Uppdatering success");
-    }
+    // if (res.fail) {
+    //   setResMessage("Fel current lösen");
+    // } else {
+    //   setResMessage("Uppdatering success");
+    // }
   };
 
   return (
@@ -53,6 +75,18 @@ export const Settings = ({ user, setShowSettings }) => {
       </div>
 
       <h4>Change pic:</h4>
+      <input
+        className="file-upload"
+        name="image"
+        type="file"
+        src=""
+        alt=""
+        onChange={(e) => {
+          console.log(e.target.files[0]);
+          console.log(e.target.files[0] === undefined);
+          setImage(e.target.files[0]);
+        }}
+      />
 
       <div
         onClick={() => {

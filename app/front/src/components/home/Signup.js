@@ -13,42 +13,14 @@ export const Signup = ({ setLoggedIn, setMainState, setPage, setUser }) => {
 
   const fetchCreateUser = async () => {
     let formData = new FormData();
-    // console.log(image);
     formData.append("image", image);
-
     formData.append("name", name);
     formData.append("password", password);
     formData.append("email", email);
     formData.append("type", type);
 
-    // console.log(formData);
-    // let res = await POST(`/user/create_user`, {
-    //   // name: name,
-    //   // password: password,
-    //   // email: email,
-    //   // type: type,
-    //   image: formData,
-    // });
-    // console.log(res);
-    // let res = await POSTFORMDATA(`/user/create_user_image`, {
-    //   // name: name,
-    //   // password: password,
-    //   // email: email,
-    //   // type: type,
-    //   image: formData,
-    // });
-    // console.log(res);
-
     await fetch(`http://localhost:8080/user/create_user`, {
       method: "POST",
-      // headers: {
-      //   "Content-Type": "multipart/form-data;  boundary=------42g24h2sd",
-      // },
-      // name: name,
-      // password: password,
-      // email: email,
-      // type: type,
-      // image: formData,
       body: formData,
     })
       .then((res) => res.json())

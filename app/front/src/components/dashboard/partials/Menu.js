@@ -1,9 +1,15 @@
 import { get, POST } from "../../../utils/http";
 import { If } from "../../../utils/If";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useContext } from "react";
 import { Settings } from "./Settings";
 
-export const Menu = ({ user, setShowMenu, setLoggedIn }) => {
+import { ShowContext } from "../Dashboard";
+import { UserContext } from "../../../App";
+import { GoBack } from "./GoBack";
+
+export const Menu = ({ setLoggedIn }) => {
+  const { dispatch } = useContext(ShowContext);
+  const { user } = useContext(UserContext);
   const [showSettings, setShowSettings] = useState(false);
 
   const fetchLogout = async () => {
@@ -11,7 +17,6 @@ export const Menu = ({ user, setShowMenu, setLoggedIn }) => {
     let res = await get(`/user/user_logout`, abortController.signal);
     console.log(res);
     setLoggedIn(false);
-    setShowMenu(false);
     return () => abortController.abort();
   };
 
@@ -19,14 +24,7 @@ export const Menu = ({ user, setShowMenu, setLoggedIn }) => {
     <>
       <If condition={!showSettings}>
         <section className="menu-container">
-          <section className="menu-header">
-            <h5 onClick={() => setShowMenu(false)}>
-              <span>
-                <i class="fas fa-arrow-left"></i>
-              </span>
-              <span className="menu-header-text">tillbaka</span>
-            </h5>
-          </section>
+          <GoBack show={"showPosts"} />
 
           {/* menu items go here */}
 
@@ -50,7 +48,7 @@ export const Menu = ({ user, setShowMenu, setLoggedIn }) => {
         </section>
       </If>
       <If condition={showSettings}>
-        <Settings user={user} setShowSettings={setShowSettings} />
+        <Settings setShowSettings={setShowSettings} />
       </If>
     </>
   );
