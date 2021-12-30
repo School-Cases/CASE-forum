@@ -22,9 +22,10 @@ CREATE TABLE IF NOT EXISTS `glimradb`.`user` (
   `name` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   `type` TINYINT(1) NOT NULL,
-  `image` VARCHAR(45) NULL,
+  `image` VARCHAR(100) NULL,
   `course` VARCHAR(45) NULL,
   `password` VARCHAR(100) NOT NULL,
+  `theme` TINYINT(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`user_id`))
 ENGINE = InnoDB;
 
@@ -37,6 +38,7 @@ CREATE TABLE IF NOT EXISTS `glimradb`.`post` (
   `user_id` INT NOT NULL,
   `text` VARCHAR(200) NOT NULL,
   `time` VARCHAR(45) NOT NULL,
+  `image` VARCHAR(100) NULL,
   PRIMARY KEY (`post_id`, `user_id`),
   INDEX `fk_post_user_idx` (`user_id` ASC) VISIBLE,
   CONSTRAINT `fk_post_user`
@@ -54,7 +56,9 @@ CREATE TABLE IF NOT EXISTS `glimradb`.`comment` (
   `comment_id` INT NOT NULL AUTO_INCREMENT,
   `post_id` INT NOT NULL,
   `user_id` INT NOT NULL,
-  `text` VARCHAR(200) NULL,
+  `text` VARCHAR(200) NOT NULL,
+  `time` VARCHAR(45) NOT NULL,
+  `comment_image` VARCHAR(100) NULL,
   PRIMARY KEY (`comment_id`, `post_id`, `user_id`),
   INDEX `fk_comment_post1_idx` (`post_id` ASC) VISIBLE,
   INDEX `fk_comment_user1_idx` (`user_id` ASC) VISIBLE,
@@ -78,8 +82,8 @@ CREATE TABLE IF NOT EXISTS `glimradb`.`reaction` (
   `reaction_id` INT NOT NULL AUTO_INCREMENT,
   `user_id` INT NOT NULL,
   `type` TINYINT(1) NOT NULL,
-  `post_id` INT NOT NULL,
-  `comment_id` INT NOT NULL,
+  `post_id` INT NULL,
+  `comment_id` INT NULL,
   `reaction` INT NOT NULL DEFAULT 0,
   PRIMARY KEY (`reaction_id`, `user_id`),
   INDEX `fk_like_user1_idx` (`user_id` ASC) VISIBLE,
@@ -153,6 +157,42 @@ CREATE TABLE IF NOT EXISTS `glimradb`.`user_hashtag` (
     FOREIGN KEY (`hashtag_id`)
     REFERENCES `glimradb`.`hashtag` (`hashtag_id`)
     ON DELETE CASCADE
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `glimradb`.`notification`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `glimradb`.`notification` (
+  `notification_id` INT NOT NULL AUTO_INCREMENT,
+  `post_id` INT NULL,
+  `comment_id` INT NULL,
+  `type` TINYINT(1) NOT NULL,
+  `user_id` INT NOT NULL,
+  `time` VARCHAR(45) NOT NULL,
+  `new` TINYINT(1) NOT NULL DEFAULT 0,
+  `post_user` VARCHAR(45) NULL,
+  `origin` INT(1) NOT NULL,
+  PRIMARY KEY (`notification_id`, `user_id`),
+  UNIQUE INDEX `notification_id_UNIQUE` (`notification_id` ASC) VISIBLE,
+  INDEX `fk_notification_post1_idx` (`post_id` ASC) VISIBLE,
+  INDEX `fk_notification_comment1_idx` (`comment_id` ASC) VISIBLE,
+  INDEX `fk_notification_user1_idx` (`user_id` ASC) VISIBLE,
+  CONSTRAINT `fk_notification_post1`
+    FOREIGN KEY (`post_id`)
+    REFERENCES `glimradb`.`post` (`post_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_notification_comment1`
+    FOREIGN KEY (`comment_id`)
+    REFERENCES `glimradb`.`comment` (`comment_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_notification_user1`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `glimradb`.`user` (`user_id`)
+    ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
