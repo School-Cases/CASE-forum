@@ -7,7 +7,7 @@ import { GoBack } from "./GoBack";
 import { ShowContext } from "../Dashboard";
 import { UserContext } from "../../../App";
 
-export const WritePost = ({}) => {
+export const WritePost = () => {
   const { dispatch } = useContext(ShowContext);
   const { user } = useContext(UserContext);
 

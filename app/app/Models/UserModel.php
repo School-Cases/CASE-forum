@@ -88,6 +88,14 @@ class UserModel extends Model
         // getRow()
     }
 
+    public function user_theme_update($user_id, $theme)
+    {
+
+            $query = $this->db->query("UPDATE user SET theme = $theme WHERE user_id=$user_id");
+
+            return $query;
+    }
+
     public function create_user($data)
     {
         // var_dump($data)

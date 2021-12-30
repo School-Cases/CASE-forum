@@ -13,6 +13,19 @@ class PostModel extends Model
         $this->db = db_connect();
     }
 
+    public function get_certain_posts($hashtag, $page)
+    
+    {
+
+        // $hashtags = implode("', '", $hashtag);
+        // print_r($hashtag);
+        $query = $this->db->query("
+        SELECT * FROM post WHERE post_id IN (
+        SELECT post_id FROM post_hashtag WHERE hashtag_id IN($hashtag)
+        ) ORDER BY post_id DESC LIMIT $page, 10");
+        return $query->getResult();
+    }
+
     public function get_all_posts($page)
     {
         // $query = $this->db->query("SELECT * FROM post LIMIT $page, 10");

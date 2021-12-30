@@ -1,34 +1,13 @@
-import {
-  useState,
-  useEffect,
-  useCallback,
-  useReducer,
-  useContext,
-  createContext,
-} from "react";
-
-import { get, POST } from "../../../utils/http";
+import { useContext } from "react";
 
 import { GoBack } from "./GoBack";
 
-import { UserContext } from "../../../App";
+import { get } from "../../../utils/http";
+
 import { ShowContext } from "../Dashboard";
 
 export const Notifications = ({ notifications, setChosenPost }) => {
-  const [loading, setLoading] = useState(false);
-  const { user } = useContext(UserContext);
   const { dispatch } = useContext(ShowContext);
-  // const [notifications, setNotifications] = useState([]);
-
-  // const fetchNotifications = async (signal) => {
-  //   let res = await get(
-  //     `/notification/get_user_notifications/?user=${user.user_id}`,
-  //     signal
-  //   );
-  //   console.log(res.notifications);
-  //   setNotifications(res.notifications);
-  //   setLoading(false);
-  // };
 
   const getNotiText = (n) => {
     if (n.type === "0") {
@@ -66,16 +45,9 @@ export const Notifications = ({ notifications, setChosenPost }) => {
     return () => abortController.abort();
   };
 
-  // useEffect(async () => {
-  //   console.log("FETCHED NOTI");
-  //   const abortController = new AbortController();
-  //   await fetchNotifications(abortController.signal);
-  //   return () => abortController.abort();
-  // }, []);
-
-  if (loading) {
-    return <h3>loading ..</h3>;
-  }
+  // if (loading) {
+  //   return <h3>loading ..</h3>;
+  // }
 
   return (
     <>
@@ -92,7 +64,6 @@ export const Notifications = ({ notifications, setChosenPost }) => {
                   n.post_id ? n.post_id : n.comment_id,
                   n.type
                 );
-                // dispatch({ type: "showPostView" });
               }}
             >
               <div>{getNotiText(n)}</div>

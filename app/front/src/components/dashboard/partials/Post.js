@@ -18,7 +18,12 @@ const StyledDiv = styled("div")`
   background-image: url(./static/media/${(props) => props.img});
 `;
 
-export const Post = ({ post, chosenPost, setChosenPost }) => {
+export const Post = ({
+  fetchCertainPosts,
+  post,
+  chosenPost,
+  setChosenPost,
+}) => {
   console.log(post.post.user_id);
   const { dispatch } = useContext(ShowContext);
   const { user } = useContext(UserContext);
@@ -65,15 +70,27 @@ export const Post = ({ post, chosenPost, setChosenPost }) => {
     return () => abortController.abort();
   };
 
-  const fetchCertainHashtags = async (hashtag) => {
-    const abortController = new AbortController();
-    let res = await get(
-      `/hashtags/get_certain_hashtags/?hashtag=${hashtag}`,
-      abortController.signal
-    );
-    console.log(res);
-    return () => abortController.abort();
-  };
+  // const fetchCertainHashtags = async (hashtag) => {
+  //   const abortController = new AbortController();
+  //   let res = await get(
+  //     `/hashtags/get_certain_hashtags/?hashtag=${hashtag}`,
+  //     abortController.signal
+  //   );
+  //   console.log(res);
+  //   return () => abortController.abort();
+  // };
+
+  // const fetchCertainPosts = async (hashtag) => {
+  //   const abortController = new AbortController();
+  //   let res = await get(
+  //     `/post/get_certain_posts_data/?input=${hashtag}`,
+  //     abortController.signal
+  //   );
+  //   console.log(res);
+  //   setCertainPosts(res);
+  //   // setLoading(false);
+  //   return () => abortController.abort();
+  // };
 
   if (loading) {
     return <h3>loading ..</h3>;
@@ -167,7 +184,7 @@ export const Post = ({ post, chosenPost, setChosenPost }) => {
               {post.hashtags.map((h) => {
                 return (
                   <span
-                    onClick={() => fetchCertainHashtags(h.content.slice(1))}
+                    onClick={() => fetchCertainPosts(h.content.slice(1))}
                     className={`noshow-com post-hashtag ${
                       h.searched ? "searched" : ""
                     }`}

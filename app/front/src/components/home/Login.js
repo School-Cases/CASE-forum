@@ -1,8 +1,8 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
 
-import { get, POST } from "../../utils/http";
+import { POST } from "../../utils/http";
 
-export const Login = ({ setLoggedIn, setMainState, setPage, setUser }) => {
+export const Login = ({ setTheme, setLoggedIn, setSignup, setUser }) => {
   const [name, setName] = useState(null);
   const [password, setPassword] = useState(null);
 
@@ -13,13 +13,12 @@ export const Login = ({ setLoggedIn, setMainState, setPage, setUser }) => {
       name: name,
       password: password,
     });
-    console.log(!res.fail);
 
     if (res.fail) {
-      console.log("hej");
       setResMessage(res.fail);
     } else {
       setUser(res);
+      setTheme(parseInt(res.theme));
       setLoggedIn(true);
     }
   };
@@ -73,10 +72,7 @@ export const Login = ({ setLoggedIn, setMainState, setPage, setUser }) => {
 
         <div className="login-create-user">
           Ny användare?{" "}
-          <span
-            className="create-user-link"
-            onClick={() => setMainState("signup")}
-          >
+          <span className="create-user-link" onClick={() => setSignup(true)}>
             skapa konto
           </span>
         </div>

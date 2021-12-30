@@ -6,11 +6,7 @@ import { POST, get } from "../../../utils/http";
 
 import { ShowContext } from "../Dashboard";
 
-export const Search = ({
-  // setPosts,
-  setCertainPosts,
-  setPostFilter,
-}) => {
+export const Search = ({ fetchCertainPosts, setPostFilter }) => {
   const { dispatch } = useContext(ShowContext);
 
   const [searchHashtagsInput, setSearchHashtagsInput] = useState("");
@@ -22,20 +18,7 @@ export const Search = ({
       `/hashtag/get_certain_hashtags/?input=${searchHashtagsInput}`,
       abortController.signal
     );
-    console.log(res);
     setSearchedHashtagsResult(res.hashtags);
-    return () => abortController.abort();
-  };
-
-  const fetchCertainPosts = async (hashtag) => {
-    const abortController = new AbortController();
-    let res = await get(
-      `/post/get_certain_posts_data/?input=${hashtag}`,
-      abortController.signal
-    );
-    console.log(res);
-    setCertainPosts(res);
-    dispatch({ type: "showPosts" });
     return () => abortController.abort();
   };
 
@@ -59,6 +42,7 @@ export const Search = ({
               <div
                 key={i}
                 onClick={() => {
+                  dispatch({ type: "showPosts" });
                   setPostFilter(h.content);
                   fetchCertainPosts(h.content.slice(1));
                 }}

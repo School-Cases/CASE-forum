@@ -1,0 +1,219 @@
+CRITICAL - 2021-12-29 06:42:33 --> syntax error, unexpected variable "$hashtags", expecting ";" or "{"
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Post...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Post...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\Post...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'PostModel')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/Post.php(120): model('PostModel')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\Post->testa()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-29 06:42:51 --> Array to string conversion
+#0 /app/app/Models/PostModel.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/app/app/Models...', 21)
+#1 /app/app/Controllers/Post.php(122): App\Models\PostModel->get_certain_posts()
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->testa()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-29 06:43:29 --> Array to string conversion
+#0 /app/app/Models/PostModel.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/app/app/Models...', 22)
+#1 /app/app/Controllers/Post.php(122): App\Models\PostModel->get_certain_posts()
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->testa()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-29 06:45:08 --> Array to string conversion
+#0 /app/app/Models/PostModel.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/app/app/Models...', 22)
+#1 /app/app/Controllers/Post.php(122): App\Models\PostModel->get_certain_posts()
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->testa()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-29 06:46:07 --> Array to string conversion
+#0 /app/app/Models/PostModel.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/app/app/Models...', 22)
+#1 /app/app/Controllers/Post.php(122): App\Models\PostModel->get_certain_posts()
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->testa()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2021-12-29 06:48:47 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '31)' at line 1
+CRITICAL - 2021-12-29 06:48:47 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '31)' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM p...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM p...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM p...')
+#3 /app/app/Models/PostModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM p...')
+#4 /app/app/Controllers/Post.php(122): App\Models\PostModel->get_certain_posts()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->testa()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-29 06:49:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''31')' at line 1
+CRITICAL - 2021-12-29 06:49:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''31')' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM p...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM p...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM p...')
+#3 /app/app/Models/PostModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM p...')
+#4 /app/app/Controllers/Post.php(122): App\Models\PostModel->get_certain_posts()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->testa()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-29 06:51:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '31)' at line 1
+CRITICAL - 2021-12-29 06:51:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '31)' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM p...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM p...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM p...')
+#3 /app/app/Models/PostModel.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM p...')
+#4 /app/app/Controllers/Post.php(122): App\Models\PostModel->get_certain_posts()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->testa()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-29 06:56:26 --> Unknown column 'hashtag_id' in 'where clause'
+CRITICAL - 2021-12-29 06:56:26 --> Unknown column 'hashtag_id' in 'where clause'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 /app/app/Models/PostModel.php(25): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...')
+#4 /app/app/Controllers/Post.php(122): App\Models\PostModel->get_certain_posts()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->testa()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-29 06:56:52 --> Subquery returns more than 1 row
+CRITICAL - 2021-12-29 06:56:52 --> Subquery returns more than 1 row
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 /app/app/Models/PostModel.php(25): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...')
+#4 /app/app/Controllers/Post.php(122): App\Models\PostModel->get_certain_posts()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->testa()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-29 07:10:22 --> Object of class stdClass could not be converted to string
+#0 /app/app/Models/PostModel.php(21): implode('', '', Array)
+#1 /app/app/Controllers/Post.php(154): App\Models\PostModel->get_certain_posts(Array, '0')
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_certain_posts_data()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-29 07:11:35 --> implode(): Argument #2 ($array) must be of type ?array, string given
+#0 /app/app/Models/PostModel.php(21): implode('', '', '31')
+#1 /app/app/Controllers/Post.php(154): App\Models\PostModel->get_certain_posts('31', '0')
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_certain_posts_data()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-29 07:12:03 --> Array to string conversion
+#0 /app/app/Models/PostModel.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/app/app/Models...', 32)
+#1 /app/app/Controllers/Post.php(157): App\Models\PostModel->get_all_posts(Array, 10)
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_certain_posts_data()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-29 07:12:30 --> Array to string conversion
+#0 /app/app/Models/PostModel.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/app/app/Models...', 24)
+#1 /app/app/Controllers/Post.php(157): App\Models\PostModel->get_certain_posts(Array, 10)
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_certain_posts_data()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-29 07:13:01 --> Array to string conversion
+#0 /app/app/Models/PostModel.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/app/app/Models...', 24)
+#1 /app/app/Controllers/Post.php(157): App\Models\PostModel->get_certain_posts(Array, 10)
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_certain_posts_data()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-29 07:13:21 --> Cannot use object of type stdClass as array
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_certain_posts_data()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-29 07:15:07 --> Cannot use object of type stdClass as array
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_certain_posts_data()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-29 07:16:12 --> Cannot use object of type stdClass as array
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_certain_posts_data()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-29 07:16:36 --> Cannot use object of type stdClass as array
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_certain_posts_data()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-29 07:17:05 --> Cannot use object of type stdClass as array
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_certain_posts_data()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-29 07:18:30 --> Cannot use object of type stdClass as array
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_certain_posts_data()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-29 07:18:45 --> Cannot use object of type stdClass as array
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_certain_posts_data()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-29 07:19:14 --> Cannot use object of type stdClass as array
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_certain_posts_data()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-29 07:19:39 --> Cannot use object of type stdClass as array
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_certain_posts_data()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-29 07:20:19 --> Cannot use object of type stdClass as array
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_certain_posts_data()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-29 07:41:05 --> Undefined array key 0
+#0 /app/app/Controllers/Post.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 137)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_certain_posts_data()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-29 07:43:57 --> Undefined array key 0
+#0 /app/app/Controllers/Post.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 137)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_certain_posts_data()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

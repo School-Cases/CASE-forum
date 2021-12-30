@@ -1,15 +1,14 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import { GuardProvider, GuardedRoute } from "react-router-guards";
+import { useState, useEffect, useContext, createContext } from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style/main.scss";
 
 import { Home } from "./components/home/Home";
 import { Dashboard } from "./components/dashboard/Dashboard";
-import { useState, useEffect, useContext, createContext } from "react";
 
 import { If } from "./utils/If";
-
 import { get } from "./utils/http";
 // const requireLogin = async (to, from, next) => {
 //   const res = await get("/logged-in");
@@ -31,20 +30,20 @@ const NotFound = () => {
   return <p>Not Found</p>;
 };
 
-function App() {
-  const [page, setPage] = useState("home");
+const App = () => {
   const [user, setUser] = useState(null);
+  const [theme, setTheme] = useState(0);
 
-  const [theme, setTheme] = useState(true);
   const [loggedIn, setLoggedIn] = useState(false);
 
   const isLoggedIn = async (signal) => {
     let res = await get(`/user/is_loggedin`, signal);
-    console.log(res);
     if (res.fail) {
-      setLoggedIn(false);
+      // setLoggedIn(false);
+      return console.log("islogged in false");
     } else {
       setUser(res.user);
+      setTheme(res.user.theme);
       setLoggedIn(true);
     }
   };
@@ -56,7 +55,8 @@ function App() {
   }, []);
 
   return (
-    <div className={`App ${theme ? "light" : "dark"}`}>
+    <div className={`App ${theme === 0 ? "light" : "dark"}`}>
+      {/* <div className={`App ${user.theme == 0 ? "light" : "dark"}`}> */}
       <UserContext.Provider value={{ user }}>
         {/* <BrowserRouter>
         <GuardProvider
@@ -89,7 +89,6 @@ function App() {
             setLoggedIn={setLoggedIn}
             theme={theme}
             setTheme={setTheme}
-            setPage={setPage}
             setUser={setUser}
           />
         </If>
@@ -100,12 +99,11 @@ function App() {
             setLoggedIn={setLoggedIn}
             theme={theme}
             setTheme={setTheme}
-            setPage={setPage}
           />
         </If>
       </UserContext.Provider>
     </div>
   );
-}
+};
 
 export default App;

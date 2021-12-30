@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState, useContext } from "react";
+import { useContext } from "react";
 import { ShowContext } from "../Dashboard";
 
 export const GoBack = ({ show }) => {

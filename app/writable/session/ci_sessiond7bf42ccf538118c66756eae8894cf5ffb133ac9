@@ -1,1 +1,0 @@
-__ci_last_regenerate|i:1640514945;_ci_previous_url|s:48:"http://localhost:8080/index.php/user/is_loggedin";user_data|O:8:"stdClass":8:{s:7:"user_id";s:2:"45";s:4:"name";s:2:"ad";s:5:"email";s:13:"test@test.com";s:4:"type";s:1:"1";s:5:"image";s:35:"1640514147_61a82d46155ef38c62c6.jpg";s:6:"course";N;s:8:"password";N;s:4:"fail";b:0;}

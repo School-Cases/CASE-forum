@@ -1,76 +1,75 @@
-@import './login.scss';
+@import "./login.scss";
 
-@import '../components/colors.scss';
-@import '../components/flex.scss';
+@import "../components/colors.scss";
+@import "../components/flex.scss";
 
-@import '../dark.scss';
-@import '../light.scss';
+@import "../dark.scss";
+@import "../light.scss";
 
 .heading {
-    width: 100vw;
-    padding: 0 1rem;
+  width: 100vw;
+  padding: 0 1rem;
 }
 
 .user-img-upload {
-    padding: 0 2.5rem 1rem 2.5rem;
-    width: 100%;
+  padding: 0 2.5rem 1rem 2.5rem;
+  width: 100%;
 }
 
 .img-icon {
-    color: $greenM;
+  color: $greenM;
 
-    .fa-image {
-        transform: scale(1.4);
-    }
+  .fa-image {
+    transform: scale(1.4);
+  }
 }
 
 // CHECKBOX //////////////////////////////////////////////////////////////
 
-input[type="checkbox"] {
-    -webkit-appearance: none;
-    appearance: none;
-    background-color: #fff;
-    margin: 0;
-    appearance: none;
-    background-color: #fff;
-    margin: 0;
-    font: inherit;
-    color: $greyD;
-    width: 1.5em;
-    height: 1.5em;
-    border: 0.15em solid $greyD;
-    border-radius: 23px;
-    transform: translateY(0.3em);
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: $greyD;
+  width: 1.5em;
+  height: 1.5em;
+  border: 0.15em solid $greyD;
+  border-radius: 23px;
+  transform: translateY(0.3em);
 }
 
-input[type="checkbox"]:checked {
-    background: radial-gradient($orange 50%, white 50%);
-    ;
+input[type="radio"]:checked {
+  background: radial-gradient($orange 50%, white 50%);
 }
 
 // UPLOAD FILE //////////////////////////////////////////////////////////////
 
 .file-upload::-webkit-file-upload-button {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .file-upload::before {
-    content: 'upload img';
-    color: $greenD;
-    text-decoration-line: underline;
-    display: inline-block;
-    background: white;
-    border: none;
-    outline: none;
-    white-space: nowrap;
-    -webkit-user-select: none;
-    cursor: pointer;
+  content: "upload img";
+  color: $greenD;
+  text-decoration-line: underline;
+  display: inline-block;
+  background: white;
+  border: none;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
 }
 
 .file-upload:hover::before {
-    border-color: $greenM;
+  border-color: $greenM;
 }
 
 .file-upload:active::before {
-    background: $greyL;
+  background: $greyL;
 }

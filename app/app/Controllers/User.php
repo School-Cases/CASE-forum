@@ -143,7 +143,8 @@ class User extends BaseController
     {
         $fail = array();
         if ($this->session->has('user_data')) {
-            $this->session->remove('user_data');
+            // $this->session->remove('user_data');
+            $this->session->destroy();
             array_push($fail, ['fail' => false]);
             return $this->response->setJSON($fail[0]);
         } else {
@@ -172,6 +173,27 @@ class User extends BaseController
     //     return $this->response->setJSON($res[0]);
     // }
 
+    public function user_theme_update()
+    {
+        $user_model = model('UserModel');
+
+        $json = file_get_contents('php://input');
+        $data = json_decode($json);
+
+        $user = $user_model->get_user($data->user_id);
+
+        $user[0]->theme == 0 ? $newTheme = 1 : $newTheme = 0;
+        
+        $success = $user_model->user_theme_update($data->user_id, $newTheme);
+
+        if ($success) {
+            $res = array();
+            $res['newTheme'] = $newTheme;
+            return $this->response->setJSON($res);
+        }
+
+    }
+
     public function user_update()
     {
         $user_model = model('UserModel');
@@ -180,8 +202,11 @@ class User extends BaseController
         $new_password = $_POST['new_password'];
         $file = $this->request->getFile('image');
         $user = $user_model->get_user($user_id);
+
+        // print_r("{$user[0]->image}");
+
+        $res = array();
         if ($user[0]) {
-            $res = array();
             $data = array();
             $data['user_id'] = $user_id;
             if (!$file) {
@@ -191,7 +216,7 @@ class User extends BaseController
                 $res['image_fail'] = true;
                 throw new \RuntimeException($file->getErrorString().'('.$file->getError().')');
                 } else {
-                    // unlink(WRITEPATH."../public/static/media/$user->image");
+                    unlink("../public/static/media/{$user[0]->image}");
                     // $files->removeFile(APPPATH . 'Filters/DevelopToolbar');
                     $newName = $file->getRandomName();
                     $file->move(WRITEPATH.'../public/static/media', $newName);
@@ -264,7 +289,6 @@ class User extends BaseController
         
         array_push($datadata, ['name' => $name, 'password' => $password, 'email' => $email, 'type' => $type, 'image' => $newName]);
 
-        print_r($datadata[0]);
 
         $id = $user_model->create_user($datadata[0]);
 

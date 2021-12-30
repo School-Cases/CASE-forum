@@ -1,22 +1,9 @@
-// remove pic from images when changing profilepic and deleting post/comment
+// remove pic from images when  deleting post/comment
 
 // when and what to update(fetch) when user interacts
 // sockets??
-// remove sessions
 // res messages
 // pagination
-
-// notifications?
-// ------------> post = 1. like 2. reaction 3. comment
-// --> Nya interaktioner på din post "lorem ipsum bla .."
-
-// ------------> comment = 1. like 2. reaction 3. also comment
-// --> Andra har också kommenterat på post "lorem ipsum bla .."
-// --> Nya interaktioner på din kommentar "lorem ipsum bla .."
-
-// types: 0: Nya interaktioner på din post "lorem ipsum bla .."
-// 1: Nya interaktioner på din kommentar "lorem ipsum bla .."
-// 2: Andra har också kommenterat på post "lorem ipsum bla .."
 
 import {
   useState,
@@ -28,24 +15,21 @@ import {
   createContext,
   useLayoutEffect,
 } from "react";
+
 import { Header } from "./partials/Header";
 import { Post } from "./partials/Post";
 import { WritePost } from "./partials/WritePost";
 import { Search } from "./partials/Search";
 import { Menu } from "./partials/Menu";
-import { If } from "../../utils/If";
-
-import { UserContext } from "../../App";
-
-import styled from "styled-components";
-
-import { get } from "../../utils/http";
 import { WriteComment } from "./partials/WriteComment";
 import { Notifications } from "./partials/Notifications";
+import { ChosenPost } from "./partials/ChosenPost";
 
-const StyledDiv = styled("div")`
-  background-image: url(./static/media/${(props) => props.img});
-`;
+import { If } from "../../utils/If";
+import { get, POST } from "../../utils/http";
+
+import { UserContext } from "../../App";
+import { MainHashtags } from "./partials/MainHashtags";
 
 export const ShowContext = createContext(null);
 
@@ -119,10 +103,7 @@ const reducer = (showState, action) => {
 };
 
 export const Dashboard = ({ setLoggedIn, theme, setTheme }) => {
-  const [lastPost, setLastPost] = useState(null);
-  const [nextPagePosts, setNextPagePosts] = useState([]);
   const { user } = useContext(UserContext);
-
   const [showState, dispatch] = useReducer(reducer, {
     showPosts: true,
     showMenu: false,
@@ -134,51 +115,49 @@ export const Dashboard = ({ setLoggedIn, theme, setTheme }) => {
   });
 
   const [page, setPage] = useState(0);
-  const [nextPage, setNextPage] = useState(false);
+  const [nextPageExists, setNextPageExists] = useState(false);
 
-  const [update, setUpdate] = useState(false);
+  const [posts, setPosts] = useState([]);
+  const [nextPagePosts, setNextPagePosts] = useState([]);
 
   const [chosenPost, setChosenPost] = useState(null);
 
-  const [mainHashtags, setMainHashtags] = useState([]);
-
   const [postFilter, setPostFilter] = useState("ALL");
 
-  const [posts, setPosts] = useState([]);
-  const [certainPosts, setCertainPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [smallLoading, setSmallLoading] = useState(false);
-
+  const [mainHashtags, setMainHashtags] = useState([]);
   const [notifications, setNotifications] = useState([]);
 
-  // const scroll = () => {
-  //   if (!loading && !smallLoading) {
-  //     document.querySelector(".last").scrollIntoView();
-  //   }
-  // };
+  const [loading, setLoading] = useState(true);
+  const [postsLoading, setPostsLoading] = useState(false);
+
+  const [update, setUpdate] = useState(false);
 
   const fetchCertainPosts = async (hashtag) => {
     const abortController = new AbortController();
     let res = await get(
-      `/post/get_certain_posts_data/?input=${hashtag}`,
+      `/post/get_certain_posts_data/?input=${hashtag}&page=${page}`,
       abortController.signal
     );
     console.log(res);
-    setCertainPosts(res.reverse());
-    // setLoading(false);
+    setPosts(res[0].posts);
+    if (res[1].nextPage) {
+      setNextPageExists(true);
+    } else {
+      setNextPageExists(false);
+    }
+    setPostsLoading(false);
     return () => abortController.abort();
   };
 
   const fetchPosts = async (signal) => {
     let res = await get(`/post/get_posts_data/?page=${page}`, signal);
-    console.log(res[1].nextPage);
     setPosts(res[0].posts);
     if (res[1].nextPage) {
-      setNextPage(true);
+      setNextPageExists(true);
     } else {
-      setNextPage(false);
+      setNextPageExists(false);
     }
-    setLoading(false);
+    setPostsLoading(false);
   };
 
   const fetchPagePosts = async (thePage) => {
@@ -189,24 +168,15 @@ export const Dashboard = ({ setLoggedIn, theme, setTheme }) => {
       `/post/get_posts_data/?page=${thePage}`,
       abortController.signal
     );
-    console.log(res[1].nextPage);
-    // let mergedPosts = posts.concat(res[0].posts);
-    // setPosts(res[0].posts);
-    // setPosts((prev) => {
-    //   return [...prev, res[0].posts];
-    // });
-    // console.log(mergedPosts);
-    // setPosts(mergedPosts);
+
     setNextPagePosts(res[0].posts);
 
-    console.log(posts);
     if (res[1].nextPage) {
-      setNextPage(true);
+      setNextPageExists(true);
     } else {
-      setNextPage(false);
+      setNextPageExists(false);
     }
-    // setLoading(false);
-    setSmallLoading(false);
+    setPostsLoading(false);
     return () => abortController.abort();
   };
 
@@ -241,13 +211,14 @@ export const Dashboard = ({ setLoggedIn, theme, setTheme }) => {
   useEffect(async () => {
     console.log("FETCHED ALL");
     await fetchMainData();
+    setLoading(false);
   }, [fetchMainData]);
 
   useEffect(() => {
-    if (!loading && !smallLoading) {
+    if (!loading && !postsLoading) {
       document.querySelector(".last").scrollIntoView();
     }
-  }, [smallLoading]);
+  }, [postsLoading]);
 
   // useEffect(async () => {
   //   console.log("FETCHED ALL");
@@ -265,93 +236,22 @@ export const Dashboard = ({ setLoggedIn, theme, setTheme }) => {
   return (
     <ShowContext.Provider value={{ showState, dispatch }}>
       <If condition={showState.showPosts}>
-        <header className="flex JC-SB header">
-          <StyledDiv img={user.image} className="header-user-img"></StyledDiv>
-          <div className="header-stars" onClick={() => setTheme(!theme)}></div>
-        </header>
-
-        <section>
-          <section className="top-btns flex JC-C">
-            <div
-              className="menu-btn flex"
-              onClick={() => {
-                dispatch({ type: "showMenu" });
-              }}
-            >
-              <i class="fas fa-bars"></i>
-            </div>
-            <div
-              className="write-post-btn flex"
-              onClick={() => {
-                dispatch({ type: "showWritePost" });
-              }}
-            >
-              <i class="fas fa-pencil-alt"></i>
-            </div>
-            <div
-              className="search-btn flex"
-              onClick={() => {
-                dispatch({ type: "showSearch" });
-              }}
-            >
-              <i class="fas fa-search"></i>
-            </div>
-          </section>
-        </section>
+        <Header />
 
         <section className="container">
-          <div className="flex">
-            {/* <If condition={page !== 0}>
-              <div
-                onClick={() => {
-                  setLoading(true);
-                  setPage(page - 1);
-                  fetchPagePosts(page - 1);
-                }}
-              >
-                previous page
-              </div>
-            </If> */}
-            {/* <If condition={nextPage}>
-              <div
-                onClick={() => {
-                  // setLoading(true);
-                  setSmallLoading(true);
-                  setPage(page + 1);
-                  fetchPagePosts(page + 1);
-                }}
-              >
-                next page
-              </div>
-            </If> */}
-            <div
-              className={postFilter === "ALL" ? "filter" : ""}
-              onClick={() => {
-                setPostFilter("ALL");
-                setCertainPosts([]);
-              }}
-            >
-              ALL
-            </div>
-            {mainHashtags.map((h) => {
-              return (
-                <div
-                  className={postFilter === h.content ? "filter" : ""}
-                  onClick={() => {
-                    // setLoading(true);
-                    setPostFilter(h.content);
-                    fetchCertainPosts(h.content.slice(1));
-                  }}
-                >
-                  {h.content}
-                </div>
-              );
-            })}
-          </div>
+          <MainHashtags
+            postFilter={postFilter}
+            setPostFilter={setPostFilter}
+            mainHashtags={mainHashtags}
+            fetchCertainPosts={fetchCertainPosts}
+            fetchPosts={fetchPosts}
+            setPostsLoading={setPostsLoading}
+          />
           <div
             onClick={() => {
               setLoading(true);
-              setUpdate(!update);
+              // setUpdate(!update);
+              fetchMainData();
             }}
           >
             update
@@ -363,19 +263,15 @@ export const Dashboard = ({ setLoggedIn, theme, setTheme }) => {
           >
             noti {notifications.length}
           </div>
+
           <div className="posts">
-            <If condition={smallLoading}>
+            <If condition={postsLoading}>
               <div>small load</div>
             </If>
-            <If condition={certainPosts.length < 1 && !smallLoading}>
+            <If condition={!postsLoading}>
               {posts.map((post, i) => {
-                console.log(i, posts.length);
-                // if (i + 1 === posts.length) {
-                //   setLastPost("last");
-                // }
                 return (
                   <div
-                    // className={`post${i}`}
                     className={`${i + 1 === posts.length ? "last" : ""}`}
                     onClick={(e) => {
                       if (!e.target.classList.value.includes("noshow-com")) {
@@ -383,15 +279,14 @@ export const Dashboard = ({ setLoggedIn, theme, setTheme }) => {
                         dispatch({ type: "showPostView" });
                       }
                     }}
+                    key={i}
                   >
-                    <Post key={i} post={post} chosenPost={chosenPost} />
+                    <Post post={post} fetchCertainPosts={fetchCertainPosts} />
                   </div>
                 );
               })}
-              <If condition={smallLoading}>
-                <div>small load</div>
-              </If>
-              <If condition={nextPagePosts.length > 0 && !smallLoading}>
+
+              <If condition={nextPagePosts.length > 0 && !postsLoading}>
                 {nextPagePosts.map((post, i) => {
                   return (
                     <div
@@ -402,21 +297,18 @@ export const Dashboard = ({ setLoggedIn, theme, setTheme }) => {
                           dispatch({ type: "showPostView" });
                         }
                       }}
+                      key={i}
                     >
-                      <Post key={i} post={post} chosenPost={chosenPost} />
+                      <Post post={post} fetchCertainPosts={fetchCertainPosts} />
                     </div>
                   );
                 })}
               </If>
-              <If condition={nextPage}>
+              <If condition={nextPageExists}>
                 <div
                   onClick={(e) => {
-                    console.log(e.target.offsetTop);
-                    // let scrollToY = e.target.offsetTop;
-                    // setLoading(true);
-                    setSmallLoading(true);
+                    setPostsLoading(true);
                     setPage(page + 1);
-                    // setLastPost(`post${posts.length - 1}`);
                     fetchPagePosts(page + 1);
                   }}
                 >
@@ -424,56 +316,27 @@ export const Dashboard = ({ setLoggedIn, theme, setTheme }) => {
                 </div>
               </If>
             </If>
-            <If condition={certainPosts}>
-              {certainPosts.map((post, i) => {
-                console.log(post);
-                return (
-                  <div
-                    onClick={(e) => {
-                      console.log(e.target);
-                      if (e.target.classList.value.includes("noshow-com")) {
-                        console.log("noshow");
-                      }
-                      setChosenPost(post);
-                      dispatch({ type: "showPostView" });
-                    }}
-                  >
-                    <Post
-                      key={i}
-                      post={post}
-                      chosenPost={chosenPost}
-                      user={user}
-                    />
-                  </div>
-                );
-              })}
-            </If>
           </div>
         </section>
       </If>
 
       <If condition={showState.showWritePost}>
-        <WritePost user={user} />
+        <WritePost />
       </If>
       <If condition={showState.showSearch}>
         <Search
           setPosts={setPosts}
-          setCertainPosts={setCertainPosts}
+          fetchCertainPosts={fetchCertainPosts}
           setPostFilter={setPostFilter}
         />
       </If>
       <If condition={showState.showMenu}>
-        <Menu user={user} setLoggedIn={setLoggedIn} />
+        <Menu setLoggedIn={setLoggedIn} theme={theme} setTheme={setTheme} />
       </If>
       <If condition={showState.showPostView}>
         <section className="container">
           <div className="posts">
-            <Post
-              post={chosenPost}
-              chosenPost={chosenPost}
-              setChosenPost={setChosenPost}
-              user={user}
-            />
+            <ChosenPost post={chosenPost} setChosenPost={setChosenPost} />
           </div>
         </section>
       </If>

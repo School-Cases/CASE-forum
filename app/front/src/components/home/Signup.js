@@ -1,41 +1,43 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
 
-import { get, POST, POSTFORMDATA } from "../../utils/http";
+// import { get, POST, POSTFORMDATA } from "../../utils/http";
 
-export const Signup = ({ setLoggedIn, setMainState, setPage, setUser }) => {
+export const Signup = ({ setLoggedIn, setSignup, setUser }) => {
   const [name, setName] = useState(null);
   const [email, setEmail] = useState("test@test.com");
-  const [type, setType] = useState(0);
+  const [type, setType] = useState(null);
   const [password, setPassword] = useState(null);
   const [image, setImage] = useState(null);
 
   const [resMessage, setResMessage] = useState(null);
 
   const fetchCreateUser = async () => {
-    let formData = new FormData();
-    formData.append("image", image);
-    formData.append("name", name);
-    formData.append("password", password);
-    formData.append("email", email);
-    formData.append("type", type);
+    if (name && type !== null && password) {
+      let formData = new FormData();
+      formData.append("image", image);
+      formData.append("name", name);
+      formData.append("password", password);
+      formData.append("email", email);
+      formData.append("type", type);
 
-    await fetch(`http://localhost:8080/user/create_user`, {
-      method: "POST",
-      body: formData,
-    })
-      .then((res) => res.json())
-      .then((err) => console.log(err));
-    // })
-    // .then((res) => res.json())
-    // .then((data) => console.log(data));
+      let resUser;
+      await fetch(`http://localhost:8080/user/create_user`, {
+        method: "POST",
+        body: formData,
+      })
+        .then((res) => res.json())
+        .then((data) => (resUser = data));
 
-    // if (res.fail) {
-    //   console.log("hej");
-    //   setResMessage(res.fail);
-    // } else {
-    //   setUser(res.user);
-    //   setLoggedIn(true);
-    // }
+      if (resUser.fail) {
+        console.log("failed");
+      } else {
+        console.log("success");
+        setUser(resUser);
+        setLoggedIn(true);
+      }
+    } else {
+      setResMessage("try again");
+    }
   };
 
   return (
@@ -48,7 +50,7 @@ export const Signup = ({ setLoggedIn, setMainState, setPage, setUser }) => {
         <section className="flex JC-SB heading">
           <span
             className="back-arrow login-welcome"
-            onClick={() => setMainState("login")}
+            onClick={() => setSignup(false)}
           >
             <i class="fas fa-arrow-left"></i>
           </span>
@@ -95,11 +97,11 @@ export const Signup = ({ setLoggedIn, setMainState, setPage, setUser }) => {
           <label className="login-text" htmlFor="">
             Deltagare
           </label>{" "}
-          <input type="checkbox" name="type" onClick={() => setType(0)} />
+          <input type="radio" name="type" onClick={(e) => setType(0)} />
           <label className="login-text" htmlFor="">
             Personal
           </label>{" "}
-          <input type="checkbox" name="type" onClick={() => setType(1)} />
+          <input type="radio" name="type" onClick={(e) => setType(1)} />
         </div>
 
         <div className="user-img-upload">
@@ -113,10 +115,7 @@ export const Signup = ({ setLoggedIn, setMainState, setPage, setUser }) => {
               type="file"
               src=""
               alt=""
-              onChange={(e) => {
-                console.log(e.target.files[0]);
-                setImage(e.target.files[0]);
-              }}
+              onChange={(e) => setImage(e.target.files[0])}
             />
           </section>
         </div>

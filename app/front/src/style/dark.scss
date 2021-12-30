@@ -1,8 +1,8 @@
-@import './components/colors.scss';
+@import "./components/colors.scss";
 
 .dark {
   .post-pic {
-    background-image: url(./images/Temp.jpg);
+    // background-image: url(./images/Temp.jpg);
     background-size: cover;
     border-radius: 15px;
     width: 100%;
@@ -20,15 +20,15 @@
   }
 
   .write-post-btn {
-    border: 7px solid #2A2A2A;
+    border: 7px solid #2a2a2a;
   }
 
   .fa-pencil-alt,
   .fa-bars,
   .fa-search {
-    filter: invert(6%) sepia(0%) saturate(478%) hue-rotate(216deg) brightness(63%) contrast(76%);
+    filter: invert(6%) sepia(0%) saturate(478%) hue-rotate(216deg)
+      brightness(63%) contrast(76%);
   }
-
 
   .container {
     background-image: url(./images/containerD.svg);
@@ -78,5 +78,4 @@
   .comment-content {
     color: $darkL;
   }
-
 }
