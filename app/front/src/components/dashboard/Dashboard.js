@@ -5,6 +5,8 @@
 // res messages
 // pagination
 
+// import { FiRefreshCw } from "react-icons/bs";
+
 import {
   useState,
   useEffect,
@@ -24,6 +26,8 @@ import { Menu } from "./partials/Menu";
 import { WriteComment } from "./partials/WriteComment";
 import { Notifications } from "./partials/Notifications";
 import { ChosenPost } from "./partials/ChosenPost";
+
+import { Loading } from "../animations/Loading";
 
 import { If } from "../../utils/If";
 import { get, POST } from "../../utils/http";
@@ -102,6 +106,16 @@ const reducer = (showState, action) => {
   }
 };
 
+class ClassPost {
+  constructor(comments, hashtags, post, reactions, user) {
+    this.comments = comments;
+    this.hashtags = hashtags;
+    this.post = post;
+    this.reactions = reactions;
+    this.user = user;
+  }
+}
+
 export const Dashboard = ({ setLoggedIn, theme, setTheme }) => {
   const { user } = useContext(UserContext);
   const [showState, dispatch] = useReducer(reducer, {
@@ -122,15 +136,17 @@ export const Dashboard = ({ setLoggedIn, theme, setTheme }) => {
 
   const [chosenPost, setChosenPost] = useState(null);
 
-  const [postFilter, setPostFilter] = useState("ALL");
+  const [postFilter, setPostFilter] = useState(null);
 
-  const [mainHashtags, setMainHashtags] = useState([]);
+  // const [mainHashtags, setMainHashtags] = useState([]);
   const [notifications, setNotifications] = useState([]);
 
   const [loading, setLoading] = useState(true);
   const [postsLoading, setPostsLoading] = useState(false);
 
   const [update, setUpdate] = useState(false);
+
+  const [load2, setLoad2] = useState(false);
 
   const fetchCertainPosts = async (hashtag) => {
     const abortController = new AbortController();
@@ -152,6 +168,21 @@ export const Dashboard = ({ setLoggedIn, theme, setTheme }) => {
   const fetchPosts = async (signal) => {
     let res = await get(`/post/get_posts_data/?page=${page}`, signal);
     setPosts(res[0].posts);
+    console.log("posts", res[0].posts);
+    // let arr = [];
+    // res[0].posts.map((p, i) => {
+    //   console.log(p);
+    //   let haha = new ClassPost(
+    //     p.comments,
+    //     p.hashtags,
+    //     p.post,
+    //     p.reactions,
+    //     p.user
+    //   );
+    //   console.log(haha);
+    //   arr.push(haha);
+    // });
+    // setPosts(arr);
     if (res[1].nextPage) {
       setNextPageExists(true);
     } else {
@@ -176,19 +207,20 @@ export const Dashboard = ({ setLoggedIn, theme, setTheme }) => {
     } else {
       setNextPageExists(false);
     }
-    setPostsLoading(false);
+    // setPostsLoading(false);
+    setLoad2(false);
     return () => abortController.abort();
   };
 
-  const fetchMainHashtags = async (signal) => {
-    let res = await get(
-      `/hashtag/get_user_main_hashtags/?user_id=${user.user_id}`,
-      signal
-    );
-    console.log(res);
-    setMainHashtags(res.main_hashtags);
-    // setLoading(false);
-  };
+  // const fetchMainHashtags = async (signal) => {
+  //   let res = await get(
+  //     `/hashtag/get_user_main_hashtags/?user_id=${user.user_id}`,
+  //     signal
+  //   );
+  //   console.log(res);
+  //   setMainHashtags(res.main_hashtags);
+  //   // setLoading(false);
+  // };
 
   const fetchNotifications = async (signal) => {
     let res = await get(
@@ -202,23 +234,29 @@ export const Dashboard = ({ setLoggedIn, theme, setTheme }) => {
 
   const fetchMainData = useCallback(async () => {
     const abortController = new AbortController();
-    await fetchMainHashtags(abortController.signal);
+    // await fetchMainHashtags(abortController.signal);
     await fetchNotifications(abortController.signal);
     await fetchPosts(abortController.signal);
+    setLoading(false);
     return () => abortController.abort();
   }, []);
 
   useEffect(async () => {
     console.log("FETCHED ALL");
     await fetchMainData();
-    setLoading(false);
   }, [fetchMainData]);
 
-  useEffect(() => {
+  // useEffect(() => {
+  //   if (!loading && !postsLoading) {
+  //     document.querySelector(".last").scrollIntoView();
+  //   }
+  // }, [postsLoading]);
+
+  const scroll = useCallback(async () => {
     if (!loading && !postsLoading) {
       document.querySelector(".last").scrollIntoView();
     }
-  }, [postsLoading]);
+  }, [fetchPagePosts]);
 
   // useEffect(async () => {
   //   console.log("FETCHED ALL");
@@ -230,67 +268,68 @@ export const Dashboard = ({ setLoggedIn, theme, setTheme }) => {
   // }, [update]);
 
   if (loading) {
-    return <h3>loading ..</h3>;
+    // return <h3>loading ..</h3>;
+    return <Loading color={"white"} />;
   }
 
   return (
     <ShowContext.Provider value={{ showState, dispatch }}>
       <If condition={showState.showPosts}>
-        <Header />
+        <Header notiAmount={notifications.length} />
 
         <section className="container">
-          <MainHashtags
-            postFilter={postFilter}
-            setPostFilter={setPostFilter}
-            mainHashtags={mainHashtags}
-            fetchCertainPosts={fetchCertainPosts}
-            fetchPosts={fetchPosts}
-            setPostsLoading={setPostsLoading}
-          />
-          <div
-            onClick={() => {
-              setLoading(true);
-              // setUpdate(!update);
-              fetchMainData();
-            }}
-          >
-            update
+          <div className="flex JC-SB pad-1 con-top">
+            <div className="flex FW-wrap hashtags-filter">
+              {/* <MainHashtags
+                postFilter={postFilter}
+                setPostFilter={setPostFilter}
+                mainHashtags={mainHashtags}
+                fetchCertainPosts={fetchCertainPosts}
+                fetchPosts={fetchPosts}
+                setPostsLoading={setPostsLoading}
+              /> */}
+              <If condition={postFilter}>
+                <div className="hashtag-filter">
+                  {postFilter}{" "}
+                  <span
+                    className="filter-delete"
+                    onClick={() => {
+                      setPostsLoading(true);
+                      const abortController = new AbortController();
+                      setPostFilter(null);
+                      fetchPosts(abortController.signal);
+                      return () => abortController.abort();
+                    }}
+                  >
+                    <i class="fas fa-times"></i>
+                  </span>
+                </div>
+              </If>
+            </div>
+            <div
+              onClick={() => {
+                setLoading(true);
+                // setUpdate(!update);
+                fetchMainData();
+              }}
+            >
+              <i class="fas fa-redo"></i>
+            </div>
           </div>
-          <div
-            onClick={() => {
-              dispatch({ type: "showNotifications" });
-            }}
-          >
-            noti {notifications.length}
-          </div>
-
           <div className="posts">
             <If condition={postsLoading}>
-              <div>small load</div>
+              <Loading color={"green"} />
             </If>
             <If condition={!postsLoading}>
+              <div className="gade"></div>
               {posts.map((post, i) => {
                 return (
-                  <div
-                    className={`${i + 1 === posts.length ? "last" : ""}`}
-                    onClick={(e) => {
-                      if (!e.target.classList.value.includes("noshow-com")) {
-                        setChosenPost(post);
-                        dispatch({ type: "showPostView" });
-                      }
-                    }}
-                    key={i}
-                  >
-                    <Post post={post} fetchCertainPosts={fetchCertainPosts} />
-                  </div>
-                );
-              })}
-
-              <If condition={nextPagePosts.length > 0 && !postsLoading}>
-                {nextPagePosts.map((post, i) => {
-                  return (
+                  <>
+                    <hr />
                     <div
-                      className={`post${i}`}
+                      className={`pad-1 ${
+                        i + 1 === posts.length ? "last" : ""
+                      }`}
                       onClick={(e) => {
                         if (!e.target.classList.value.includes("noshow-com")) {
                           setChosenPost(post);
@@ -299,22 +338,95 @@ export const Dashboard = ({ setLoggedIn, theme, setTheme }) => {
                       }}
                       key={i}
                     >
-                      <Post post={post} fetchCertainPosts={fetchCertainPosts} />
+                      <Post
+                        posts={posts}
+                        setPosts={setPosts}
+                        post={post}
+                        fetchCertainPosts={fetchCertainPosts}
+                        setPostFilter={setPostFilter}
+                      />
+                    </div>
+                    <If condition={i === posts.length - 1}>
+                      <hr />
+                    </If>
+                  </>
+                );
+              })}
+
+              <If condition={nextPagePosts.length > 0}>
+                {nextPagePosts.map((post, i) => {
+                  return (
+                    <div
+                      className={`pad-1 post${i}`}
+                      onClick={(e) => {
+                        if (!e.target.classList.value.includes("noshow-com")) {
+                          setChosenPost(post);
+                          dispatch({ type: "showPostView" });
+                        }
+                      }}
+                      key={i}
+                    >
+                      <Post
+                        posts={posts}
+                        setPosts={setPosts}
+                        post={post}
+                        fetchCertainPosts={fetchCertainPosts}
+                        setPostFilter={setPostFilter}
+                      />
                     </div>
                   );
                 })}
               </If>
+
+              <If condition={nextPageExists && !load2}>
+                <div
+                  className="pad-1"
+                  onClick={(e) => {
+                    setLoad2(true);
+                    setPage(page + 1);
+                    fetchPagePosts(page + 1);
+                  }}
+                >
+                  Visa fler
+                </div>
+              </If>
+
+              {/* <If condition={nextPagePosts.length > 0 && !postsLoading}>
+                {nextPagePosts.map((post, i) => {
+                  return (
+                    <div
+                      className={`pad-1 post${i}`}
+                      onClick={(e) => {
+                        if (!e.target.classList.value.includes("noshow-com")) {
+                          setChosenPost(post);
+                          dispatch({ type: "showPostView" });
+                        }
+                      }}
+                      key={i}
+                    >
+                      <Post
+                        posts={posts}
+                        setPosts={setPosts}
+                        post={post}
+                        fetchCertainPosts={fetchCertainPosts}
+                      />
+                    </div>
+                  );
+                })}
+              </If>
+
               <If condition={nextPageExists}>
                 <div
+                  className="pad-1"
                   onClick={(e) => {
                     setPostsLoading(true);
                     setPage(page + 1);
                     fetchPagePosts(page + 1);
                   }}
                 >
-                  next page
+                  Visa fler
                 </div>
-              </If>
+              </If> */}
             </If>
           </div>
         </section>
@@ -325,9 +437,10 @@ export const Dashboard = ({ setLoggedIn, theme, setTheme }) => {
       </If>
       <If condition={showState.showSearch}>
         <Search
-          setPosts={setPosts}
+          // setPosts={setPosts}
           fetchCertainPosts={fetchCertainPosts}
           setPostFilter={setPostFilter}
+          setPostsLoading={setPostsLoading}
         />
       </If>
       <If condition={showState.showMenu}>
@@ -336,7 +449,12 @@ export const Dashboard = ({ setLoggedIn, theme, setTheme }) => {
       <If condition={showState.showPostView}>
         <section className="container">
           <div className="posts">
-            <ChosenPost post={chosenPost} setChosenPost={setChosenPost} />
+            <ChosenPost
+              posts={posts}
+              setPosts={setPosts}
+              post={chosenPost}
+              setChosenPost={setChosenPost}
+            />
           </div>
         </section>
       </If>

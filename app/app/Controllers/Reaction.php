@@ -57,8 +57,9 @@ class Reaction extends BaseController
                         $user_hashtag_updated_int = $hashtag_model->update_user_hashtag_interactions($hashtag->hashtag_id, $data->user_id);
                     };
                 }
-            
-            return $this->response->setJSON($result);
+
+            $reaction = $reaction_model->get_reaction($result);
+            return $this->response->setJSON($reaction);
         } 
     }
 

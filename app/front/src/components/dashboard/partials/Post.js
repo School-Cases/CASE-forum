@@ -1,41 +1,44 @@
-import { useCallback, useContext, useEffect, useState } from "react";
+import { useCallback, useContext, useState } from "react";
+
+import { ReactionsPopup } from "./ReactionsPopup";
 
 import { If } from "../../../utils/If";
-
 import { POST, get } from "../../../utils/http";
 import { checkYear } from "../../../utils/checkYear";
-
-import { WriteComment } from "./WriteComment";
+import { getDateAndTime } from "../../../utils/getDate&Time";
 
 import { ShowContext } from "../Dashboard";
 import { UserContext } from "../../../App";
 
 import styled from "styled-components";
-import { ReactionsPopup } from "./ReactionsPopup";
-import { GoBack } from "./GoBack";
-import { getDateAndTime } from "../../../utils/getDate&Time";
+import { Like } from "../../animations/Like";
 const StyledDiv = styled("div")`
   background-image: url(./static/media/${(props) => props.img});
 `;
 
 export const Post = ({
+  posts,
+  setPosts,
   fetchCertainPosts,
   post,
-  chosenPost,
-  setChosenPost,
+  setPostFilter,
 }) => {
-  console.log(post.post.user_id);
   const { dispatch } = useContext(ShowContext);
   const { user } = useContext(UserContext);
-
-  let postLikes = post.reactions.filter((l) => l.type === "0" && l.post_id);
-  let postReactions = post.reactions.filter((l) => l.type === "1" && l.post_id);
 
   const [showReactions, setShowReactions] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  const [likeAni, setLikeAni] = useState(false);
+
+  const [postLikes, setPostLikes] = useState(
+    post.reactions.filter((l) => l.type === "0" && l.post_id)
+  );
+
+  // let postLikes = post.reactions.filter((l) => l.type === "0" && l.post_id);
+  let postReactions = post.reactions.filter((l) => l.type === "1" && l.post_id);
+
   const fetchLikePost = async (type, reaction) => {
-    console.log(reaction);
     let res = await POST(`/reaction/create_reaction`, {
       post_id: post.post.post_id,
       user_id: user.user_id,
@@ -44,9 +47,16 @@ export const Post = ({
       reaction: reaction,
       hashtags: post.hashtags,
     });
-    console.log(res);
 
-    // if (post.post.user_id !== user.user_id) {
+    let corr = posts.map((p) => {
+      if (p.post.post_id === post.post.post_id) {
+        return { ...p, reactions: [...p.reactions, res[0]] };
+      } else {
+        return p;
+      }
+    });
+    setPosts(corr);
+
     let notiRes = await POST(`/notification/create_notification`, {
       time: getDateAndTime(),
       post_id: post.post.post_id,
@@ -58,7 +68,6 @@ export const Post = ({
     });
     console.log(notiRes);
   };
-  // }
 
   const fetchDeletePost = async () => {
     const abortController = new AbortController();
@@ -70,27 +79,13 @@ export const Post = ({
     return () => abortController.abort();
   };
 
-  // const fetchCertainHashtags = async (hashtag) => {
-  //   const abortController = new AbortController();
-  //   let res = await get(
-  //     `/hashtags/get_certain_hashtags/?hashtag=${hashtag}`,
-  //     abortController.signal
-  //   );
-  //   console.log(res);
-  //   return () => abortController.abort();
-  // };
-
-  // const fetchCertainPosts = async (hashtag) => {
-  //   const abortController = new AbortController();
-  //   let res = await get(
-  //     `/post/get_certain_posts_data/?input=${hashtag}`,
-  //     abortController.signal
-  //   );
-  //   console.log(res);
-  //   setCertainPosts(res);
-  //   // setLoading(false);
-  //   return () => abortController.abort();
-  // };
+  // const theLikeAni = useCallback(() => {
+  //   setLikeAni(true);
+  //   setTimeout(() => {
+  //     setLikeAni(false);
+  //   }, [1000]);
+  // }, [likeAni]);
+  console.log(postLikes);
 
   if (loading) {
     return <h3>loading ..</h3>;
@@ -98,32 +93,9 @@ export const Post = ({
 
   return (
     <>
-      <If condition={chosenPost}>
-        <div
-          onClick={() => {
-            setChosenPost(null);
-            // dispatch({ type: "showPosts" });
-          }}
-        >
-          <GoBack show={"showPosts"} />
-        </div>
-      </If>
-      <section
-        className="flex single-post"
-        onClick={(e) => {
-          // if (!e.target.classList.value.includes("noshow-com")) {
-          //   setShowComments(!showComments);
-          // }
-        }}
-      >
+      <section className="flex single-post">
         <div className="author-img-container">
           <StyledDiv img={post.user.image} className="author-img"></StyledDiv>
-          <If condition={chosenPost && post.comments.length > 0}>
-            <div className="comment-line">
-              <div className="line"></div>
-              <div className="corner"></div>
-            </div>
-          </If>
         </div>
 
         <div className="w100">
@@ -145,26 +117,36 @@ export const Post = ({
                   delete
                 </div>
               </If>
-              <If
-                condition={
-                  !postLikes.some((l) => l.user_id === user.user_id) &&
-                  post.post.user_id !== user.user_id
-                }
-              >
-                <span
-                  className="noshow-com"
-                  onClick={() => {
-                    fetchLikePost(0, 0);
-                  }}
-                >
-                  LIKEIT
-                </span>
-              </If>
-
               <span className="noshow-com likes-number">
                 {postLikes.length}
               </span>
-              <span className="noshow-com likes-svg"></span>
+              <span
+                className={`noshow-com like`}
+                onClick={(e) => {
+                  console.log(e.target);
+                  if (
+                    !postLikes.some((l) => l.user_id === user.user_id) &&
+                    post.post.user_id !== user.user_id
+                  ) {
+                    setPostLikes((prev) => {
+                      return [...prev, { user_id: user.user_id }];
+                    });
+                    fetchLikePost(0, 0);
+                    e.target.closest(".like").classList.add("like-ani");
+                    setTimeout(() => {
+                      e.target.closest(".like").classList.remove("like-ani");
+                    }, [2000]);
+                  }
+                }}
+              >
+                <Like
+                  likeable={
+                    !postLikes.some((l) => l.user_id === user.user_id) &&
+                    post.post.user_id !== user.user_id
+                  }
+                  liked={postLikes.some((l) => l.user_id === user.user_id)}
+                />
+              </span>
             </div>
           </div>
 
@@ -173,7 +155,6 @@ export const Post = ({
             <p className="post-text-content">{post.post.text}</p>
 
             {/* bild */}
-            {/* <div className="post-pic"></div> */}
             <If condition={post.post.image}>
               <StyledDiv img={post.post.image} className="post-pic"></StyledDiv>
             </If>
@@ -184,7 +165,10 @@ export const Post = ({
               {post.hashtags.map((h) => {
                 return (
                   <span
-                    onClick={() => fetchCertainPosts(h.content.slice(1))}
+                    onClick={() => {
+                      setPostFilter(h.content);
+                      fetchCertainPosts(h.content.slice(1));
+                    }}
                     className={`noshow-com post-hashtag ${
                       h.searched ? "searched" : ""
                     }`}
@@ -196,12 +180,10 @@ export const Post = ({
             </div>
 
             <div className="flex">
-              <If condition={!chosenPost}>
-                <span className="noshow-com">
-                  <i class="fas fa-comment"></i>
-                </span>
-                <span className="comment-number">{post.comments.length}</span>
-              </If>
+              <span className="noshow-com">
+                <i class="fas fa-comment"></i>
+              </span>
+              <span className="comment-number">{post.comments.length}</span>
               <span
                 className="noshow-com"
                 onClick={() => {
@@ -224,219 +206,6 @@ export const Post = ({
           </div>
         </div>
       </section>
-
-      {/* comment */}
-      {/* <If condition={showComments}> */}
-      <If condition={chosenPost}>
-        {post.comments.map((c, i) => {
-          console.log(c);
-          return (
-            <Comment
-              user={user}
-              comment={c}
-              index={i}
-              length={post.comments.length - 1}
-              postHashtags={post.hashtags}
-            />
-          );
-        })}
-      </If>
-
-      <If condition={chosenPost}>
-        <div
-          onClick={() => {
-            // setCommentPost_id(post.post.post_id);
-            // setShowPostView(false);
-            // setShowWriteComment(true);
-            dispatch({ type: "showWriteComment" });
-          }}
-        >
-          comment
-        </div>
-      </If>
     </>
-  );
-};
-
-const Comment = ({ user, comment, index, length, postHashtags }) => {
-  // console.log(comment);
-  // console.log(index);
-  // console.log(length);
-
-  const [showReactions, setShowReactions] = useState(false);
-
-  let commentLikes = comment.reactions.filter(
-    (l) => l.type === "0" && l.comment_id
-  );
-  let commentReactions = comment.reactions.filter(
-    (l) => l.type === "1" && l.comment_id
-  );
-
-  const fetchLikeComment = async (type, reaction) => {
-    let res = await POST(`/reaction/create_reaction`, {
-      post_id: "null",
-      user_id: user.user_id,
-      type: type,
-      reaction: reaction,
-      comment_id: comment.comment_id,
-      hashtags: [],
-    });
-    console.log(res);
-
-    let notiRes = await POST(`/notification/create_notification`, {
-      time: getDateAndTime(),
-      post_id: "null",
-      comment_id: comment.comment_id,
-      type: 1,
-      notiUsers: [comment.user_id],
-      origin: comment.post_id,
-      post_user: false,
-    });
-
-    console.log(notiRes);
-  };
-
-  const fetchDeleteComment = async () => {
-    const abortController = new AbortController();
-    let res = await get(
-      `/comment/delete_comment/?id=${comment.comment_id}`,
-      abortController.signal
-    );
-    console.log(res);
-    return () => abortController.abort();
-  };
-
-  return (
-    <section className={`flex comment-container`}>
-      <div className="comment-img-container">
-        <StyledDiv
-          img={comment.image}
-          className="commentator-user-img"
-        ></StyledDiv>
-        <If condition={index !== length}>
-          <div className="comment-line">
-            <div className="line"> </div>
-          </div>
-        </If>
-      </div>
-
-      <div className="w100">
-        <div className="flex JC-SB comment-top">
-          <div>
-            <span className="commentator-username">{comment.name}</span>
-            <span className="comment-timestamp">{checkYear(comment.time)}</span>
-          </div>
-
-          <div className="flex noshow-com likes">
-            <If condition={comment.user_id === user.user_id}>
-              <div
-                onClick={() => {
-                  fetchDeleteComment();
-                }}
-              >
-                delete
-              </div>
-            </If>
-            <If
-              condition={
-                !commentLikes.some((l) => l.user_id === user.user_id) &&
-                comment.user_id !== user.user_id
-              }
-            >
-              <span
-                className="noshow-com"
-                onClick={() => {
-                  fetchLikeComment(0, 0);
-                }}
-              >
-                LIKEIT
-              </span>
-            </If>
-
-            <span className="noshow-com likes-number">
-              {commentLikes.length}
-            </span>
-            <span className="noshow-com likes-svg"></span>
-          </div>
-        </div>
-
-        <div className="comment-content">
-          <p>{comment.text}</p>
-          <If condition={comment.comment_image}>
-            <StyledDiv
-              img={comment.comment_image}
-              className="post-pic"
-            ></StyledDiv>
-          </If>
-        </div>
-
-        <div className="flex JC-E comment-bot">
-          <span
-            onClick={() => {
-              if (comment.user_id !== user.user_id)
-                setShowReactions(!showReactions);
-            }}
-          >
-            <i class="fas fa-smile"></i>
-          </span>
-          <span className="reaction-number">
-            {commentReactions.length}
-            <If condition={showReactions}>
-              <ReactionsPopup
-                reactions={commentReactions}
-                fetchLike={fetchLikeComment}
-              />
-              {/* <div className="flex reactions">
-                <span
-                  className="flex noshow-com"
-                  onClick={() => {
-                    if (
-                      !commentReactions.some((r) => r.user_id === user.user_id)
-                    ) {
-                      fetchLikeComment(1, 0);
-                    }
-                  }}
-                >
-                  <span className="noshow-com">:D</span>
-                  <span className="noshow-com">
-                    {commentReactions.filter((r) => r.reaction === "0").length}
-                  </span>
-                </span>
-                <span
-                  className="flex noshow-com"
-                  onClick={() => {
-                    if (
-                      !commentReactions.some((r) => r.user_id === user.user_id)
-                    ) {
-                      fetchLikeComment(1, 1);
-                    }
-                  }}
-                >
-                  <span className="noshow-com">:*</span>
-                  <span className="noshow-com">
-                    {commentReactions.filter((r) => r.reaction === "1").length}
-                  </span>
-                </span>
-                <span
-                  className="flex noshow-com"
-                  onClick={() => {
-                    if (
-                      !commentReactions.some((r) => r.user_id === user.user_id)
-                    ) {
-                      fetchLikeComment(1, 2);
-                    }
-                  }}
-                >
-                  <span className="noshow-com">:)</span>
-                  <span className="noshow-com">
-                    {commentReactions.filter((r) => r.reaction === "2").length}
-                  </span>
-                </span>
-              </div> */}
-            </If>
-          </span>
-        </div>
-      </div>
-    </section>
   );
 };

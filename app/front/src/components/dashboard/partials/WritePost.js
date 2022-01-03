@@ -102,8 +102,6 @@ export const WritePost = () => {
                 setImage(e.target.files[0]);
               }}
             />
-
-            <div></div>
           </div>
 
           <div className="flex send-container">
@@ -115,7 +113,6 @@ export const WritePost = () => {
           <section className="flex">
             <div
               onClick={(e) => {
-                console.log(hashtags);
                 if (!hashtags.includes(e.target.textContent)) {
                   setHashtags((prev) => {
                     return [...prev, e.target.textContent];

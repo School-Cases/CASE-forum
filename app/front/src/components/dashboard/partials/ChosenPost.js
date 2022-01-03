@@ -10,6 +10,8 @@ import { WriteComment } from "./WriteComment";
 import { ShowContext } from "../Dashboard";
 import { UserContext } from "../../../App";
 
+import { Like } from "../../animations/Like";
+
 import styled from "styled-components";
 import { ReactionsPopup } from "./ReactionsPopup";
 import { GoBack } from "./GoBack";
@@ -18,12 +20,15 @@ const StyledDiv = styled("div")`
   background-image: url(./static/media/${(props) => props.img});
 `;
 
-export const ChosenPost = ({ post, setChosenPost }) => {
+export const ChosenPost = ({ posts, setPosts, post, setChosenPost }) => {
   console.log(post.post.user_id);
   const { dispatch } = useContext(ShowContext);
   const { user } = useContext(UserContext);
 
-  let postLikes = post.reactions.filter((l) => l.type === "0" && l.post_id);
+  const [postLikes, setPostLikes] = useState(
+    post.reactions.filter((l) => l.type === "0" && l.post_id)
+  );
+  // let postLikes = post.reactions.filter((l) => l.type === "0" && l.post_id);
   let postReactions = post.reactions.filter((l) => l.type === "1" && l.post_id);
 
   const [showReactions, setShowReactions] = useState(false);
@@ -39,7 +44,14 @@ export const ChosenPost = ({ post, setChosenPost }) => {
       reaction: reaction,
       hashtags: post.hashtags,
     });
-    console.log(res);
+    let corr = posts.map((p) => {
+      if (p.post.post_id === post.post.post_id) {
+        return { ...p, reactions: [...p.reactions, res[0]] };
+      } else {
+        return p;
+      }
+    });
+    setPosts(corr);
 
     // if (post.post.user_id !== user.user_id) {
     let notiRes = await POST(`/notification/create_notification`, {
@@ -126,7 +138,7 @@ export const ChosenPost = ({ post, setChosenPost }) => {
                   delete
                 </div>
               </If>
-              <If
+              {/* <If
                 condition={
                   !postLikes.some((l) => l.user_id === user.user_id) &&
                   post.post.user_id !== user.user_id
@@ -140,12 +152,41 @@ export const ChosenPost = ({ post, setChosenPost }) => {
                 >
                   LIKEIT
                 </span>
-              </If>
+              </If> */}
 
               <span className="noshow-com likes-number">
                 {postLikes.length}
               </span>
-              <span className="noshow-com likes-svg"></span>
+
+              <span
+                className={`noshow-com like`}
+                onClick={(e) => {
+                  console.log(e.target);
+                  if (
+                    !postLikes.some((l) => l.user_id === user.user_id) &&
+                    post.post.user_id !== user.user_id
+                  ) {
+                    setPostLikes((prev) => {
+                      return [...prev, { user_id: user.user_id }];
+                    });
+                    fetchLikePost(0, 0);
+                    e.target.closest(".like").classList.add("like-ani");
+                    setTimeout(() => {
+                      e.target.closest(".like").classList.remove("like-ani");
+                    }, [2000]);
+                  }
+                }}
+              >
+                <Like
+                  likeable={
+                    !postLikes.some((l) => l.user_id === user.user_id) &&
+                    post.post.user_id !== user.user_id
+                  }
+                  liked={postLikes.some((l) => l.user_id === user.user_id)}
+                />
+              </span>
+
+              {/* <span className="noshow-com likes-svg"></span> */}
             </div>
           </div>
 
@@ -211,6 +252,9 @@ export const ChosenPost = ({ post, setChosenPost }) => {
             index={i}
             length={post.comments.length - 1}
             postHashtags={post.hashtags}
+            posts={posts}
+            setPosts={setPosts}
+            post={post}
           />
         );
       })}
@@ -229,12 +273,26 @@ export const ChosenPost = ({ post, setChosenPost }) => {
   );
 };
 
-const Comment = ({ user, comment, index, length, postHashtags }) => {
+const Comment = ({
+  user,
+  comment,
+  index,
+  length,
+  postHashtags,
+  posts,
+  setPosts,
+  post,
+}) => {
   const [showReactions, setShowReactions] = useState(false);
 
-  let commentLikes = comment.reactions.filter(
-    (l) => l.type === "0" && l.comment_id
+  const [commentLikes, setCommentLikes] = useState(
+    comment.reactions.filter((l) => l.type === "0" && l.comment_id)
   );
+  console.log(comment.reactions.filter((l) => l.type === "0" && l.comment_id));
+
+  // let commentLikes = comment.reactions.filter(
+  //   (l) => l.type === "0" && l.comment_id
+  // );
   let commentReactions = comment.reactions.filter(
     (l) => l.type === "1" && l.comment_id
   );
@@ -248,7 +306,26 @@ const Comment = ({ user, comment, index, length, postHashtags }) => {
       comment_id: comment.comment_id,
       hashtags: [],
     });
-    console.log(res);
+    console.log(res[0]);
+    // 35
+
+    let corr = posts.map((p) => {
+      let corr2 = p.comments.map((c) => {
+        if (c.comment_id === comment.comment_id) {
+          console.log(c.reactions, "correct");
+          return { ...c, reactions: [...c.reactions, res[0]] };
+        } else {
+          return c;
+        }
+      });
+      p.comments = corr2;
+      return p;
+    });
+    console.log(corr);
+    // setCommentLikes((prev) => {
+    //   return [...prev, res[0]];
+    // });
+    setPosts(corr);
 
     let notiRes = await POST(`/notification/create_notification`, {
       time: getDateAndTime(),
@@ -304,7 +381,36 @@ const Comment = ({ user, comment, index, length, postHashtags }) => {
                 delete
               </div>
             </If>
-            <If
+            <span className="noshow-com likes-number">
+              {commentLikes.length}
+            </span>
+            <span
+              className={`noshow-com like`}
+              onClick={(e) => {
+                if (
+                  !commentLikes.some((l) => l.user_id === user.user_id) &&
+                  comment.user_id !== user.user_id
+                ) {
+                  setCommentLikes((prev) => {
+                    return [...prev, { user_id: user.user_id }];
+                  });
+                  fetchLikeComment(0, 0);
+                  e.target.closest(".like").classList.add("like-ani");
+                  setTimeout(() => {
+                    e.target.closest(".like").classList.remove("like-ani");
+                  }, [2000]);
+                }
+              }}
+            >
+              <Like
+                likeable={
+                  !commentLikes.some((l) => l.user_id === user.user_id) &&
+                  comment.user_id !== user.user_id
+                }
+                liked={commentLikes.some((l) => l.user_id === user.user_id)}
+              />
+            </span>
+            {/* <If
               condition={
                 !commentLikes.some((l) => l.user_id === user.user_id) &&
                 comment.user_id !== user.user_id
@@ -318,12 +424,9 @@ const Comment = ({ user, comment, index, length, postHashtags }) => {
               >
                 LIKEIT
               </span>
-            </If>
+            </If> */}
 
-            <span className="noshow-com likes-number">
-              {commentLikes.length}
-            </span>
-            <span className="noshow-com likes-svg"></span>
+            {/* <span className="noshow-com likes-svg"></span> */}
           </div>
         </div>
 

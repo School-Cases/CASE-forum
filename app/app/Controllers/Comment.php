@@ -148,6 +148,7 @@ class Comment extends BaseController
                     };
                 }
             }
+            
             return $this->response->setJSON($result);
         } 
 

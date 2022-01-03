@@ -13,6 +13,12 @@ class ReactionModel extends Model
         $this->db = db_connect();
     }
 
+    public function get_reaction($id)
+    {
+        $query = $this->db->query("SELECT * FROM reaction WHERE reaction_id = $id");
+        return $query->getResult();
+    }
+
     public function get_all_reactions()
     {
         $query = $this->db->query('SELECT * FROM reaction');

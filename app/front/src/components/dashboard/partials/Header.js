@@ -10,14 +10,24 @@ const StyledDiv = styled("div")`
   background-image: url(./static/media/${(props) => props.img});
 `;
 
-export const Header = () => {
+export const Header = ({ notiAmount }) => {
   const { dispatch } = useContext(ShowContext);
   const { user } = useContext(UserContext);
 
   return (
     <>
       <header className="flex JC-SB header">
-        <StyledDiv img={user.image} className="header-user-img"></StyledDiv>
+        <StyledDiv img={user.image} className=" header-user-img">
+          <div
+            className="flex notis"
+            onClick={() => {
+              console.log("pressing");
+              dispatch({ type: "showNotifications" });
+            }}
+          >
+            <div>{notiAmount}</div>
+          </div>
+        </StyledDiv>
         <div className="header-stars"></div>
       </header>
 

@@ -39,6 +39,10 @@
     .likes,
     .likes-svg {
       color: $greenD;
+
+      &.liked {
+        color: $orange;
+      }
     }
 
     .post-timestamp {

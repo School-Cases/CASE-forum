@@ -12,6 +12,11 @@ class CommentModel extends Model
     {
         $this->db = db_connect();
     }
+    public function get_comment($id)
+    {
+        $query = $this->db->query("SELECT * FROM comment WHERE comment_id = $id");
+        return $query->getResult();
+    }
 
     public function get_all_comments()
     {

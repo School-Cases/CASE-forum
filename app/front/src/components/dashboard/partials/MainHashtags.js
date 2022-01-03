@@ -13,8 +13,8 @@ export const MainHashtags = ({
 }) => {
   const { dispatch } = useContext(ShowContext);
   return (
-    <div className="flex">
-      <div
+    <>
+      {/* <div
         className={postFilter === "ALL" ? "filter" : ""}
         onClick={async () => {
           dispatch({ type: "showPosts" });
@@ -27,23 +27,32 @@ export const MainHashtags = ({
         }}
       >
         ALL
-      </div>
+      </div> */}
       {mainHashtags.map((h) => {
         return (
           <div
-            className={postFilter === h.content ? "filter" : ""}
+            className={`main-hashtag ${
+              postFilter === h.content ? "filter" : ""
+            }`}
             onClick={() => {
               // setLoading(true);
               dispatch({ type: "showPosts" });
               setPostsLoading(true);
-              setPostFilter(h.content);
-              fetchCertainPosts(h.content.slice(1));
+              if (postFilter) {
+                const abortController = new AbortController();
+                fetchPosts(abortController.signal);
+                return () => abortController.abort();
+              } else {
+                fetchCertainPosts(h.content.slice(1));
+              }
+
+              setPostFilter(postFilter === null ? h.content : null);
             }}
           >
             {h.content}
           </div>
         );
       })}
-    </div>
+    </>
   );
 };

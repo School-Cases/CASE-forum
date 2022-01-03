@@ -1,5 +1,7 @@
 import { useState, useEffect, useCallback, useContext } from "react";
 
+import { GoBack } from "./GoBack";
+
 import { get, POST } from "../../../utils/http";
 import { If } from "../../../utils/If";
 import { getDateAndTime } from "../../../utils/getDate&Time";
@@ -8,7 +10,6 @@ import { ShowContext } from "../Dashboard";
 import { UserContext } from "../../../App";
 
 export const WriteComment = ({ chosenPost }) => {
-  console.log(chosenPost);
   const { dispatch } = useContext(ShowContext);
   const { user } = useContext(UserContext);
 
@@ -72,18 +73,21 @@ export const WriteComment = ({ chosenPost }) => {
 
     await fetch(`http://localhost:8080/comment/create_comment`, {
       method: "POST",
-
       body: formData,
     });
 
     let arr = [];
-    if (chosenPost.comments.length < 1) {
+    if (
+      chosenPost.comments.length < 1 &&
+      user.user_id !== chosenPost.user.user_id
+    ) {
       arr.push(chosenPost.user.user_id);
     } else {
       chosenPost.comments.map((c) => {
         if (
           c.user_id !== user.user_id &&
           !arr.includes(c.user_id)
+          // && user.user_id !== chosenPost.user.user_id
           // &&
           // c.user_id !== chosenPost.user.user_id
         ) {
@@ -91,15 +95,14 @@ export const WriteComment = ({ chosenPost }) => {
         }
       });
     }
-
-    console.log(arr);
+    let notiArr = arr.filter((n) => n !== user.user_id);
 
     let notiRes = await POST(`/notification/create_notification`, {
       time: getDateAndTime(),
       post_id: chosenPost.post.post_id,
       comment_id: "null",
       type: 2,
-      notiUsers: arr,
+      notiUsers: notiArr,
       post_user: chosenPost.user.user_id,
       origin: chosenPost.post.post_id,
     });
@@ -118,24 +121,14 @@ export const WriteComment = ({ chosenPost }) => {
 
   return (
     <>
-      <h5
-        onClick={() => {
-          dispatch({ type: "showPostView" });
-        }}
-      >
-        <span>pil</span>
-        <span>cancel</span>
-      </h5>
+      <GoBack show={"showPostView"} />
 
       <div>
         <label htmlFor="">upload img: </label>
         <input
           type="file"
           name="image"
-          onChange={(e) => {
-            console.log(e.target.files[0]);
-            setImage(e.target.files[0]);
-          }}
+          onChange={(e) => setImage(e.target.files[0])}
         />
       </div>
 

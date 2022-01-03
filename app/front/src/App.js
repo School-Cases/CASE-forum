@@ -22,9 +22,9 @@ import { get } from "./utils/http";
 
 export const UserContext = createContext(null);
 
-const Loading = () => {
-  return <p>Loading...</p>;
-};
+// const Loading = () => {
+//   return <p>Loading...</p>;
+// };
 
 const NotFound = () => {
   return <p>Not Found</p>;

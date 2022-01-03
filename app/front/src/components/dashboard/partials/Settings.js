@@ -1,6 +1,7 @@
+import { useCallback, useEffect, useState, useContext } from "react";
+
 import { get, POST } from "../../../utils/http";
 import { If } from "../../../utils/If";
-import { useCallback, useEffect, useState, useContext } from "react";
 
 import { UserContext } from "../../../App";
 
@@ -81,11 +82,7 @@ export const Settings = ({ setShowSettings }) => {
         type="file"
         src=""
         alt=""
-        onChange={(e) => {
-          console.log(e.target.files[0]);
-          console.log(e.target.files[0] === undefined);
-          setImage(e.target.files[0]);
-        }}
+        onChange={(e) => setImage(e.target.files[0])}
       />
 
       <div
