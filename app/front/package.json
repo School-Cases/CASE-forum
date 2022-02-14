@@ -7,6 +7,8 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "bootstrap": "^5.1.3",
+    "browser-image-compression": "^1.0.17",
+    "compressorjs": "^1.1.1",
     "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.2",

@@ -100,7 +100,7 @@ class UserModel extends Model
     {
         // var_dump($data)
         // $sql = "INSERT INTO user (name, email, type) VALUES ($data->name, $data->email, $data->type)"
-        $query = $this->db->query("INSERT INTO user (name , email , type , password, image) VALUES ('$data[name]', '$data[email]', $data[type], '$data[password]', '$data[image]')");
+        $query = $this->db->query("INSERT INTO user (name , email , type , password, image, course) VALUES ('$data[name]', '$data[email]', $data[type], '$data[password]', '$data[image]', '$data[course]')");
 
         if ($query) {
             $id = $this->db->insertid();

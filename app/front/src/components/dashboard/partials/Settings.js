@@ -11,7 +11,7 @@ export const Settings = ({ setShowSettings }) => {
   const [newPassword, setNewPassword] = useState(null);
   const [image, setImage] = useState(null);
 
-  const [resMessage, setResMessage] = useState("temp");
+  const [resMessage, setResMessage] = useState("");
 
   // const fetchUserUpdate = async () => {
   //   let res = await POST(`/user/user_update`, {
@@ -45,55 +45,60 @@ export const Settings = ({ setShowSettings }) => {
   };
 
   return (
-    <section className="menu-container">
+    <section className="main-container">
       <section className="menu-header">
         <h5 onClick={() => setShowSettings(false)}>
           <span>
             <i class="fas fa-arrow-left"></i>
           </span>
-          <span className="menu-header-text">tillbaka</span>
+          <span className="menu-header-text">Tillbaka</span>
         </h5>
       </section>
 
-      <h4>Change password:</h4>
+      <section className="pad-1 main-view settings-main">
+        <h4>Byt lösenord:</h4>
 
-      <div className="flex FD-C">
-        <label htmlFor="">current:</label>
+        <div className="flex FD-C">
+          <label htmlFor="">Nuvarande:</label>
+          <input
+            className="input-settings"
+            type="password"
+            name=""
+            onChange={(e) => setCurrentPassword(e.target.value)}
+          />
+        </div>
+
+        <div className="flex FD-C">
+          <label htmlFor="">Nytt:</label>
+          <input
+            className="input-settings"
+            type="password"
+            name=""
+            onChange={(e) => setNewPassword(e.target.value)}
+          />
+        </div>
+
+        <h4 className="change-pic-set">Byt profilbild:</h4>
         <input
-          type="password"
-          name=""
-          onChange={(e) => setCurrentPassword(e.target.value)}
+          className="file-upload"
+          name="image"
+          type="file"
+          src=""
+          alt=""
+          onChange={(e) => setImage(e.target.files[0])}
         />
-      </div>
 
-      <div className="flex FD-C">
-        <label htmlFor="">new:</label>
-        <input
-          type="password"
-          name=""
-          onChange={(e) => setNewPassword(e.target.value)}
-        />
-      </div>
-
-      <h4>Change pic:</h4>
-      <input
-        className="file-upload"
-        name="image"
-        type="file"
-        src=""
-        alt=""
-        onChange={(e) => setImage(e.target.files[0])}
-      />
-
-      <div
-        onClick={() => {
-          fetchUserUpdate();
-        }}
-      >
-        save
-      </div>
-
-      <div>{resMessage}</div>
+        <div className="flex JC-C settings-bot">
+          <button
+            className="settings-save"
+            onClick={() => {
+              fetchUserUpdate();
+            }}
+          >
+            Spara
+          </button>
+        </div>
+      </section>
     </section>
   );
 };

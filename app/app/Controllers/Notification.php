@@ -46,9 +46,24 @@ class Notification extends BaseController
 
         if (isset($_GET['user'])) {
             $user_id = $_GET['user'];
+            // $page = $_GET['page'];
         } else {
             echo "bajs";
         }
+
+        // $originalPage = $page;
+        
+        // if ($page != 0) {
+        //     $page = $page * 10;
+        // }
+
+        // $user_notis = $notification_model->get_user_notifications($user_id, $page);
+
+        // $nextPageExists = false;
+        // $nextPage = $notification_model->get_user_notifications($user_id, ($originalPage + 1) * 10);
+        // if (count($nextPage)) {
+        //     $nextPageExists = true;
+        // }
 
         $user_notis = $notification_model->get_user_notifications($user_id);
 
@@ -91,6 +106,10 @@ class Notification extends BaseController
     // }
     // $user_notis = DeDupeArrayOfObjectsByProps($user_notis, ['post_id', 'type']);
 
+    // $resData = array();
+    // array_push($resData, (object)['notifications' => $user_notis], (object)['nextPage' => $nextPageExists]);
+    // return $this->response->setJSON($resData);
+
         $data = [
             'notifications' => $user_notis
         ];
@@ -113,17 +132,18 @@ class Notification extends BaseController
 
         $json = file_get_contents('php://input');
         $data = json_decode($json);
-        print_r($data);
 
         foreach ($data->notiUsers as $user_id) {
             if ($user_id == $data->post_user && $data->type == 2) {
                 $temp_data = $data;
                 $temp_data->type = 0;
-                $notification_model->create_notification($user_id, $temp_data);
+                $res = $notification_model->create_notification($user_id, $temp_data);
             } else {
-                $notification_model->create_notification($user_id, $data);
+                $res = $notification_model->create_notification($user_id, $data);
             }
         }
+
+        return $this->response->setJSON($res);
 
         // print_r($data->post_user != false);
 

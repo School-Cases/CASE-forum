@@ -9,7 +9,7 @@ export const GoBack = ({ show }) => {
         <span>
           <i class="fas fa-arrow-left"></i>
         </span>
-        <span className="menu-header-text">tillbaka</span>
+        <span className="menu-header-text">Tillbaka</span>
       </h5>
     </section>
   );

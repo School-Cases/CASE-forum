@@ -1,1 +1,0 @@
-__ci_last_regenerate|i:1641210042;user_data|O:8:"stdClass":9:{s:7:"user_id";s:2:"60";s:4:"name";s:2:"ad";s:5:"email";s:13:"test@test.com";s:4:"type";s:1:"0";s:5:"image";s:35:"1641041250_9ffcf605a3c81bfdd72e.jpg";s:6:"course";N;s:8:"password";N;s:5:"theme";s:1:"0";s:4:"fail";b:0;}_ci_previous_url|s:47:"http://localhost:8080/index.php/user/user_login";

@@ -1,6 +1,6 @@
-export const Loading = ({ color }) => {
+export const Loading = ({ color, size }) => {
   return (
-    <div class="load-wrapp">
+    <div class={`load-wrap ${size}`}>
       <div class="load-9">
         <div class="spinner">
           <div class="bubble-1">

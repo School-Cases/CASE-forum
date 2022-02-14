@@ -12,8 +12,12 @@
 }
 
 .user-img-upload {
-  padding: 0 2.5rem 1rem 2.5rem;
+  padding: 0 2.5rem 1.5rem 2.5rem;
   width: 100%;
+
+  .login-label {
+    padding-top: 0.2rem;
+  }
 }
 
 .img-icon {
@@ -54,7 +58,7 @@ input[type="radio"]:checked {
 }
 
 .file-upload::before {
-  content: "upload img";
+  content: "Välj bild";
   color: $greenD;
   text-decoration-line: underline;
   display: inline-block;
@@ -72,4 +76,121 @@ input[type="radio"]:checked {
 
 .file-upload:active::before {
   background: $greyL;
+}
+
+// Learn about this solution to creating custom select styles:
+// @link https://moderncss.dev/custom-select-styles-with-pure-css/
+
+$form-textborder-color: $greyD;
+
+/*
+   * Safari will not reveal an option
+   * unless the select height has room to 
+   * show all of it
+   * Firefox and Chrome allow showing 
+   * a partial option
+   */
+.input-custom {
+  &__border {
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background: $form-textborder-color;
+      z-index: 0;
+      transition: all 0.15s ease;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background: linear-gradient(
+        to right bottom,
+        rgba(126, 213, 111, 0.7),
+        rgba(40, 180, 131, 0.7)
+      );
+      transform: scaleX(0);
+      z-index: 1;
+      transition: all 0.15s ease;
+    }
+  }
+}
+
+.select-custom {
+  position: relative;
+  width: 15em;
+  input[type="checkbox"] {
+    display: none;
+    &:checked {
+      & ~ .select-custom__label:after {
+        transform: rotate(180deg);
+      }
+      & ~ .select-custom__dropdownMenu {
+        display: block;
+
+        &.noshowdrop {
+          display: none;
+        }
+      }
+    }
+  }
+  &__label {
+    height: 1.5rem;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+    color: $form-textborder-color;
+    width: 100%;
+    &:after {
+      content: "";
+      display: block;
+      border-left: 0.3em solid transparent;
+      border-right: 0.3em solid transparent;
+      border-top: 0.3em solid $form-textborder-color;
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 30%;
+      transition: all 0.3s;
+    }
+    &.valid + .input-custom__border:after {
+      transform: scaleX(1);
+    }
+  }
+  &__dropdownMenu {
+    display: none;
+    transform: translateY(1.5rem);
+    position: absolute;
+    background: white;
+    top: 0;
+    right: 0;
+    left: 0;
+    border: 1px solid $greenD;
+    list-style: none;
+    padding: 0.2rem;
+    max-height: 12rem;
+    overflow: scroll;
+
+    & > li {
+      padding: 0 0.2rem;
+      &:hover {
+        background-color: $greenL;
+        color: white;
+        cursor: pointer;
+      }
+
+      &.picked {
+        background-color: $greenL;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
 }

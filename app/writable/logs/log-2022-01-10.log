@@ -1,0 +1,285 @@
+ERROR - 2022-01-10 04:57:29 --> Cannot add or update a child row: a foreign key constraint fails (`glimradb`.`post`, CONSTRAINT `fk_post_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+CRITICAL - 2022-01-10 04:57:29 --> Cannot add or update a child row: a foreign key constraint fails (`glimradb`.`post`, CONSTRAINT `fk_post_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pos...')
+#3 /app/app/Models/PostModel.php(69): CodeIgniter\Database\BaseConnection->query('INSERT INTO pos...')
+#4 /app/app/Controllers/Post.php(313): App\Models\PostModel->create_post(Array)
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-01-10 06:12:45 --> Call to a member function isValid() on null
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2022-01-10 06:12:47 --> Unknown column 'undefined' in 'where clause'
+CRITICAL - 2022-01-10 06:12:47 --> Unknown column 'undefined' in 'where clause'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(59): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(68): App\Models\NotificationModel->get_user_notifications('undefined')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-01-10 06:15:16 --> Undefined array key 0
+#0 /app/app/Controllers/Hashtag.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 157)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->get_user_main_hashtags()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 06:15:52 --> Undefined array key 0
+#0 /app/app/Controllers/Hashtag.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 157)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->get_user_main_hashtags()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 06:17:59 --> foreach() argument must be of type array|object, null given
+#0 /app/app/Controllers/Post.php(318): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 318)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 06:24:03 --> foreach() argument must be of type array|object, string given
+#0 /app/app/Controllers/Post.php(317): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', '/app/app/Contro...', 317)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 06:55:28 --> Array to string conversion
+#0 /app/app/Controllers/Post.php(348): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/app/app/Contro...', 348)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 07:20:45 --> Attempt to read property "user_id" on array
+#0 /app/app/Controllers/Post.php(360): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Contro...', 360)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 07:21:12 --> Cannot use object of type stdClass as array
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-10 07:50:36 --> Undefined variable $reaction_model
+#0 /app/app/Controllers/Comment.php(159): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 159)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Comment->create_comment()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 07:51:18 --> Undefined variable $post_model
+#0 /app/app/Controllers/Comment.php(164): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 164)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Comment->create_comment()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 07:51:36 --> You must set the database table to be used with your query.
+#0 /app/system/Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 /app/system/Model.php(717): CodeIgniter\Model->builder()
+#2 /app/app/Controllers/Comment.php(165): CodeIgniter\Model->__call('get_comment', Array)
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Comment->create_comment()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-01-10 08:09:51 --> Undefined variable $res
+#0 /app/app/Controllers/Notification.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 146)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 08:11:04 --> Undefined variable $res
+#0 /app/app/Controllers/Notification.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 146)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 08:15:36 --> Undefined variable $res
+#0 /app/app/Controllers/Notification.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 146)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 08:17:31 --> Undefined variable $res
+#0 /app/app/Controllers/Notification.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 146)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 14:23:11 --> Undefined variable $res
+#0 /app/app/Controllers/Notification.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 146)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2022-01-10 14:34:10 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ON comment.user_id = user.user_id 
+        WHERE comment.post_id=228' at line 2
+CRITICAL - 2022-01-10 14:34:10 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ON comment.user_id = user.user_id 
+        WHERE comment.post_id=228' at line 2
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM c...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM c...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM c...')
+#3 /app/app/Models/CommentModel.php(32): CodeIgniter\Database\BaseConnection->query('SELECT * FROM c...')
+#4 /app/app/Controllers/Comment.php(76): App\Models\CommentModel->get_post_comments('228')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Comment->get_post_comments()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-01-10 14:34:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ON comment.user_id = user.user_id 
+        WHERE comment.post_id=228' at line 2
+CRITICAL - 2022-01-10 14:34:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ON comment.user_id = user.user_id 
+        WHERE comment.post_id=228' at line 2
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM c...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM c...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM c...')
+#3 /app/app/Models/CommentModel.php(32): CodeIgniter\Database\BaseConnection->query('SELECT * FROM c...')
+#4 /app/app/Controllers/Comment.php(76): App\Models\CommentModel->get_post_comments('228')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Comment->get_post_comments()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-01-10 14:36:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ON comment.user_id = user.user_id) 
+        WHERE comment.post_id=228' at line 3
+CRITICAL - 2022-01-10 14:36:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ON comment.user_id = user.user_id) 
+        WHERE comment.post_id=228' at line 3
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM c...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM c...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM c...')
+#3 /app/app/Models/CommentModel.php(33): CodeIgniter\Database\BaseConnection->query('SELECT * FROM c...')
+#4 /app/app/Controllers/Comment.php(76): App\Models\CommentModel->get_post_comments('228')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Comment->get_post_comments()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-01-10 14:36:34 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE comment.post_id=228' at line 4
+CRITICAL - 2022-01-10 14:36:34 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE comment.post_id=228' at line 4
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM c...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM c...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM c...')
+#3 /app/app/Models/CommentModel.php(33): CodeIgniter\Database\BaseConnection->query('SELECT * FROM c...')
+#4 /app/app/Controllers/Comment.php(76): App\Models\CommentModel->get_post_comments('228')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Comment->get_post_comments()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-01-10 14:38:36 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE comment.post_id=228' at line 5
+CRITICAL - 2022-01-10 14:38:36 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE comment.post_id=228' at line 5
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM c...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM c...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM c...')
+#3 /app/app/Models/CommentModel.php(34): CodeIgniter\Database\BaseConnection->query('SELECT * FROM c...')
+#4 /app/app/Controllers/Comment.php(76): App\Models\CommentModel->get_post_comments('228')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Comment->get_post_comments()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-01-10 14:41:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ON comment.user_id = user.user_id
+        WHERE comment.post_id=228' at line 5
+CRITICAL - 2022-01-10 14:41:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ON comment.user_id = user.user_id
+        WHERE comment.post_id=228' at line 5
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM c...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM c...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM c...')
+#3 /app/app/Models/CommentModel.php(35): CodeIgniter\Database\BaseConnection->query('SELECT * FROM c...')
+#4 /app/app/Controllers/Comment.php(76): App\Models\CommentModel->get_post_comments('228')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Comment->get_post_comments()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-01-10 14:53:47 --> syntax error, unexpected variable "$reactions"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_posts_...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_posts_...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 14:54:59 --> syntax error, unexpected variable "$reactions"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_posts_...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_posts_...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 14:56:40 --> Cannot use object of type stdClass as array
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Comment->create_comment()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-10 14:56:41 --> Undefined variable $res
+#0 /app/app/Controllers/Notification.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 146)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 14:59:45 --> Undefined variable $res
+#0 /app/app/Controllers/Notification.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 146)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 15:00:00 --> Undefined variable $res
+#0 /app/app/Controllers/Notification.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 146)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 15:02:50 --> Undefined variable $res
+#0 /app/app/Controllers/Notification.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 146)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 15:04:31 --> Undefined variable $res
+#0 /app/app/Controllers/Notification.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 146)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 15:08:49 --> Undefined variable $res
+#0 /app/app/Controllers/Notification.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 146)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 15:09:11 --> Undefined variable $res
+#0 /app/app/Controllers/Notification.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 146)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

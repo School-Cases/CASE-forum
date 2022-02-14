@@ -64,9 +64,9 @@ class PostModel extends Model
 
     public function create_post($data)
     {
-        print_r($data);
         // $query = $this->db->query("INSERT INTO post (user_id , text , time, image) VALUES ($data[user_id], '$data[text]', '$data[time]', '$data[image]')");
-        $query = $this->db->query("INSERT INTO post (user_id , text , time, image) VALUES ($data[user_id], '$data[text]', '$data[time]', '$data[image]')");
+        $query = $this->db->query("INSERT INTO post (user_id , text , time) VALUES ($data[user_id], '$data[text]', '$data[time]'
+        )");
 
         if ($query) {
             $id = $this->db->insertid();

@@ -57,7 +57,7 @@ class Post extends BaseController
     {
         $post_model = model('PostModel');
         $data = [
-            'posts' => $post_model->get_all_posts()
+            'posts' => $post_model->get_all_posts(0)
         ];
         return $this->response->setJSON($data);
     }
@@ -69,6 +69,7 @@ class Post extends BaseController
         $user_model = model('UserModel');
         $comment_model = model('CommentModel');
         $reaction_model = model('ReactionModel');
+        $image_model = model('ImageModel');
 
         if (isset($_GET['page'])) {
             $page = $_GET['page'];
@@ -78,9 +79,9 @@ class Post extends BaseController
 
         $originalPage = $page;
         
-        if ($page != 0) {
+        // if ($page != 0) {
             $page = $page * 10;
-        }
+        // }
 
         $posts = $post_model->get_all_posts($page);
 
@@ -108,7 +109,11 @@ class Post extends BaseController
             // reaction
             $reactions = $reaction_model->get_post_reactions($post->post_id);
 
-            array_push($data, (object)['post' => $post, 'hashtags' => $hashtags, 'user' => $user_model->get_user($post->user_id)[0], 'comments' => $comments, 'reactions' => $reactions]);
+            // image
+            $images = $image_model->get_post_images($post->post_id);
+
+
+            array_push($data, (object)['post' => $post, 'hashtags' => $hashtags, 'user' => $user_model->get_user($post->user_id)[0], 'comments' => $comments, 'reactions' => $reactions, 'images' => $images]);
             
         };
         array_push($resData, (object)['posts' => $data], (object)['nextPage' => $nextPageExists]);
@@ -122,6 +127,7 @@ class Post extends BaseController
         $user_model = model('UserModel');
         $comment_model = model('CommentModel');
         $reaction_model = model('ReactionModel');
+        $image_model = model('ImageModel');
 
         if (isset($_GET['input'])) {
             $post_filter = $_GET['input'];
@@ -160,7 +166,9 @@ class Post extends BaseController
             // reaction
             $reactions = $reaction_model->get_post_reactions($post->post_id);
 
-            array_push($data, (object)['post' => $post, 'hashtags' => $hashtags, 'user' => $user_model->get_user($post->user_id)[0], 'comments' => $comments, 'reactions' => $reactions]);
+            $images = $image_model->get_post_images($post->post_id);
+
+            array_push($data, (object)['post' => $post, 'hashtags' => $hashtags, 'user' => $user_model->get_user($post->user_id)[0], 'comments' => $comments, 'reactions' => $reactions, 'images' => $images]);
             
         };
         array_push($resData, (object)['posts' => $data], (object)['nextPage' => $nextPageExists]);
@@ -194,6 +202,7 @@ class Post extends BaseController
         $comment_model = model('CommentModel');
         $reaction_model = model('ReactionModel');
         $notification_model = model('NotificationModel');
+        $image_model = model('ImageModel');
 
         if (isset($_GET['id'])) {
             $post_id = $_GET['id'];
@@ -222,7 +231,9 @@ class Post extends BaseController
         // reaction
         $reactions = $reaction_model->get_post_reactions($post_id);
 
-        array_push($data, (object)['post' => $post, 'hashtags' => $hashtags, 'user' => $user_model->get_user($post->user_id)[0], 'comments' => $comments, 'reactions' => $reactions]);
+        $images = $image_model->get_post_images($post->post_id);
+
+        array_push($data, (object)['post' => $post, 'hashtags' => $hashtags, 'user' => $user_model->get_user($post->user_id)[0], 'comments' => $comments, 'reactions' => $reactions, 'images' => $images]);
         return $this->response->setJSON($data);
     }
 
@@ -284,6 +295,7 @@ class Post extends BaseController
         $user_model = model('UserModel');
         $comment_model = model('CommentModel');
         $reaction_model = model('ReactionModel');
+        $image_model = model('ImageModel');
 
         $user_id = $_POST['user_id'];
         $text = $_POST['text'];
@@ -294,27 +306,68 @@ class Post extends BaseController
 
         $data = array();
 
-        $file = $this->request->getFile('image');
-        if (!$file) {
-            $newName = null;
-        } else {
-            if (! $file->isValid()) {
-                throw new \RuntimeException($file->getErrorString().'('.$file->getError().')');
-            };
-            $newName = $file->getRandomName();
-            $file->move(WRITEPATH.'../public/static/media', $newName);
-        }
 
-        // $data += ['user_id' => $user_id, 'text' => $text, 'time' => $time, 'hashtags' => $hashtags, 'image' => $newName];
-        array_push( $data, ['user_id' => $user_id, 'text' => $text, 'time' => $time, 'hashtags' => $hashtags, 'image' => $newName]);
+        // $file = $this->request->getFile('image');
+        // print_r($file);
+        // if ($imagefile = $this->request->getFiles()) {
+        //     $newName = null;
+        // } else {
+        //     if (! $file->isValid()) {
+        //         throw new \RuntimeException($file->getErrorString().'('.$file->getError().')');
+        //     };
+        //     $newName = $file->getRandomName();
+        //     $file->move(WRITEPATH.'../public/static/media', $newName);
+        // };
+
+        // $imagefile = $this->request->getFiles();
+
+        $images = array();
+
+        // if ($imagefile = $this->request->getFiles()) {
+            // foreach($imagefile['images'] as $file) {
+        if ($this->request->getFiles()) {
+            $files = $this->request->getFiles()['images'];
+            foreach($files as $file) {
+                // print_r($file);
+                if (! $file->isValid()) {
+                    throw new \RuntimeException($file->getErrorString().'('.$file->getError().')');
+                };
+                $newName = $file->getRandomName();
+                $file->move(WRITEPATH.'../public/static/media', $newName);
+                array_push($images, $newName);
+            };
+        }
         
-        print_r($data[0]['user_id']);
+        // };
+
+
+        // $file = $this->request->getFile('image');
+        // print_r($file);
+        // if (!$file) {
+        //     $newName = null;
+        // } else {
+        //     if (! $file->isValid()) {
+        //         throw new \RuntimeException($file->getErrorString().'('.$file->getError().')');
+        //     };
+        //     $newName = $file->getRandomName();
+        //     $file->move(WRITEPATH.'../public/static/media', $newName);
+        // }
+
+        array_push( $data, ['user_id' => $user_id, 'text' => $text, 'time' => $time, 'hashtags' => $hashtags]);
+        
+        // array_push( $data, ['user_id' => $user_id, 'text' => $text, 'time' => $time, 'hashtags' => $hashtags, 'image' => $newName]);
+        
 
         $post_id = $post_model->create_post($data[0]);
         if ($post_id) {
-            // return $this->response->setJSON($result);
-            // foreach ($data[0]['hashtags'] as $hashtag) {
-            //     print_r($hashtag);
+
+            foreach ($images as $img) {
+                $img_data = array();
+                array_push($img_data, ['name' => $img, 'post_id' => $post_id, 'comment_id' => "null"]);
+                // print_r($img_data);
+                $create_img = $image_model->create_image($img_data[0]);
+            }
+
             foreach ($hashtags as $hashtag) {
                 $hashtag_exists = $hashtag_model->check_if_hashtag_exists($hashtag);
 
@@ -330,21 +383,42 @@ class Post extends BaseController
 
                 if (!$post_hashtag_exists) {
                     $post_hashtag = $hashtag_model->create_post_hashtag($hashtag_id, $post_id);
-                    print_r($post_hashtag);
                 }
 
                 $user_hashtag_exists = $hashtag_model->check_if_userhashtag_exists($hashtag_id, $user_id);
 
                 if (!$user_hashtag_exists) {
                     $user_hashtag = $hashtag_model->create_user_hashtag($hashtag_id, $user_id);
-                    print_r($user_hashtag);
                 } else {
                     $user_hashtag_updated_int = $hashtag_model->update_user_hashtag_interactions($hashtag_id, $user_id);
-                    print_r($user_hashtag_updated_int);
                 };
             }
-        } 
 
+
+            $post_hashtags = $hashtag_model->get_post_hashtags($post_id);
+            $Hashtags = array();
+            foreach ($post_hashtags as $ph) {
+                array_push($Hashtags, $hashtag_model->get_hashtag($ph->hashtag_id)[0]);
+            };
+
+            // comment
+            $comments = $comment_model->get_post_comments($post_id);
+
+            // reaction
+            $reactions = $reaction_model->get_post_reactions($post_id);
+
+            $resPost = $post_model->get_post($post_id)[0];
+
+            $datadata = array();
+
+            array_push($datadata, (object)['post' => $resPost,
+            'images' => $images, 
+            'hashtags' => $hashtags, 'user' => $user_model->get_user($resPost->user_id)[0], 'comments' => $comments, 'reactions' => $reactions, 'fail' => false]);
+
+            return $this->response->setJSON($datadata[0]);
+
+        } 
+        
         
     }
 

@@ -1,0 +1,12 @@
+ERROR - 2022-01-30 08:06:36 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`notification`, CONSTRAINT `fk_notification_comment1` FOREIGN KEY (`comment_id`) REFERENCES `comment` (`comment_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+CRITICAL - 2022-01-30 08:06:36 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`notification`, CONSTRAINT `fk_notification_comment1` FOREIGN KEY (`comment_id`) REFERENCES `comment` (`comment_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM com...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM com...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM com...')
+#3 /app/app/Models/CommentModel.php(67): CodeIgniter\Database\BaseConnection->query('DELETE FROM com...')
+#4 /app/app/Controllers/Comment.php(246): App\Models\CommentModel->delete_comment('141')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Comment->delete_comment()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

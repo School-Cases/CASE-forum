@@ -32,34 +32,28 @@ export const Login = ({ setTheme, setLoggedIn, setSignup, setUser }) => {
       <section className="flex login-container">
         <h2 className="login-welcome">Välkommen!</h2>
 
-        <div>
-          <label className="login-text" htmlFor="namn">
-            namn:
+        <div className="home-pad-input2">
+          <label className="login-label" htmlFor="namn">
+            Namn:
           </label>
-          {/* <input
-            className="login-input"
-            type="email"
-            name=""
-            placeholder="mejl"
-          /> */}
           <input
             className="login-input"
             type="text"
             name=""
-            placeholder="namn"
+            placeholder=""
             onChange={(e) => setName(e.target.value)}
           />
         </div>
 
-        <div>
-          <label className="login-text" htmlFor="password">
-            lösenord:
+        <div className="home-pad-input">
+          <label className="login-label" htmlFor="password">
+            Lösenord:
           </label>
           <input
             className="login-input"
             type="password"
             name=""
-            placeholder="lösenord"
+            placeholder=""
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
@@ -67,7 +61,7 @@ export const Login = ({ setTheme, setLoggedIn, setSignup, setUser }) => {
         <div>{resMessage}</div>
 
         <button className="login-btn" onClick={() => fetchUserLogin()}>
-          logga in
+          Logga in
         </button>
 
         <div className="login-create-user">

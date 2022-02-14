@@ -73,6 +73,7 @@ class NotificationModel extends Model
         ");
         // $data = array();
         $data = array_merge($query2->getResult(), $query->getResult());
+        // $data = array_slice($data, $page, 10);
 
         usort($data, function($a, $b) {
             return strcmp($b->notification_id, $a->notification_id);

@@ -1,0 +1,73 @@
+CRITICAL - 2022-01-13 08:02:13 --> syntax error, unexpected token "}"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/create_pos...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/create_pos...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-13 08:04:24 --> syntax error, unexpected token "}"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/create_pos...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/create_pos...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-13 08:08:49 --> syntax error, unexpected token "}"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/create_pos...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/create_pos...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-13 08:09:08 --> syntax error, unexpected token "}"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/create_pos...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/create_pos...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2022-01-13 08:09:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+CRITICAL - 2022-01-13 08:09:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO ima...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO ima...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO ima...')
+#3 /app/app/Models/ImageModel.php(76): CodeIgniter\Database\BaseConnection->query('INSERT INTO ima...')
+#4 /app/app/Controllers/Post.php(358): App\Models\ImageModel->create_image(Array)
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-01-13 08:21:07 --> Undefined variable $data
+#0 /app/app/Controllers/Comment.php(284): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 284)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Comment->delete_all_comments()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2022-01-13 08:21:11 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`image`, CONSTRAINT `fk_image_post1` FOREIGN KEY (`post_id`) REFERENCES `post` (`post_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+CRITICAL - 2022-01-13 08:21:11 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`image`, CONSTRAINT `fk_image_post1` FOREIGN KEY (`post_id`) REFERENCES `post` (`post_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM pos...')
+#3 /app/app/Models/PostModel.php(86): CodeIgniter\Database\BaseConnection->query('DELETE FROM pos...')
+#4 /app/app/Controllers/Post.php(438): App\Models\PostModel->delete_all_posts()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-01-13 08:23:05 --> Undefined variable $data
+#0 /app/app/Controllers/Post.php(439): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 439)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-13 08:24:43 --> Undefined array key "images"
+#0 /app/app/Controllers/Post.php(321): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 321)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

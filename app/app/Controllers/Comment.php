@@ -109,6 +109,12 @@ class Comment extends BaseController
     {
         $comment_model = model('CommentModel');
         $hashtag_model = model('HashtagModel');
+        $post_model = model('PostModel');
+
+        $user_model = model('UserModel');
+        $reaction_model = model('ReactionModel');
+
+        $image_model = model('ImageModel');
 
         $datadata = array();
 
@@ -120,23 +126,54 @@ class Comment extends BaseController
         $hashtags = json_decode($_POST['hashtags']);
         $no_interaction_upd = $_POST['noInteractionUpd'];
 
-        $file = $this->request->getFile('image');
-        if (!$file) {
-            $newName = null;
-        } else {
+        // $file = $this->request->getFile('image');
+        // if (!$file) {
+        //     $newName = null;
+        // } else {
+        //     if (! $file->isValid()) {
+        //         throw new \RuntimeException($file->getErrorString().'('.$file->getError().')');
+        //     };
+        //     $newName = $file->getRandomName();
+        //     $file->move(WRITEPATH.'../public/static/media', $newName);
+        // }
+        $images = array();
+
+
+
+        // print_r($files);
+
+        // if ($imagefile = $this->request->getFiles()) {
+            // foreach($imagefile['images'] as $file) {
+                if ($this->request->getFiles()) {
+        $files = $this->request->getFiles()['images'];
+
+        foreach($files as $file) {
+            // print_r($file);
             if (! $file->isValid()) {
                 throw new \RuntimeException($file->getErrorString().'('.$file->getError().')');
             };
             $newName = $file->getRandomName();
             $file->move(WRITEPATH.'../public/static/media', $newName);
-        }
+            array_push($images, $newName);
+            
+        };
+         }
         
 
-        array_push($datadata, ['post_id' => $post_id, 'user_id' => $user_id, 'text' => $text, 'time' => $time, 'hashtags' => $hashtags, 'image' => $newName]);
+        array_push($datadata, ['post_id' => $post_id, 'user_id' => $user_id, 'text' => $text, 'time' => $time, 'hashtags' => $hashtags]);
 
-        $result = $comment_model->create_comment($datadata[0]);
+        $comment_id = $comment_model->create_comment($datadata[0]);
 
-        if ($result) {
+        if ($comment_id) {
+
+
+            foreach ($images as $img) {
+                $img_data = array();
+                array_push($img_data, ['name' => $img, 'post_id' => "null", 'comment_id' => $comment_id]);
+                // print_r($img_data);
+                $create_img = $image_model->create_image($img_data[0]);
+            }
+
             if (!$no_interaction_upd) {
                 foreach ($hashtags as $hashtag) {
                     $user_hashtag_exists = $hashtag_model->check_if_userhashtag_exists($hashtag, $user_id);
@@ -148,8 +185,35 @@ class Comment extends BaseController
                     };
                 }
             }
+
+            // $post_hashtags = $hashtag_model->get_post_hashtags($post_id);
+            // $Hashtags = array();
+            // foreach ($post_hashtags as $ph) {
+            //     array_push($Hashtags, $hashtag_model->get_hashtag($ph->hashtag_id)[0]);
+            // };
+            $resComment = array();
+
+            // reaction
+            $reactions = $reaction_model->get_post_reactions($post_id);
+
+            $resComment = $comment_model->get_comment($comment_id)[0];
+
+            // $datadata = array();
+
+            $resComment->user_id = $user_model->get_user($resComment->user_id)[0]->user_id;
+
+
+
+            $resComment->image = $user_model->get_user($resComment->user_id)[0]->image;
+            $resComment->images = $image_model->get_comment_images($comment_id);
+            $resComment->reactions = $reactions;
+            $resComment->fail = false;
+
+            // array_push($resComment, (object)['comment' => $comment_model->get_comment($comment_id)[0], 'user' => $user_id, 'reactions' => $reaction_model->get_post_reactions($post_id),'images' => $images, 'fail' => false]);
+
             
-            return $this->response->setJSON($result);
+            // return $this->response->setJSON($datadata[0]);
+            return $this->response->setJSON($resComment);
         } 
 
         // if ($result) {

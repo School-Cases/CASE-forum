@@ -35,6 +35,17 @@ class Hashtag extends BaseController
 
     }
 
+    public function create_hashtag()
+    {
+        $hashtag_model = model('HashtagModel');
+        $json = file_get_contents('php://input');
+        $data = json_decode($json);
+
+        $res = $hashtag_model->create_hashtag($data->content);
+
+        return $this->response->setJSON($res);
+    }
+
     public function get_all_hashtags()
     {
         $hashtag_model = model('HashtagModel');
@@ -130,26 +141,41 @@ class Hashtag extends BaseController
     public function get_user_main_hashtags()
     {
         $hashtag_model = model('HashtagModel');
+        $user_model = model('UserModel');
 
         if (isset($_GET['user_id'])) {
             $user_id = $_GET['user_id'];
         } else {
             echo "bajs";
         }
+        $main_hashtags = array();
+
+        $user = $user_model->get_user($user_id)[0];
+
+        if ($user->type === "0") {
+            $type_hashtag = $hashtag_model->get_certain_hashtags("#deltagare")[0];
+            $course_hashtag = $hashtag_model->get_certain_hashtags($user->course)[0];
+            $main_hashtags[] = $type_hashtag;
+            $main_hashtags[] = $course_hashtag;
+        } else {
+            $type_hashtag = $hashtag_model->get_certain_hashtags("#personal")[0];
+            $main_hashtags[] = $type_hashtag;
+        }
 
         $hashtags = $hashtag_model->get_user_main_hashtags($user_id);
 
         // print_r($hashtags);
 
-        $main_hashtags = array();
+        $fav_hashtags = array();
         foreach ($hashtags as $hashtag) {
             $hash = $hashtag_model->get_hashtag($hashtag->hashtag_id);
             // print_r($hash);
-            array_push($main_hashtags, $hash[0]);
+            array_push($fav_hashtags, $hash[0]);
         }
 
         // print_r($main_hashtags);
         $data = [
+            'fav_hashtags' => $fav_hashtags,
             'main_hashtags' => $main_hashtags
         ];
 

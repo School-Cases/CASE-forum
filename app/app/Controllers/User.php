@@ -259,6 +259,7 @@ class User extends BaseController
         $name = $_POST['name'];
         $email = $_POST['email'];
         $type = $_POST['type'];
+        $course = $_POST['course'];
 
         // print_r($this->request->getVar('name'));
 
@@ -287,7 +288,7 @@ class User extends BaseController
         // $file->move(WRITEPATH.'uploads/profile_pics', $newName);
         $file->move(WRITEPATH.'../public/static/media', $newName);
         
-        array_push($datadata, ['name' => $name, 'password' => $password, 'email' => $email, 'type' => $type, 'image' => $newName]);
+        array_push($datadata, ['name' => $name, 'password' => $password, 'email' => $email, 'type' => $type, 'image' => $newName, 'course' => $course]);
 
 
         $id = $user_model->create_user($datadata[0]);
