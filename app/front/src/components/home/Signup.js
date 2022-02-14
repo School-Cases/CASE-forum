@@ -4,8 +4,6 @@ import { If } from "../../utils/If";
 import courses from "../../utils/courses";
 import { api_address } from "../../utils/http";
 
-import { api_address } from "../../utils/http";
-
 // import { get, POST, POSTFORMDATA } from "../../utils/http";
 
 export const Signup = ({ setLoggedIn, setSignup, setUser }) => {
