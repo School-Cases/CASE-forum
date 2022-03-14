@@ -415,7 +415,7 @@ class Post extends BaseController
 
             array_push($datadata, (object)['post' => $resPost,
             'images' => $imageses, 
-            'hashtags' => $hashtags, 'user' => $user_model->get_user($resPost->user_id)[0], 'comments' => $comments, 'reactions' => $reactions, 'fail' => false]);
+            'hashtags' => $Hashtags, 'user' => $user_model->get_user($resPost->user_id)[0], 'comments' => $comments, 'reactions' => $reactions, 'fail' => false]);
 
             return $this->response->setJSON($datadata[0]);
 
