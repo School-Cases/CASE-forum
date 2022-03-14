@@ -1,5 +1,5 @@
-export const api_address = "http://localhost";
-// export const api_address = "http://glimra.glimnet.se";
+// export const api_address = "http://localhost";
+export const api_address = "http://glimra.glimnet.se";
 export const client_address = "http://localhost:3000";
 
 export const get = async (endpoint, signal) => {
