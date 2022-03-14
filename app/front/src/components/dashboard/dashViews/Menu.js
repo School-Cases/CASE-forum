@@ -39,7 +39,7 @@ export const Menu = ({ setLoggedIn, theme, setTheme }) => {
           <section className="pad-1 main-view">
             <section className="flex FD-C menu-view">
               <div
-                className="menu-item"
+                className="menu-item pointer"
                 onClick={() => {
                   setShowSettings(true);
                 }}
@@ -48,7 +48,7 @@ export const Menu = ({ setLoggedIn, theme, setTheme }) => {
               </div>
 
               <div
-                className="menu-item"
+                className="menu-item pointer"
                 onClick={() => {
                   fetchLogout();
                 }}
@@ -57,7 +57,7 @@ export const Menu = ({ setLoggedIn, theme, setTheme }) => {
               </div>
 
               <div
-                className="menu-item-theme"
+                className="menu-item-theme pointer"
                 onClick={() => {
                   setTheme(theme === 0 ? 1 : 0);
                   fetchUserChangeTheme();

@@ -120,7 +120,7 @@ export const ChosenPost = ({ posts, setPosts, post, setChosenPost }) => {
               </div>
 
               <div
-                className={`flex noshow-com likes ${
+                className={`flex noshow-com likes pointer ${
                   postLikes.some((l) => l.user_id === user.user_id)
                     ? "liked"
                     : ""
@@ -140,7 +140,7 @@ export const ChosenPost = ({ posts, setPosts, post, setChosenPost }) => {
                 </span>
 
                 <span
-                  className={`noshow-com like`}
+                  className={`noshow-com like pointer`}
                   onClick={(e) => {
                     if (
                       !postLikes.some((l) => l.user_id === user.user_id) &&
@@ -200,7 +200,7 @@ export const ChosenPost = ({ posts, setPosts, post, setChosenPost }) => {
                   return (
                     <span
                       onClick={() => fetchCertainHashtags(h.content.slice(1))}
-                      className={`noshow-com post-hashtag ${
+                      className={`noshow-com post-hashtag pointer ${
                         h.searched ? "searched" : ""
                       }`}
                     >
@@ -212,7 +212,7 @@ export const ChosenPost = ({ posts, setPosts, post, setChosenPost }) => {
 
               <div className="flex">
                 <span
-                  className="noshow-com"
+                  className="noshow-com pointer"
                   onClick={() => {
                     if (post.post.user_id !== user.user_id)
                       setShowReactions(!showReactions);
@@ -256,7 +256,7 @@ export const ChosenPost = ({ posts, setPosts, post, setChosenPost }) => {
         })}
 
         <div
-          className="comment-input"
+          className="comment-input pointer"
           onClick={() => {
             // setCommentPost_id(post.post.post_id);
             // setShowPostView(false);

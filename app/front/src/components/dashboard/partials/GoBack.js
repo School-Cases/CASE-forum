@@ -5,7 +5,7 @@ export const GoBack = ({ show }) => {
   const { dispatch } = useContext(ShowContext);
   return (
     <section className="menu-header">
-      <h5 onClick={() => dispatch({ type: show })}>
+      <h5 className="pointer" onClick={() => dispatch({ type: show })}>
         <span>
           <i class="fas fa-arrow-left"></i>
         </span>

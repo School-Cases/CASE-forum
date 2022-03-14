@@ -20,7 +20,7 @@ export const Header = ({ notiAmount }) => {
       <header className="flex JC-SB header">
         <StyledDiv
           img={user.image}
-          className="header-user-img"
+          className="header-user-img pointer"
           onClick={() => {
             if (notiAmount > 0) dispatch({ type: "showNotifications" });
           }}
@@ -37,7 +37,7 @@ export const Header = ({ notiAmount }) => {
       <section style={{ position: "relative" }}>
         <section className="top-btns flex JC-C">
           <div
-            className="menu-btn flex"
+            className="menu-btn flex pointer"
             onClick={() => {
               dispatch({ type: "showMenu" });
             }}
@@ -45,7 +45,7 @@ export const Header = ({ notiAmount }) => {
             <i class="fas fa-bars"></i>
           </div>
           <div
-            className="write-post-btn flex"
+            className="write-post-btn flex pointer"
             onClick={() => {
               dispatch({ type: "showWritePost" });
             }}
@@ -53,7 +53,7 @@ export const Header = ({ notiAmount }) => {
             <i class="fas fa-pencil-alt"></i>
           </div>
           <div
-            className="search-btn flex"
+            className="search-btn flex pointer"
             onClick={() => {
               dispatch({ type: "showSearch" });
             }}
