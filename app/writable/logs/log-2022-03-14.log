@@ -40,3 +40,17 @@ CRITICAL - 2022-03-14 05:31:27 --> Undefined variable $data
 #3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
 #5 {main}
+CRITICAL - 2022-03-14 07:51:38 --> Undefined variable $data
+#0 /app/app/Controllers/Post.php(446): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 446)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-14 07:51:59 --> Undefined variable $data
+#0 /app/app/Controllers/Comment.php(320): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 320)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Comment->delete_all_comments()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
