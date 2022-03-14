@@ -72,66 +72,11 @@ export const WritePost = ({
       return;
     }
     let formData = new FormData();
-    console.log(JSON.stringify(hashtags));
 
     formData.append("user_id", user.user_id);
     formData.append("text", text);
     formData.append("time", getDateAndTime());
     formData.append("hashtags", JSON.stringify(hashtags));
-
-    if (images.length > 0) {
-      images.forEach(async (imageFile) => {
-        // console.log("originalFile instanceof Blob", imageFile instanceof Blob); // true
-        // console.log(`originalFile size ${imageFile.size / 1024 / 1024} MB`);
-        new Compressor(imageFile, {
-          quality: 0.6,
-          success(result) {
-            console.log(result);
-            // The third parameter is required for server
-            // formData.append("images[]", result, result.name);
-            // formData.append("images[]", imageFile);
-
-            setImages((prev) => {
-              return [...prev, result];
-            });
-
-            // Send the compressed image file to server with XMLHttpRequest.
-          },
-          error(err) {
-            console.log(err.message);
-          },
-        });
-
-        // const options = {
-        //   maxSizeMB: 1,
-        //   maxWidthOrHeight: 1920,
-        //   useWebWorker: true,
-        // };
-
-        // from blob2file, appendblob formdata,
-
-        // formData.append("images[]", imageFile);
-
-        // try {
-        // const compressedFile = await imageCompression(imageFile, options);
-        // console.log(
-        //   "compressedFile instanceof Blob",
-        //   compressedFile instanceof Blob
-        // ); // true
-        // console.log(
-        //   `compressedFile size ${compressedFile.size / 1024 / 1024} MB`
-        // );
-        // console.log(compressedFile);
-        // console.log(imageFile);
-        // formData.append("images[]", compressedFile);
-
-        // formData.append("images[]", compressedFile, compressedFile.name);
-        // } catch (error) {
-        // console.log(error);
-        // }
-      });
-      console.log(formData);
-    }
 
     if (images.length > 0) {
       images.forEach((i) => {
@@ -147,7 +92,6 @@ export const WritePost = ({
       .then((res) => res.json())
       .then((data) => (resPost = data));
     // .then((err) => console.log(err));
-    console.log(resPost);
     if (!resPost.fail) {
       setPosts((prev) => {
         return [resPost, ...prev];
@@ -220,22 +164,44 @@ export const WritePost = ({
           <input
             className="file-upload write-post-file"
             type="file"
-            // name="images"
+            // name="images[]"
             // multiple
             onChange={(e) => {
-              console.log(e.target.files[0]);
               // setImage(e.target.files[0]);
-              setImages((prev) => {
-                return [...prev, e.target.files[0]];
+              let file = e.target.files[0];
+              new Compressor(file, {
+                quality: 0.6,
+                maxWidth: 1000,
+                maxHeight: 1000,
+                success(result) {
+                  let newFile = new File(
+                    [result],
+                    "namnet"
+                    // , {
+                    //   lastModified: 1646388045,
+                    // }
+                  );
+                  // formData.append("images[]", newFile);
+                  // formData.append("images[]", imageFile);
+                  setImages((prev) => {
+                    return [...prev, newFile];
+                  });
+                  // setImages((prev) => {
+                  //   return [...prev, newFile];
+                  // });
+
+                  // Send the compressed image file to server with XMLHttpRequest.
+                },
+                error(err) {
+                  throw err;
+                },
               });
-              console.log(images);
             }}
           />
 
           <div className="flex JC-SB write-post-bot">
             <div className="flex FW-wrap hashtags-filter">
               {hashtags.map((h, i) => {
-                console.log(h);
                 return (
                   <div className="hashtag-box orange">
                     {h}{" "}
@@ -263,7 +229,6 @@ export const WritePost = ({
           <h5
             className="add-hash-label"
             onClick={() => {
-              console.log(images);
               setShowAddHashtag(!showAddHashtag);
             }}
           >
@@ -286,7 +251,6 @@ export const WritePost = ({
                         <div
                           className="hashtag-box orange"
                           onClick={(e) => {
-                            console.log(hashtags);
                             // if (!hashtags.includes(e.target.textContent)) {
                             setHashtags((prev) => {
                               return [...prev, h.content];
@@ -312,7 +276,6 @@ export const WritePost = ({
                           <div
                             className="hashtag-box orange"
                             onClick={(e) => {
-                              console.log(hashtags);
                               // if (!hashtags.includes(e.target.textContent)) {
                               setHashtags((prev) => {
                                 return [...prev, h.content];

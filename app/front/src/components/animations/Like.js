@@ -1,7 +1,6 @@
 import { If } from "../../utils/If";
 
 export const Like = ({ likeable, liked }) => {
-  console.log(liked);
   return (
     <div class={`star`}>
       <svg

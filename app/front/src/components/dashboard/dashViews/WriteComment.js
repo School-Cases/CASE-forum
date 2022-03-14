@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useContext } from "react";
 
 import { GoBack } from "../partials/GoBack";
-
+import Compressor from "compressorjs";
 import { api_address } from "../../../utils/http";
 
 import { get, POST } from "../../../utils/http";
@@ -73,7 +73,6 @@ export const WriteComment = ({
     })
       .then((res) => res.json())
       .then((data) => (resComment = data));
-    console.log(resComment);
 
     let arr = [];
     if (
@@ -212,13 +211,34 @@ export const WriteComment = ({
             type="file"
             // name="images"
             // multiple
+            // onChange={(e) => {
+            //   // setImage(e.target.files[0]);
+            //   setImages((prev) => {
+            //     return [...prev, e.target.files[0]];
+            //   });
+            // }}
             onChange={(e) => {
-              console.log(e.target.files[0]);
               // setImage(e.target.files[0]);
-              setImages((prev) => {
-                return [...prev, e.target.files[0]];
+              let file = e.target.files[0];
+              new Compressor(file, {
+                quality: 0.6,
+                maxWidth: 1000,
+                maxHeight: 1000,
+                success(result) {
+                  let newFile = new File([result], "namnet");
+                  // formData.append("images[]", newFile);
+                  // formData.append("images[]", imageFile);
+                  setImages((prev) => {
+                    return [...prev, newFile];
+                  });
+                  // setImages((prev) => {
+                  //   return [...prev, newFile];
+                  // });
+
+                  // Send the compressed image file to server with XMLHttpRequest.
+                },
+                error(err) {},
               });
-              console.log(images);
             }}
           />
 

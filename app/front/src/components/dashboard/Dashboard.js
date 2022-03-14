@@ -154,7 +154,6 @@ export const Dashboard = ({ setLoggedIn, theme, setTheme }) => {
       `/post/get_certain_posts_data/?input=${hashtag}&page=${0}`,
       abortController.signal
     );
-    console.log(res[0]);
     setPosts(res[0].posts);
     if (res[1].nextPage) {
       setNextPageExists(true);
@@ -169,7 +168,6 @@ export const Dashboard = ({ setLoggedIn, theme, setTheme }) => {
     setPostsLoading(true);
     let res = await get(`/post/get_posts_data/?page=${page}`, signal);
     setPosts(res[0].posts);
-    console.log("posts", res[0].posts);
     if (res[1].nextPage) {
       setNextPageExists(true);
     } else {
@@ -299,7 +297,6 @@ export const Dashboard = ({ setLoggedIn, theme, setTheme }) => {
                           setChosenPost(post);
                           dispatch({ type: "showPostView" });
                         }
-                        console.log(e.target);
                       }}
                       key={i}
                     >

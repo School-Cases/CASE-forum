@@ -37,7 +37,6 @@ export const Search = ({
   //     `/hashtag/get_user_main_hashtags/?user_id=${user.user_id}`,
   //     signal
   //   );
-  //   console.log(res);
   //   setMainHashtags(res.main_hashtags);
   //   setFavHashtags(res.fav_hashtags);
   //   setLoading(false);

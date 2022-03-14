@@ -40,7 +40,6 @@ export const Notifications = ({
       abortController.signal
     );
     setNotifications(notifications.filter((n) => n.notification_id !== notiId));
-    console.log(res[0]);
     setChosenPost(res[0]);
     dispatch({ type: "showPostView" });
     setLoading(false);
@@ -72,7 +71,6 @@ export const Notifications = ({
 
 export const Notification = ({ n, lastHr, fetchPostAndDeletNoti }) => {
   const getNotiText = (n) => {
-    console.log(n.post.name.at(-1));
     let postUser = n.post.name + (n.post.name.at(-1) === "s" ? "" : "s");
     if (n.type === "0") {
       return (

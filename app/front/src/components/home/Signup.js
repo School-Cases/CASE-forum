@@ -3,11 +3,10 @@ import { useState } from "react";
 import { If } from "../../utils/If";
 import courses from "../../utils/courses";
 import { api_address } from "../../utils/http";
-
+import Compressor from "compressorjs";
 // import { get, POST, POSTFORMDATA } from "../../utils/http";
 
 export const Signup = ({ setLoggedIn, setSignup, setUser }) => {
-  console.log(courses);
   const [name, setName] = useState(null);
   const [email, setEmail] = useState("test@test.com");
   const [type, setType] = useState(null);
@@ -161,7 +160,30 @@ export const Signup = ({ setLoggedIn, setSignup, setUser }) => {
               className="file-upload"
               name="image"
               type="file"
-              onChange={(e) => setImage(e.target.files[0])}
+              // onChange={(e) => setImage(e.target.files[0])}
+              onChange={(e) => {
+                let file = e.target.files[0];
+                new Compressor(file, {
+                  quality: 0.6,
+                  maxWidth: 1000,
+                  maxHeight: 1000,
+                  success(result) {
+                    let newFile = new File([result], "namnet");
+                    // formData.append("images[]", newFile);
+                    // formData.append("images[]", imageFile);
+                    // setImages((prev) => {
+                    //   return [...prev, newFile];
+                    // });
+                    setImage(newFile);
+
+                    // Send the compressed image file to server with XMLHttpRequest.
+                  },
+                  error(err) {
+                    // console.log(err.message);
+                    throw err;
+                  },
+                });
+              }}
             />
           </section>
         </div>

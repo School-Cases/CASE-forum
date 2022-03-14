@@ -42,8 +42,7 @@ const App = () => {
   const isLoggedIn = async (signal) => {
     let res = await get(`/user/is_loggedin`, signal);
     if (res.fail) {
-      // setLoggedIn(false);
-      return console.log("islogged in false");
+      setLoggedIn(false);
     } else {
       setUser(res.user);
       setTheme(res.user.theme);

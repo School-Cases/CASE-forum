@@ -27,7 +27,6 @@ export const Post = ({
   setPage,
   setChosenPost,
 }) => {
-  console.log(post);
   const { dispatch } = useContext(ShowContext);
   const { user } = useContext(UserContext);
 
@@ -74,7 +73,6 @@ export const Post = ({
       origin: post.post.post_id,
       post_user: post.post.user_id,
     });
-    console.log(notiRes);
   };
 
   const fetchDeletePost = async () => {
@@ -83,7 +81,6 @@ export const Post = ({
       `/post/delete_post/?id=${post.post.post_id}`,
       abortController.signal
     );
-    console.log(res);
     return () => abortController.abort();
   };
 
@@ -140,7 +137,6 @@ export const Post = ({
               <span
                 className={`noshow-com like`}
                 onClick={(e) => {
-                  console.log(e.target);
                   if (
                     !postLikes.some((l) => l.user_id === user.user_id) &&
                     post.post.user_id !== user.user_id

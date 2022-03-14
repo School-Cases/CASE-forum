@@ -21,7 +21,6 @@ const StyledDiv = styled("div")`
 `;
 
 export const ChosenPost = ({ posts, setPosts, post, setChosenPost }) => {
-  console.log(post.images.length);
   const { dispatch } = useContext(ShowContext);
   const { user } = useContext(UserContext);
 
@@ -36,7 +35,6 @@ export const ChosenPost = ({ posts, setPosts, post, setChosenPost }) => {
   const [loading, setLoading] = useState(false);
 
   const fetchLikePost = async (type, reaction) => {
-    console.log(reaction);
     let res = await POST(`/reaction/create_reaction`, {
       post_id: post.post.post_id,
       user_id: user.user_id,
@@ -298,7 +296,6 @@ const Comment = ({
   setPosts,
   // post,
 }) => {
-  console.log(comment);
   const [showReactions, setShowReactions] = useState(false);
 
   const [commentLikes, setCommentLikes] = useState(

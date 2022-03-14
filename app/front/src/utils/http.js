@@ -1,5 +1,5 @@
-// export const api_address = "http://localhost";
-export const api_address = "http://glimra.glimnet.se";
+export const api_address = "http://localhost";
+// export const api_address = "http://glimra.glimnet.se";
 export const client_address = "http://localhost:3000";
 
 export const get = async (endpoint, signal) => {
@@ -13,11 +13,9 @@ export const get = async (endpoint, signal) => {
       // authorization: localStorage.getItem("token") || "",
     },
   }).then((res) => res.json());
-  // }).then((res) => console.log(res));
 };
 
 export const POST = async (endpoint, data) => {
-  console.log(data);
   return await fetch(api_address + endpoint, {
     method: "POST",
     headers: {
@@ -33,7 +31,6 @@ export const POST = async (endpoint, data) => {
 };
 
 export const POSTFORMDATA = async (endpoint, data) => {
-  console.log(data);
   return await fetch(api_address + endpoint, {
     method: "POST",
     // headers: {
