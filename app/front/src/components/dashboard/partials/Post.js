@@ -135,7 +135,7 @@ export const Post = ({
                 {postLikes.length}
               </span>
               <span
-                className={`noshow-com like`}
+                className={`noshow-com like pointer`}
                 onClick={(e) => {
                   if (
                     !postLikes.some((l) => l.user_id === user.user_id) &&
@@ -211,7 +211,7 @@ export const Post = ({
                       setPostFilter(h.content);
                       fetchCertainPosts(h.content.slice(1));
                     }}
-                    className={`noshow-com post-hashtag ${
+                    className={`noshow-com pointer post-hashtag ${
                       h.searched ? "searched" : ""
                     }`}
                   >
@@ -223,7 +223,7 @@ export const Post = ({
 
             <div className="flex ok">
               <span
-                className="noshow-com ok"
+                className="noshow-com ok pointer"
                 // onClick={() => {
                 //   setChosenPost(post);
                 //   dispatch({ type: "showPostView" });
@@ -233,7 +233,7 @@ export const Post = ({
               </span>
               <span className="comment-number ok">{post.comments.length}</span>
               <span
-                className="noshow-com"
+                className="noshow-com pointer"
                 onClick={() => setShowReactions(!showReactions)}
               >
                 <i className="fas fa-smile noshow-com"></i>
