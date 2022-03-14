@@ -20,10 +20,11 @@ export const getDateAndTime = () => {
   // let time = timeSplitted[0] + ":" + timeSplitted[1];
   // return date + "-" + year + " " + time;
   // return date + " " + time;
-
-  let date = new Date().toLocaleDateString().split("T")[0].split("-");
-  let time = new Date().toLocaleDateString().split("T")[1].split(":");
-  date = date[1] + "/" + date[2] + date[0];
-  time = time[0] + ":" + time[1];
-  return date + " " + time;
+  console.log(new Date().toLocaleDateString());
+  // let date = new Date().toLocaleDateString().split("T")[0].split("-");
+  // let time = new Date().toLocaleDateString().split("T")[1].split(":");
+  // date = date[1] + "/" + date[2] + date[0];
+  // time = time[0] + ":" + time[1];
+  // return date + " " + time;
+  return new Date().toLocaleDateString();
 };
