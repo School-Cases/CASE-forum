@@ -1,0 +1,30 @@
+CRITICAL - 2022-01-01 06:56:33 --> Call to a member function isValid() on null
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2022-01-01 06:56:35 --> Unknown column 'undefined' in 'where clause'
+CRITICAL - 2022-01-01 06:56:35 --> Unknown column 'undefined' in 'where clause'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM u...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM u...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM u...')
+#3 /app/app/Models/HashtagModel.php(118): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#4 /app/app/Controllers/Hashtag.php(140): App\Models\HashtagModel->get_user_main_hashtags('undefined')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->get_user_main_hashtags()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-01-01 06:56:37 --> Unknown column 'undefined' in 'where clause'
+CRITICAL - 2022-01-01 06:56:37 --> Unknown column 'undefined' in 'where clause'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(59): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('undefined')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

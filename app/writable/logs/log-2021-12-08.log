@@ -1,0 +1,459 @@
+CRITICAL - 2021-12-08 02:45:44 --> Undefined property: stdClass::$comment_id
+#0 /app/app/Models/ReactionModel.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/app/app/Models...', 30)
+#1 /app/app/Controllers/Reaction.php(47): App\Models\ReactionModel->create_reaction(Object(stdClass))
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Reaction->create_reaction()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reaction))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2021-12-08 02:46:11 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 0)' at line 1
+CRITICAL - 2021-12-08 02:46:11 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 0)' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO rea...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO rea...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO rea...')
+#3 /app/app/Models/ReactionModel.php(30): CodeIgniter\Database\BaseConnection->query('INSERT INTO rea...')
+#4 /app/app/Controllers/Reaction.php(47): App\Models\ReactionModel->create_reaction(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Reaction->create_reaction()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reaction))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-08 03:09:34 --> Column 'post_id' in where clause is ambiguous
+CRITICAL - 2021-12-08 03:09:34 --> Column 'post_id' in where clause is ambiguous
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM c...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM c...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM c...')
+#3 /app/app/Models/CommentModel.php(24): CodeIgniter\Database\BaseConnection->query('SELECT * FROM c...')
+#4 /app/app/Controllers/Post.php(60): App\Models\CommentModel->get_post_comments('71')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_posts_data()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-08 03:10:01 --> Column 'post_id' in where clause is ambiguous
+CRITICAL - 2021-12-08 03:10:01 --> Column 'post_id' in where clause is ambiguous
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM c...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM c...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM c...')
+#3 /app/app/Models/CommentModel.php(24): CodeIgniter\Database\BaseConnection->query('SELECT * FROM c...')
+#4 /app/app/Controllers/Post.php(60): App\Models\CommentModel->get_post_comments('71')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_posts_data()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-08 03:37:48 --> Undefined property: stdClass::$post_id
+#0 /app/app/Models/ReactionModel.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/app/app/Models...', 30)
+#1 /app/app/Controllers/Reaction.php(47): App\Models\ReactionModel->create_reaction(Object(stdClass))
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Reaction->create_reaction()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reaction))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-08 03:39:23 --> Undefined property: stdClass::$post_id
+#0 /app/app/Models/ReactionModel.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/app/app/Models...', 30)
+#1 /app/app/Controllers/Reaction.php(47): App\Models\ReactionModel->create_reaction(Object(stdClass))
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Reaction->create_reaction()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reaction))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2021-12-08 03:39:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 0)' at line 1
+CRITICAL - 2021-12-08 03:39:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 0)' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO rea...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO rea...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO rea...')
+#3 /app/app/Models/ReactionModel.php(30): CodeIgniter\Database\BaseConnection->query('INSERT INTO rea...')
+#4 /app/app/Controllers/Reaction.php(47): App\Models\ReactionModel->create_reaction(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Reaction->create_reaction()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reaction))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-08 03:40:10 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 0)' at line 1
+CRITICAL - 2021-12-08 03:40:10 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 0)' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO rea...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO rea...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO rea...')
+#3 /app/app/Models/ReactionModel.php(30): CodeIgniter\Database\BaseConnection->query('INSERT INTO rea...')
+#4 /app/app/Controllers/Reaction.php(47): App\Models\ReactionModel->create_reaction(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Reaction->create_reaction()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reaction))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-08 03:40:39 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 0)' at line 1
+CRITICAL - 2021-12-08 03:40:39 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 0)' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO rea...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO rea...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO rea...')
+#3 /app/app/Models/ReactionModel.php(30): CodeIgniter\Database\BaseConnection->query('INSERT INTO rea...')
+#4 /app/app/Controllers/Reaction.php(47): App\Models\ReactionModel->create_reaction(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Reaction->create_reaction()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reaction))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-08 03:48:58 --> Undefined property: App\Controllers\User::$load
+#0 /app/app/Controllers/User.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/app/app/Contro...', 54)
+#1 /app/system/CodeIgniter.php(801): App\Controllers\User->__construct()
+#2 /app/system/CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-08 03:50:00 --> syntax error, unexpected token "::", expecting "("
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('user/get_user/')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('user/get_user/')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-08 03:51:14 --> Undefined variable $session
+#0 /app/app/Controllers/User.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 85)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->get_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-08 03:51:29 --> Undefined property: App\Controllers\User::$session
+#0 /app/app/Controllers/User.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/app/app/Contro...', 85)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->get_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-08 03:52:55 --> Undefined variable $session
+#0 /app/app/Controllers/User.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 85)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->get_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-08 03:53:45 --> Undefined variable $session
+#0 /app/app/Controllers/User.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 85)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->get_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-08 03:54:04 --> Undefined property: App\Controllers\User::$session
+#0 /app/app/Controllers/User.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/app/app/Contro...', 85)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->get_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-08 03:54:28 --> syntax error, unexpected token "=", expecting "," or ";"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('user/get_user/')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('user/get_user/')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-08 03:57:44 --> Undefined variable $session
+#0 /app/app/Controllers/User.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 85)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->get_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-08 03:58:45 --> CodeIgniter\Session\Session::get(): Argument #1 ($key) must be of type ?string, array given, called in /app/app/Controllers/User.php on line 87
+#0 /app/app/Controllers/User.php(87): CodeIgniter\Session\Session->get(Array)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->get_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-08 04:15:21 --> syntax error, unexpected token "as"
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Comm...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Comm...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\Comm...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'CommentModel')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/Comment.php(43): model('CommentModel')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\Comment->get_post_comments()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2021-12-08 04:29:24 --> Cannot add or update a child row: a foreign key constraint fails (`glimradb`.`reaction`, CONSTRAINT `fk_like_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+CRITICAL - 2021-12-08 04:29:24 --> Cannot add or update a child row: a foreign key constraint fails (`glimradb`.`reaction`, CONSTRAINT `fk_like_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO rea...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO rea...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO rea...')
+#3 /app/app/Models/ReactionModel.php(30): CodeIgniter\Database\BaseConnection->query('INSERT INTO rea...')
+#4 /app/app/Controllers/Reaction.php(47): App\Models\ReactionModel->create_reaction(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Reaction->create_reaction()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reaction))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-08 05:03:22 --> Call to a member function isValid() on null
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-08 05:06:56 --> Call to a member function isValid() on null
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-08 05:08:02 --> Call to a member function getRandomName() on null
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-08 05:08:35 --> Call to a member function getRandomName() on null
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-08 05:10:16 --> Call to a member function getRandomName() on string
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-08 05:12:33 --> Call to a member function getRandomName() on null
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-08 05:14:44 --> Call to a member function getRandomName() on null
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-08 05:16:53 --> Call to a member function isValid() on null
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-08 05:19:59 --> Call to a member function isValid() on null
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-08 05:20:45 --> Call to a member function isValid() on null
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-08 05:23:11 --> Call to a member function isValid() on null
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2021-12-08 09:37:37 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`comment`, CONSTRAINT `fk_comment_post1` FOREIGN KEY (`post_id`) REFERENCES `post` (`post_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+CRITICAL - 2021-12-08 09:37:37 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`comment`, CONSTRAINT `fk_comment_post1` FOREIGN KEY (`post_id`) REFERENCES `post` (`post_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM pos...')
+#3 /app/app/Models/PostModel.php(41): CodeIgniter\Database\BaseConnection->query('DELETE FROM pos...')
+#4 /app/app/Controllers/Post.php(106): App\Models\PostModel->delete_all_posts()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-08 09:48:46 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`reaction`, CONSTRAINT `fk_like_comment1` FOREIGN KEY (`comment_id`) REFERENCES `comment` (`comment_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+CRITICAL - 2021-12-08 09:48:46 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`reaction`, CONSTRAINT `fk_like_comment1` FOREIGN KEY (`comment_id`) REFERENCES `comment` (`comment_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM pos...')
+#3 /app/app/Models/PostModel.php(41): CodeIgniter\Database\BaseConnection->query('DELETE FROM pos...')
+#4 /app/app/Controllers/Post.php(106): App\Models\PostModel->delete_all_posts()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-08 09:49:37 --> Undefined variable $data
+#0 /app/app/Controllers/Post.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 107)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-08 13:55:11 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`post`, CONSTRAINT `fk_post_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+CRITICAL - 2021-12-08 13:55:11 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`post`, CONSTRAINT `fk_post_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM use...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM use...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM use...')
+#3 /app/app/Models/UserModel.php(67): CodeIgniter\Database\BaseConnection->query('DELETE FROM use...')
+#4 /app/app/Controllers/User.php(133): App\Models\UserModel->delete_all_users()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\User->delete_all_users()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-08 13:56:00 --> Undefined variable $data
+#0 /app/app/Controllers/User.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 134)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->delete_all_users()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-08 14:25:50 --> Unknown column '$2y$10$b' in 'field list'
+CRITICAL - 2021-12-08 14:25:50 --> Unknown column '$2y$10$b' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO use...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO use...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO use...')
+#3 /app/app/Models/UserModel.php(61): CodeIgniter\Database\BaseConnection->query('INSERT INTO use...')
+#4 /app/app/Controllers/User.php(119): App\Models\UserModel->create_user(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-08 14:26:35 --> Unknown column 'password' in 'field list'
+CRITICAL - 2021-12-08 14:26:35 --> Unknown column 'password' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO use...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO use...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO use...')
+#3 /app/app/Models/UserModel.php(61): CodeIgniter\Database\BaseConnection->query('INSERT INTO use...')
+#4 /app/app/Controllers/User.php(119): App\Models\UserModel->create_user(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-08 14:38:27 --> Unknown column 'haakon' in 'where clause'
+CRITICAL - 2021-12-08 14:38:27 --> Unknown column 'haakon' in 'where clause'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM u...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM u...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM u...')
+#3 /app/app/Models/UserModel.php(52): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#4 /app/app/Controllers/User.php(103): App\Models\UserModel->get_user('haakon')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\User->user_login()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-08 14:38:36 --> Unknown column 'haakon' in 'where clause'
+CRITICAL - 2021-12-08 14:38:36 --> Unknown column 'haakon' in 'where clause'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM u...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM u...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM u...')
+#3 /app/app/Models/UserModel.php(52): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#4 /app/app/Controllers/User.php(103): App\Models\UserModel->get_user('haakon')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\User->user_login()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-08 14:38:45 --> Unknown column 'haakon' in 'where clause'
+CRITICAL - 2021-12-08 14:38:45 --> Unknown column 'haakon' in 'where clause'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM u...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM u...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM u...')
+#3 /app/app/Models/UserModel.php(59): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#4 /app/app/Controllers/User.php(103): App\Models\UserModel->get_user_by_name('haakon')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\User->user_login()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-08 14:40:07 --> Attempt to read property "password" on array
+#0 /app/app/Controllers/User.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Contro...', 104)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->user_login()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-08 14:40:29 --> Undefined constant "App\Controllers\password"
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->user_login()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-08 14:43:12 --> Undefined array key "password"
+#0 /app/app/Controllers/User.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 104)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->user_login()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-08 14:43:27 --> Undefined constant "App\Controllers\password"
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->user_login()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-08 14:44:10 --> Undefined array key "password"
+#0 /app/app/Controllers/User.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 104)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->user_login()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-08 14:45:23 --> Undefined constant "App\Controllers\password"
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->user_login()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-08 15:02:38 --> Undefined variable $result
+#0 /app/app/Controllers/User.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 143)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-08 15:07:31 --> Array to string conversion
+#0 /app/app/Controllers/User.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/app/app/Contro...', 144)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-08 15:08:25 --> Call to undefined method CodeIgniter\HTTP\Response::json_encode()
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-08 15:09:47 --> Call to a member function getResult() on bool
+#0 /app/app/Controllers/User.php(141): App\Models\UserModel->create_user(Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-08 15:13:24 --> Call to a member function getResult() on bool
+#0 /app/app/Controllers/User.php(141): App\Models\UserModel->create_user(Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-08 15:14:28 --> Attempt to assign property "password" on array
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-08 15:15:36 --> Attempt to modify property "user" on array
+#0 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-08 15:16:44 --> Attempt to read property "password" on array
+#0 /app/app/Controllers/User.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Contro...', 147)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\User->create_user()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

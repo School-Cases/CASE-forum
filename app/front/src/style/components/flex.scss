@@ -1,0 +1,55 @@
+// FLEX //////////////////////////////////////////////////////////////////////
+
+.flex {
+  display: flex;
+}
+
+.JC-SB {
+  justify-content: space-between;
+}
+
+.JC-SA {
+  justify-content: space-around;
+}
+
+.JC-SE {
+  justify-content: space-evenly;
+}
+
+.JC-C {
+  justify-content: center;
+}
+
+.JC-E {
+  justify-content: flex-end;
+}
+
+.FW-wrap {
+  flex-wrap: wrap;
+}
+
+.FD-C {
+  flex-direction: column;
+}
+
+// PADDING //////////////////////////////////////////////////////////////
+
+.PD-R {
+  padding-right: 0.5rem;
+}
+
+.PD-RL {
+  padding-right: 1rem;
+}
+
+.PD-L {
+  padding-left: 0.5rem;
+}
+
+.PD-LL {
+  padding-left: 1rem;
+}
+
+.PD-LR {
+  padding: 0 0.5rem;
+}

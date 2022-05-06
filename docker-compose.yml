@@ -1,0 +1,44 @@
+# @format
+
+version: "3"
+services:
+  php:
+    build:
+      args:
+        user: docker
+        uid: 1000
+      context: ./docker/php
+      dockerfile: Dockerfile
+    # ports:
+    #   - "8080:8080"
+    expose:
+      - 9000
+    volumes:
+      - ./app:/app
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./app:/app
+  mysql:
+    image: mariadb:latest
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MARIADB_DATABASE: process.env.DB_DATABASE
+      MARIADB_ROOT_PASSWORD: process.env.DB_ROOT_PASSWORD
+      MARIADB_PASSWORD: process.env.DB_PASSWORD
+      MARIADB_USER: process.env.DB_USERNAME
+    volumes:
+      - ./docker/mysql/db:/var/lib/mysql
+      - ./docker/mysql/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - "8081:80"
+    environment:
+      - PMA_ARBITRARY=1

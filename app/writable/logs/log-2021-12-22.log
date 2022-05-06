@@ -1,0 +1,616 @@
+ERROR - 2021-12-22 03:41:41 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COUNT(notification.post_id AND notification.type) AS NrOfDub FROM notificatio...' at line 1
+CRITICAL - 2021-12-22 03:41:41 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COUNT(notification.post_id AND notification.type) AS NrOfDub FROM notificatio...' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(44): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-22 03:42:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COUNT(notification.post_id AND notification.type) AS NrOfDub FROM notificatio...' at line 1
+CRITICAL - 2021-12-22 03:42:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COUNT(notification.post_id AND notification.type) AS NrOfDub FROM notificatio...' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(44): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-22 03:45:11 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.comment_id, notification.type 
+        ORDER BY notifi...' at line 9
+CRITICAL - 2021-12-22 03:45:11 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.comment_id, notification.type 
+        ORDER BY notifi...' at line 9
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(43): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('32')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-22 03:55:11 --> syntax error, unexpected token "{", expecting ";"
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Noti...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Noti...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\Noti...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'NotificationMod...')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/Notification.php(43): model('NotificationMod...')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-22 03:55:39 --> syntax error, unexpected token "{", expecting ";"
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Noti...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Noti...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\Noti...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'NotificationMod...')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/Notification.php(43): model('NotificationMod...')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-22 03:58:00 --> syntax error, unexpected token ":"
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Noti...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Noti...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\Noti...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'NotificationMod...')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/Notification.php(43): model('NotificationMod...')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-22 03:58:10 --> Can't use method return value in write context
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-12-22 04:12:26 --> Only variables should be passed by reference
+#0 /app/app/Models/NotificationModel.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Only variables ...', '/app/app/Models...', 72)
+#1 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('32')
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-22 04:13:02 --> syntax error, unexpected token ";", expecting ")"
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Noti...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Noti...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\Noti...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'NotificationMod...')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/Notification.php(43): model('NotificationMod...')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-22 04:13:49 --> Only variables should be passed by reference
+#0 /app/app/Models/NotificationModel.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Only variables ...', '/app/app/Models...', 72)
+#1 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('32')
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2021-12-22 05:23:43 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`notification`, CONSTRAINT `fk_notification_comment1` FOREIGN KEY (`comment_id`) REFERENCES `comment` (`comment_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+CRITICAL - 2021-12-22 05:23:43 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`notification`, CONSTRAINT `fk_notification_comment1` FOREIGN KEY (`comment_id`) REFERENCES `comment` (`comment_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM pos...')
+#3 /app/app/Models/PostModel.php(72): CodeIgniter\Database\BaseConnection->query('DELETE FROM pos...')
+#4 /app/app/Controllers/Post.php(332): App\Models\PostModel->delete_all_posts()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-22 05:23:59 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`post_hashtag`, CONSTRAINT `fk_post_hashtag_hashtag1` FOREIGN KEY (`hashtag_id`) REFERENCES `hashtag` (`hashtag_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+CRITICAL - 2021-12-22 05:23:59 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`post_hashtag`, CONSTRAINT `fk_post_hashtag_hashtag1` FOREIGN KEY (`hashtag_id`) REFERENCES `hashtag` (`hashtag_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM has...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM has...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM has...')
+#3 /app/app/Models/HashtagModel.php(53): CodeIgniter\Database\BaseConnection->query('DELETE FROM has...')
+#4 /app/app/Controllers/Hashtag.php(102): App\Models\HashtagModel->delete_all_hashtags()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->delete_all_hashtags()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-22 05:24:16 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`notification`, CONSTRAINT `fk_notification_comment1` FOREIGN KEY (`comment_id`) REFERENCES `comment` (`comment_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+CRITICAL - 2021-12-22 05:24:16 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`notification`, CONSTRAINT `fk_notification_comment1` FOREIGN KEY (`comment_id`) REFERENCES `comment` (`comment_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM pos...')
+#3 /app/app/Models/PostModel.php(72): CodeIgniter\Database\BaseConnection->query('DELETE FROM pos...')
+#4 /app/app/Controllers/Post.php(332): App\Models\PostModel->delete_all_posts()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-22 05:27:18 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`notification`, CONSTRAINT `fk_notification_comment1` FOREIGN KEY (`comment_id`) REFERENCES `comment` (`comment_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+CRITICAL - 2021-12-22 05:27:18 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`notification`, CONSTRAINT `fk_notification_comment1` FOREIGN KEY (`comment_id`) REFERENCES `comment` (`comment_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM com...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM com...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM com...')
+#3 /app/app/Models/CommentModel.php(57): CodeIgniter\Database\BaseConnection->query('DELETE FROM com...')
+#4 /app/app/Controllers/Comment.php(254): App\Models\CommentModel->delete_all_comments()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Comment->delete_all_comments()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-22 05:28:07 --> Undefined variable $data
+#0 /app/app/Controllers/Post.php(333): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 333)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-22 05:28:14 --> Undefined variable $data
+#0 /app/app/Controllers/Hashtag.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 103)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->delete_all_hashtags()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-22 05:30:05 --> Undefined property: stdClass::$post_user
+#0 /app/app/Models/NotificationModel.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/app/app/Models...', 99)
+#1 /app/app/Controllers/Notification.php(117): App\Models\NotificationModel->create_notification('34', Object(stdClass))
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-22 05:30:57 --> Undefined property: stdClass::$post_user
+#0 /app/app/Models/NotificationModel.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/app/app/Models...', 99)
+#1 /app/app/Controllers/Notification.php(117): App\Models\NotificationModel->create_notification('34', Object(stdClass))
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-22 05:34:40 --> Undefined property: stdClass::$post_user
+#0 /app/app/Models/NotificationModel.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/app/app/Models...', 99)
+#1 /app/app/Controllers/Notification.php(117): App\Models\NotificationModel->create_notification('34', Object(stdClass))
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-22 05:37:57 --> Undefined property: stdClass::$post_user
+#0 /app/app/Models/NotificationModel.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/app/app/Models...', 99)
+#1 /app/app/Controllers/Notification.php(117): App\Models\NotificationModel->create_notification('34', Object(stdClass))
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-22 05:43:44 --> Undefined variable $post
+#0 /app/app/Controllers/Post.php(188): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 188)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_data()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-22 05:47:52 --> Attempt to read property "user_id" on array
+#0 /app/app/Controllers/Post.php(190): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', '/app/app/Contro...', 190)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_data()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-22 05:48:29 --> array_push(): Argument #1 ($array) must be of type array, null given
+#0 /app/app/Controllers/Post.php(190): array_push(NULL, Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_data()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-22 06:28:29 --> syntax error, unexpected token "isset"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_posts_...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_posts_...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-22 06:30:13 --> syntax error, unexpected token "isset"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('post/get_posts_...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('post/get_posts_...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-22 06:31:29 --> Undefined variable $id
+#0 /app/app/Models/NotificationModel.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Models...', 117)
+#1 /app/app/Controllers/Post.php(179): App\Models\NotificationModel->delete_notification('post_id', '0')
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Post->get_post_data_and_delete_noti()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2021-12-22 09:43:31 --> Column 'user_id' cannot be null
+CRITICAL - 2021-12-22 09:43:31 --> Column 'user_id' cannot be null
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO not...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO not...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO not...')
+#3 /app/app/Models/NotificationModel.php(99): CodeIgniter\Database\BaseConnection->query('INSERT INTO not...')
+#4 /app/app/Controllers/Notification.php(122): App\Models\NotificationModel->create_notification('null', Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-22 09:48:52 --> Column 'user_id' cannot be null
+CRITICAL - 2021-12-22 09:48:52 --> Column 'user_id' cannot be null
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO not...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO not...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO not...')
+#3 /app/app/Models/NotificationModel.php(99): CodeIgniter\Database\BaseConnection->query('INSERT INTO not...')
+#4 /app/app/Controllers/Notification.php(122): App\Models\NotificationModel->create_notification('null', Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-22 09:54:31 --> Column 'user_id' cannot be null
+CRITICAL - 2021-12-22 09:54:31 --> Column 'user_id' cannot be null
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO not...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO not...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO not...')
+#3 /app/app/Models/NotificationModel.php(99): CodeIgniter\Database\BaseConnection->query('INSERT INTO not...')
+#4 /app/app/Controllers/Notification.php(122): App\Models\NotificationModel->create_notification('null', Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-22 10:00:24 --> Column 'user_id' cannot be null
+CRITICAL - 2021-12-22 10:00:24 --> Column 'user_id' cannot be null
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO not...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO not...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO not...')
+#3 /app/app/Models/NotificationModel.php(99): CodeIgniter\Database\BaseConnection->query('INSERT INTO not...')
+#4 /app/app/Controllers/Notification.php(122): App\Models\NotificationModel->create_notification('null', Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-22 10:02:08 --> Column 'user_id' cannot be null
+CRITICAL - 2021-12-22 10:02:08 --> Column 'user_id' cannot be null
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO not...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO not...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO not...')
+#3 /app/app/Models/NotificationModel.php(99): CodeIgniter\Database\BaseConnection->query('INSERT INTO not...')
+#4 /app/app/Controllers/Notification.php(122): App\Models\NotificationModel->create_notification('null', Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-22 10:02:34 --> Column 'user_id' cannot be null
+CRITICAL - 2021-12-22 10:02:34 --> Column 'user_id' cannot be null
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO not...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO not...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO not...')
+#3 /app/app/Models/NotificationModel.php(99): CodeIgniter\Database\BaseConnection->query('INSERT INTO not...')
+#4 /app/app/Controllers/Notification.php(124): App\Models\NotificationModel->create_notification('null', Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-22 10:03:04 --> Column 'user_id' cannot be null
+CRITICAL - 2021-12-22 10:03:04 --> Column 'user_id' cannot be null
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO not...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO not...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO not...')
+#3 /app/app/Models/NotificationModel.php(99): CodeIgniter\Database\BaseConnection->query('INSERT INTO not...')
+#4 /app/app/Controllers/Notification.php(124): App\Models\NotificationModel->create_notification('null', Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-22 10:03:15 --> Column 'user_id' cannot be null
+CRITICAL - 2021-12-22 10:03:15 --> Column 'user_id' cannot be null
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO not...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO not...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO not...')
+#3 /app/app/Models/NotificationModel.php(99): CodeIgniter\Database\BaseConnection->query('INSERT INTO not...')
+#4 /app/app/Controllers/Notification.php(124): App\Models\NotificationModel->create_notification('null', Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-22 10:03:29 --> Column 'user_id' cannot be null
+CRITICAL - 2021-12-22 10:03:29 --> Column 'user_id' cannot be null
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO not...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO not...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO not...')
+#3 /app/app/Models/NotificationModel.php(99): CodeIgniter\Database\BaseConnection->query('INSERT INTO not...')
+#4 /app/app/Controllers/Notification.php(124): App\Models\NotificationModel->create_notification('null', Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-22 10:03:45 --> Column 'user_id' cannot be null
+CRITICAL - 2021-12-22 10:03:45 --> Column 'user_id' cannot be null
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO not...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO not...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO not...')
+#3 /app/app/Models/NotificationModel.php(99): CodeIgniter\Database\BaseConnection->query('INSERT INTO not...')
+#4 /app/app/Controllers/Notification.php(124): App\Models\NotificationModel->create_notification('null', Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-22 10:03:58 --> Column 'user_id' cannot be null
+CRITICAL - 2021-12-22 10:03:58 --> Column 'user_id' cannot be null
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO not...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO not...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO not...')
+#3 /app/app/Models/NotificationModel.php(99): CodeIgniter\Database\BaseConnection->query('INSERT INTO not...')
+#4 /app/app/Controllers/Notification.php(124): App\Models\NotificationModel->create_notification('null', Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-22 10:04:29 --> Column 'user_id' cannot be null
+CRITICAL - 2021-12-22 10:04:29 --> Column 'user_id' cannot be null
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO not...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO not...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO not...')
+#3 /app/app/Models/NotificationModel.php(99): CodeIgniter\Database\BaseConnection->query('INSERT INTO not...')
+#4 /app/app/Controllers/Notification.php(124): App\Models\NotificationModel->create_notification('null', Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-22 10:04:37 --> Column 'user_id' cannot be null
+CRITICAL - 2021-12-22 10:04:37 --> Column 'user_id' cannot be null
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO not...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO not...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO not...')
+#3 /app/app/Models/NotificationModel.php(99): CodeIgniter\Database\BaseConnection->query('INSERT INTO not...')
+#4 /app/app/Controllers/Notification.php(124): App\Models\NotificationModel->create_notification('null', Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-22 10:05:04 --> Column 'user_id' cannot be null
+CRITICAL - 2021-12-22 10:05:04 --> Column 'user_id' cannot be null
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO not...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO not...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO not...')
+#3 /app/app/Models/NotificationModel.php(99): CodeIgniter\Database\BaseConnection->query('INSERT INTO not...')
+#4 /app/app/Controllers/Notification.php(124): App\Models\NotificationModel->create_notification('null', Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-22 10:05:57 --> Column 'user_id' cannot be null
+CRITICAL - 2021-12-22 10:05:57 --> Column 'user_id' cannot be null
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO not...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO not...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO not...')
+#3 /app/app/Models/NotificationModel.php(99): CodeIgniter\Database\BaseConnection->query('INSERT INTO not...')
+#4 /app/app/Controllers/Notification.php(124): App\Models\NotificationModel->create_notification('null', Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-22 10:08:58 --> Undefined property: stdClass::$post_user
+#0 /app/app/Models/NotificationModel.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/app/app/Models...', 99)
+#1 /app/app/Controllers/Notification.php(117): App\Models\NotificationModel->create_notification('36', Object(stdClass))
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2021-12-22 10:58:09 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`notification`, CONSTRAINT `fk_notification_post1` FOREIGN KEY (`post_id`) REFERENCES `post` (`post_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+CRITICAL - 2021-12-22 10:58:09 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`notification`, CONSTRAINT `fk_notification_post1` FOREIGN KEY (`post_id`) REFERENCES `post` (`post_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM pos...')
+#3 /app/app/Models/PostModel.php(72): CodeIgniter\Database\BaseConnection->query('DELETE FROM pos...')
+#4 /app/app/Controllers/Post.php(342): App\Models\PostModel->delete_all_posts()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-22 10:58:20 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`notification`, CONSTRAINT `fk_notification_comment1` FOREIGN KEY (`comment_id`) REFERENCES `comment` (`comment_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+CRITICAL - 2021-12-22 10:58:20 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`notification`, CONSTRAINT `fk_notification_comment1` FOREIGN KEY (`comment_id`) REFERENCES `comment` (`comment_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM com...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM com...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM com...')
+#3 /app/app/Models/CommentModel.php(57): CodeIgniter\Database\BaseConnection->query('DELETE FROM com...')
+#4 /app/app/Controllers/Comment.php(254): App\Models\CommentModel->delete_all_comments()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Comment->delete_all_comments()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-22 10:58:34 --> Undefined variable $data
+#0 /app/app/Controllers/Post.php(343): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 343)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-22 11:03:31 --> Undefined variable $data
+#0 /app/app/Controllers/Post.php(343): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 343)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-22 11:03:41 --> Undefined variable $data
+#0 /app/app/Controllers/Hashtag.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 103)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->delete_all_hashtags()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-22 11:06:29 --> Undefined variable $data
+#0 /app/app/Controllers/Post.php(343): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 343)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-22 11:06:36 --> Undefined variable $data
+#0 /app/app/Controllers/Hashtag.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 103)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->delete_all_hashtags()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-22 11:14:52 --> Undefined variable $data
+#0 /app/app/Controllers/Post.php(343): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 343)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-22 11:14:57 --> Undefined variable $data
+#0 /app/app/Controllers/Hashtag.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 103)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->delete_all_hashtags()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-22 11:34:23 --> Attempt to assign property "post" on array
+#0 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('37')
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-22 12:19:05 --> Undefined constant "App\Controllers\res"
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Notification->create_notification()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-22 12:26:36 --> Attempt to modify property "post" on array
+#0 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('37')
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-22 12:27:01 --> Attempt to assign property "post" on array
+#0 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('37')
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-22 12:27:22 --> Attempt to assign property "post" on array
+#0 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('37')
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-22 12:42:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'user.name FROM post
+            LEFT JOIN user ON user.user_id = 37 
+      ...' at line 1
+CRITICAL - 2021-12-22 12:42:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'user.name FROM post
+            LEFT JOIN user ON user.user_id = 37 
+      ...' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT post.* u...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT post.* u...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT post.* u...')
+#3 /app/app/Models/NotificationModel.php(80): CodeIgniter\Database\BaseConnection->query('SELECT post.* u...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('37')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-22 12:52:43 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`notification`, CONSTRAINT `fk_notification_comment1` FOREIGN KEY (`comment_id`) REFERENCES `comment` (`comment_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+CRITICAL - 2021-12-22 12:52:43 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`notification`, CONSTRAINT `fk_notification_comment1` FOREIGN KEY (`comment_id`) REFERENCES `comment` (`comment_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM pos...')
+#3 /app/app/Models/PostModel.php(72): CodeIgniter\Database\BaseConnection->query('DELETE FROM pos...')
+#4 /app/app/Controllers/Post.php(342): App\Models\PostModel->delete_all_posts()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-22 12:52:59 --> Undefined variable $data
+#0 /app/app/Controllers/Comment.php(255): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 255)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Comment->delete_all_comments()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-22 12:53:04 --> Undefined variable $data
+#0 /app/app/Controllers/Post.php(343): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 343)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-22 12:53:14 --> Undefined variable $data
+#0 /app/app/Controllers/Hashtag.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 103)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->delete_all_hashtags()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-22 13:17:35 --> Attempt to assign property "post" on array
+#0 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('41')
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-22 13:25:14 --> Call to undefined method CodeIgniter\HTTP\Response::json_encode()
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-22 13:30:51 --> Undefined constant "App\Controllers\user_notis"
+#0 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#1 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#2 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-22 13:34:51 --> Attempt to assign property "post" on array
+#0 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('41')
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

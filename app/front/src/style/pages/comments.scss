@@ -1,0 +1,121 @@
+@import "../components/colors.scss";
+@import "../components/flex.scss";
+
+@import "../light.scss";
+@import "../dark.scss";
+
+.comment-container {
+  margin-left: 0.6rem;
+  // border-top: 1px solid #b7b7b7;
+  padding-bottom: 0.4rem;
+
+  &.first-c {
+    padding-top: 3rem;
+  }
+}
+
+.comment-img-container {
+  padding: 0 0.5rem 0rem 0.5rem;
+
+  .commentator-user-img {
+    // background-image: url(../images/Temp.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .comment-line {
+    padding-top: 0.5rem;
+    padding-left: 0.3rem;
+    width: 100%;
+    height: calc(100% - 50px);
+
+    .line {
+      // background-image: url(../images/line.png);
+      background-image: url(../images/line2.png);
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      filter: invert(90%) sepia(13%) saturate(4695%) hue-rotate(15deg)
+        brightness(94%) contrast(58%);
+    }
+  }
+}
+
+.comment-top {
+  padding-top: 0rem;
+
+  .commentator-username {
+    font-size: 1.2rem;
+    padding-right: 0.25rem;
+    font-weight: 700;
+  }
+
+  .comment-timestamp {
+    font-size: 0.9rem;
+  }
+
+  .likes {
+    .likes-svg {
+      background-image: url(../images/star.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 1.4rem;
+      height: 1.4rem;
+      filter: invert(57%) sepia(78%) saturate(342%) hue-rotate(31deg)
+        brightness(120%) contrast(86%);
+    }
+  }
+}
+
+.comment-content {
+  font-size: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.comment-bot {
+  // border-top: 1px solid $greyL;
+  padding-top: 0.2rem;
+  gap: 0.9rem;
+  // padding-bottom: 0.5rem;
+  // padding-top: 0.2rem;
+  .fa-trash-alt {
+    color: $greyD;
+  }
+
+  .comment-number,
+  .reaction-number {
+    font-size: 0.8rem;
+    padding-left: 0.4rem;
+  }
+
+  .comment-number {
+    padding: 0 0.8rem 0 0.4rem;
+  }
+
+  .fa-comment {
+    transform: scale(1.4);
+    filter: invert(66%) sepia(9%) saturate(3545%) hue-rotate(340deg)
+      brightness(99%) contrast(86%);
+  }
+
+  .reaction-number {
+    padding-left: 0.4rem;
+    position: relative;
+  }
+
+  .fa-smile {
+    transform: scale(1.4);
+    filter: invert(94%) sepia(12%) saturate(4832%) hue-rotate(329deg)
+      brightness(122%) contrast(98%);
+    margin-top: 0.3rem;
+  }
+
+  .fa-thumbs-up {
+    &.liked {
+      color: $orange;
+    }
+  }
+}

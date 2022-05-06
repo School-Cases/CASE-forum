@@ -1,0 +1,188 @@
+ERROR - 2021-12-14 06:57:20 --> Unknown column 'time' in 'field list'
+CRITICAL - 2021-12-14 06:57:20 --> Unknown column 'time' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pos...')
+#3 /app/app/Models/PostModel.php(36): CodeIgniter\Database\BaseConnection->query('INSERT INTO pos...')
+#4 /app/app/Controllers/Post.php(142): App\Models\PostModel->create_post(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-14 06:57:22 --> Object of class stdClass could not be converted to string
+#0 /app/app/Controllers/Hashtag.php(84): App\Models\HashtagModel->check_if_posthashtag_exists(1, Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-14 06:57:22 --> Object of class stdClass could not be converted to string
+#0 /app/app/Controllers/Hashtag.php(84): App\Models\HashtagModel->check_if_posthashtag_exists(2, Object(stdClass))
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-14 07:01:28 --> Unknown column 'time' in 'field list'
+CRITICAL - 2021-12-14 07:01:28 --> Unknown column 'time' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO pos...')
+#3 /app/app/Models/PostModel.php(36): CodeIgniter\Database\BaseConnection->query('INSERT INTO pos...')
+#4 /app/app/Controllers/Post.php(142): App\Models\PostModel->create_post(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-14 07:10:17 --> Unknown column 'interactions' in 'field list'
+CRITICAL - 2021-12-14 07:10:17 --> Unknown column 'interactions' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE hashtag ...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE hashtag ...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE hashtag ...')
+#3 /app/app/Models/HashtagModel.php(59): CodeIgniter\Database\BaseConnection->query('UPDATE hashtag ...')
+#4 /app/app/Controllers/Hashtag.php(81): App\Models\HashtagModel->update_hashtag_interactions('2')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->handle_hashtag()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-14 07:23:16 --> Undefined property: stdClass::$content
+#0 /app/app/Controllers/Post.php(152): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/app/app/Contro...', 152)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-14 07:26:19 --> Unknown column 'interactions' in 'field list'
+CRITICAL - 2021-12-14 07:26:19 --> Unknown column 'interactions' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE hashtag ...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE hashtag ...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE hashtag ...')
+#3 /app/app/Models/HashtagModel.php(59): CodeIgniter\Database\BaseConnection->query('UPDATE hashtag ...')
+#4 /app/app/Controllers/Post.php(160): App\Models\HashtagModel->update_hashtag_interactions('2')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-14 07:27:30 --> Undefined variable $data
+#0 /app/app/Controllers/Hashtag.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 107)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->delete_all_hashtags()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-14 07:27:46 --> Undefined variable $data
+#0 /app/app/Controllers/Post.php(190): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 190)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-14 07:29:27 --> Unknown column 'interactions' in 'field list'
+CRITICAL - 2021-12-14 07:29:27 --> Unknown column 'interactions' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE hashtag ...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE hashtag ...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE hashtag ...')
+#3 /app/app/Models/HashtagModel.php(59): CodeIgniter\Database\BaseConnection->query('UPDATE hashtag ...')
+#4 /app/app/Controllers/Post.php(160): App\Models\HashtagModel->update_hashtag_interactions('3')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Post->create_post()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-14 07:32:13 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`post_hashtag`, CONSTRAINT `fk_post_hashtag_hashtag1` FOREIGN KEY (`hashtag_id`) REFERENCES `hashtag` (`hashtag_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+CRITICAL - 2021-12-14 07:32:13 --> Cannot delete or update a parent row: a foreign key constraint fails (`glimradb`.`post_hashtag`, CONSTRAINT `fk_post_hashtag_hashtag1` FOREIGN KEY (`hashtag_id`) REFERENCES `hashtag` (`hashtag_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM has...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM has...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM has...')
+#3 /app/app/Models/HashtagModel.php(53): CodeIgniter\Database\BaseConnection->query('DELETE FROM has...')
+#4 /app/app/Controllers/Hashtag.php(106): App\Models\HashtagModel->delete_all_hashtags()
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->delete_all_hashtags()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-14 07:32:20 --> Undefined variable $data
+#0 /app/app/Controllers/Post.php(190): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 190)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-14 08:23:04 --> Undefined variable $data
+#0 /app/app/Controllers/Post.php(190): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 190)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Post->delete_all_posts()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-14 08:23:24 --> Undefined variable $data
+#0 /app/app/Controllers/Hashtag.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 107)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->delete_all_hashtags()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-14 08:49:33 --> Unknown column 'time' in 'field list'
+CRITICAL - 2021-12-14 08:49:33 --> Unknown column 'time' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO com...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO com...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO com...')
+#3 /app/app/Models/CommentModel.php(40): CodeIgniter\Database\BaseConnection->query('INSERT INTO com...')
+#4 /app/app/Controllers/Comment.php(65): App\Models\CommentModel->create_comment(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Comment->create_comment()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comment))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-14 15:38:57 --> Column 'comment_id' cannot be null
+CRITICAL - 2021-12-14 15:38:57 --> Column 'comment_id' cannot be null
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO rea...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO rea...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO rea...')
+#3 /app/app/Models/ReactionModel.php(30): CodeIgniter\Database\BaseConnection->query('INSERT INTO rea...')
+#4 /app/app/Controllers/Reaction.php(47): App\Models\ReactionModel->create_reaction(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Reaction->create_reaction()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reaction))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-14 16:09:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' null, )' at line 1
+CRITICAL - 2021-12-14 16:09:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' null, )' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO rea...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO rea...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO rea...')
+#3 /app/app/Models/ReactionModel.php(30): CodeIgniter\Database\BaseConnection->query('INSERT INTO rea...')
+#4 /app/app/Controllers/Reaction.php(47): App\Models\ReactionModel->create_reaction(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Reaction->create_reaction()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reaction))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-14 16:10:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' null, )' at line 1
+CRITICAL - 2021-12-14 16:10:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' null, )' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO rea...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO rea...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO rea...')
+#3 /app/app/Models/ReactionModel.php(30): CodeIgniter\Database\BaseConnection->query('INSERT INTO rea...')
+#4 /app/app/Controllers/Reaction.php(47): App\Models\ReactionModel->create_reaction(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Reaction->create_reaction()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reaction))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-14 16:12:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' null, )' at line 1
+CRITICAL - 2021-12-14 16:12:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' null, )' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO rea...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO rea...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO rea...')
+#3 /app/app/Models/ReactionModel.php(30): CodeIgniter\Database\BaseConnection->query('INSERT INTO rea...')
+#4 /app/app/Controllers/Reaction.php(47): App\Models\ReactionModel->create_reaction(Object(stdClass))
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Reaction->create_reaction()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reaction))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

@@ -1,0 +1,43 @@
+CRITICAL - 2021-12-20 08:35:48 --> syntax error, unexpected token "}"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('notification/cr...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('notification/cr...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-20 09:25:19 --> Column 'user_id' in where clause is ambiguous
+CRITICAL - 2021-12-20 09:25:19 --> Column 'user_id' in where clause is ambiguous
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(27): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-20 09:25:40 --> Column 'user_id' in where clause is ambiguous
+CRITICAL - 2021-12-20 09:25:40 --> Column 'user_id' in where clause is ambiguous
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(27): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-20 09:35:28 --> SELECT command denied to user 'user'@'192.168.0.4' for table 'text'
+CRITICAL - 2021-12-20 09:35:28 --> SELECT command denied to user 'user'@'192.168.0.4' for table 'text'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM n...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM n...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM n...')
+#3 /app/app/Models/NotificationModel.php(27): CodeIgniter\Database\BaseConnection->query('SELECT * FROM n...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

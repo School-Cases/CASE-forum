@@ -1,0 +1,257 @@
+@import "./components/colors.scss";
+
+.dark {
+  .post-pic {
+    // background-image: url(./images/Temp.jpg);
+    background-size: cover;
+    border-radius: 15px;
+    width: 100%;
+    height: 7rem;
+  }
+
+  &.App {
+    background-color: $darkBG;
+    background-image: url(./images/PatternD.svg);
+    // background-image: url(./images/darkbg2.svg);
+  }
+
+  .header {
+    // &.w-b {
+    background-color: $darkBG;
+    background-image: url(./images/PatternD.svg);
+
+    // height: 7rem;
+    // }
+  }
+
+  .header-stars {
+    background-image: url(./images/starsD.svg);
+    background-repeat: no-repeat;
+  }
+
+  .write-post-btn {
+    border: 7px solid #2a2a2a;
+  }
+
+  .top-btns {
+    .fa-pencil-alt,
+    .fa-bars,
+    .fa-search {
+      filter: invert(6%) sepia(0%) saturate(478%) hue-rotate(216deg)
+        brightness(63%) contrast(76%);
+    }
+  }
+
+  .hashtag-box {
+    background-color: $darkM;
+
+    .hashtag-delete {
+      background-color: $darkD;
+    }
+  }
+
+  .container {
+    background-image: url(./images/containerD.svg);
+    background-size: cover;
+
+    .posts {
+      background-color: $darkD;
+      .gade {
+        background: linear-gradient(
+          0deg,
+          rgba(254, 254, 254, 0) 0%,
+          $darkD 100%
+        );
+      }
+      .post-hr {
+        background-color: $darkM;
+      }
+    }
+  }
+
+  .hashtag-input-content {
+    background: $darkM;
+    color: $greySM;
+
+    input {
+      background: $darkM;
+      color: $greySM;
+    }
+  }
+
+  .main-view {
+    min-height: 100vh;
+    background-color: $darkD;
+  }
+  .author-username {
+    color: $greenD;
+  }
+
+  .post-timestamp {
+    color: $greyD;
+  }
+
+  .likes {
+    color: $greenD;
+  }
+
+  .likes-svg {
+    color: $greenD;
+  }
+
+  .post-text-content {
+    color: $darkL;
+  }
+
+  .post-hashtag {
+    color: $greenM;
+  }
+
+  .commentator-username {
+    color: $greenD;
+  }
+
+  .comment-number {
+    color: $greyD;
+  }
+
+  .reaction-number {
+    color: $greyD;
+  }
+
+  .comment-timestamp {
+    color: $greyD;
+  }
+
+  .comment-content {
+    color: $darkL;
+  }
+
+  .comment-bot {
+    border-top: 1px solid $darkPattern;
+  }
+
+  .post-bot {
+    border-top: 1px solid $darkPattern;
+  }
+
+  .write-post-container {
+    .single-img {
+      color: $greyM;
+    }
+    .write-post-file {
+      &.file-upload::before {
+        color: $orange;
+      }
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 3px;
+    height: 0px;
+  }
+  ::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $orange;
+    border: 0px none transparent;
+    border-radius: 50px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: $orangeD;
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: $orangeD;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    border: 0px none transparent;
+    border-radius: 50px;
+  }
+  ::-webkit-scrollbar-track:hover {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-track:active {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  .menu-header {
+    background-color: $darkD;
+  }
+
+  .hashtag-input-content {
+    border-radius: 4rem 11rem 11rem 4rem;
+    padding: 0.3rem 0.4rem 0.3rem 1rem;
+    margin-bottom: 0.5rem;
+    grid-gap: 0.3rem;
+    gap: 0.3rem;
+    width: 100%;
+
+    background: #555555;
+    color: #cecece;
+
+    input {
+      border: none;
+      width: 100%;
+      background: #555555;
+      color: #cecece;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .btn {
+      width: 2rem;
+      height: 2rem;
+      background-color: #d6843c;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+  }
+
+  .nr {
+    color: $greyL;
+    font-weight: 600;
+  }
+
+  .menu-item {
+    color: $greyD;
+  }
+
+  .menu-item-theme {
+    color: $greyD;
+  }
+
+  .input-settings {
+    border: none;
+    width: 100%;
+
+    border-radius: 4rem 11rem 11rem 4rem;
+    padding: 0.3rem 0.4rem 0.3rem 1rem;
+    margin-bottom: 0.5rem;
+    gap: 0.3rem;
+    background: $darkM;
+    color: $greyL;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .settings-main {
+    color: $greenD;
+
+    .file-upload::before {
+      background: $darkD;
+      color: $orange;
+    }
+  }
+}

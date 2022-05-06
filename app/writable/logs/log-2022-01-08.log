@@ -1,0 +1,7 @@
+CRITICAL - 2022-01-08 07:35:56 --> Undefined array key 0
+#0 /app/app/Controllers/Hashtag.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/app/app/Contro...', 157)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Hashtag->get_user_main_hashtags()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hashtag))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

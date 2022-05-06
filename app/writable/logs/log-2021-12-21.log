@@ -1,0 +1,1402 @@
+ERROR - 2021-12-21 03:56:36 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 4
+CRITICAL - 2021-12-21 03:56:36 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 4
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(27): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 03:58:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LEFT JOIN post 
+        ON notification.post_id = post.post_id 
+        WHE...' at line 2
+CRITICAL - 2021-12-21 03:58:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LEFT JOIN post 
+        ON notification.post_id = post.post_id 
+        WHE...' at line 2
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(27): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 03:59:26 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 4
+CRITICAL - 2021-12-21 03:59:26 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 4
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(27): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 04:07:59 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 4
+CRITICAL - 2021-12-21 04:07:59 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 4
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(27): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 04:16:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 4
+CRITICAL - 2021-12-21 04:16:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 4
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(27): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 04:19:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 4
+CRITICAL - 2021-12-21 04:19:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 4
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(27): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 04:25:18 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 4
+CRITICAL - 2021-12-21 04:25:18 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 4
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(27): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 04:31:56 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 6
+CRITICAL - 2021-12-21 04:31:56 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 6
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(27): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 04:38:08 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LEFT JOIN post 
+        ON notification.post_id = post.post_id 
+        -- ...' at line 3
+CRITICAL - 2021-12-21 04:38:08 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LEFT JOIN post 
+        ON notification.post_id = post.post_id 
+        -- ...' at line 3
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(28): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 04:47:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE notification.user_id = 31' at line 8
+CRITICAL - 2021-12-21 04:47:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE notification.user_id = 31' at line 8
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(31): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 04:48:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(ORDER BY notification.notification_id DESC )
+        
+        -- ORDER BY ...' at line 4
+CRITICAL - 2021-12-21 04:48:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(ORDER BY notification.notification_id DESC )
+        
+        -- ORDER BY ...' at line 4
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(27): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 04:53:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(SELECT notification_id, max(notification_id) as notification_id
+           ...' at line 2
+CRITICAL - 2021-12-21 04:53:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(SELECT notification_id, max(notification_id) as notification_id
+           ...' at line 2
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(30): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 04:55:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(SELECT *, max(notification_id)
+                     from notification
+    ...' at line 2
+CRITICAL - 2021-12-21 04:55:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(SELECT *, max(notification_id)
+                     from notification
+    ...' at line 2
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(30): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 04:58:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT MAX(notification.post_id AND notification.type)
+        -- GROUP BY n...' at line 7
+CRITICAL - 2021-12-21 04:58:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT MAX(notification.post_id AND notification.type)
+        -- GROUP BY n...' at line 7
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(28): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 05:04:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(SELECT MAX(notification.post_id AND notification.type) FROM notification) 
+...' at line 2
+CRITICAL - 2021-12-21 05:04:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(SELECT MAX(notification.post_id AND notification.type) FROM notification) 
+...' at line 2
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(29): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-21 05:17:52 --> Undefined variable $array
+#0 /app/app/Models/NotificationModel.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Models...', 44)
+#1 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-21 05:26:25 --> syntax error, unexpected token "}"
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Noti...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Noti...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\Noti...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'NotificationMod...')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/Notification.php(43): model('NotificationMod...')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-21 05:26:52 --> array_map(): Argument #1 ($callback) must be a valid callback, function "myfunction" not found or invalid function name
+#0 /app/app/Models/NotificationModel.php(46): array_map('myfunction', Array)
+#1 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-21 05:27:06 --> array_map(): Argument #1 ($callback) must be a valid callback, function "myfunction" not found or invalid function name
+#0 /app/app/Models/NotificationModel.php(46): array_map('myfunction', Array)
+#1 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2021-12-21 05:40:11 --> SELECT command denied to user 'user'@'192.168.0.4' for table 'text'
+CRITICAL - 2021-12-21 05:40:11 --> SELECT command denied to user 'user'@'192.168.0.4' for table 'text'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(27): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 05:40:23 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM post
+        WHERE notification.user_id = 31
+        ORDER BY notifica...' at line 3
+CRITICAL - 2021-12-21 05:40:23 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM post
+        WHERE notification.user_id = 31
+        ORDER BY notifica...' at line 3
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(27): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 05:40:34 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM post
+        ON notification.post_id = post.post_id 
+        WHERE not...' at line 2
+CRITICAL - 2021-12-21 05:40:34 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM post
+        ON notification.post_id = post.post_id 
+        WHERE not...' at line 2
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(27): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 05:51:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type) 
+        LEFT JOIN post
+ ...' at line 1
+CRITICAL - 2021-12-21 05:51:39 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type) 
+        LEFT JOIN post
+ ...' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(40): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 05:53:33 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification GROUP BY notification.post_id, notification.type) 
+       ...' at line 1
+CRITICAL - 2021-12-21 05:53:33 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification GROUP BY notification.post_id, notification.type) 
+       ...' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(40): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 05:54:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification GROUP BY notification.post_id, notification.type) 
+       ...' at line 1
+CRITICAL - 2021-12-21 05:54:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification GROUP BY notification.post_id, notification.type) 
+       ...' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(40): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 05:58:03 --> Duplicate column name 'notification_id'
+CRITICAL - 2021-12-21 05:58:03 --> Duplicate column name 'notification_id'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(40): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:02:33 --> Unknown column 'notification.post_id' in 'field list'
+CRITICAL - 2021-12-21 06:02:33 --> Unknown column 'notification.post_id' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(40): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:03:08 --> Unknown column 'notification.notification_id' in 'field list'
+CRITICAL - 2021-12-21 06:03:08 --> Unknown column 'notification.notification_id' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(40): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:03:31 --> Unknown column 'notification.comment_id' in 'field list'
+CRITICAL - 2021-12-21 06:03:32 --> Unknown column 'notification.comment_id' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(40): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:03:59 --> Unknown column 'notification.notification_id' in 'field list'
+CRITICAL - 2021-12-21 06:03:59 --> Unknown column 'notification.notification_id' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(40): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:04:10 --> Unknown column 'notification.notification_id' in 'field list'
+CRITICAL - 2021-12-21 06:04:10 --> Unknown column 'notification.notification_id' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(40): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:05:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'type) FROM notification ORDER BY notification_id) AS notification
+        LE...' at line 2
+CRITICAL - 2021-12-21 06:05:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'type) FROM notification ORDER BY notification_id) AS notification
+        LE...' at line 2
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(41): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:07:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification ORDER BY notification_id dESC) AS notification
+        LEF...' at line 2
+CRITICAL - 2021-12-21 06:07:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification ORDER BY notification_id dESC) AS notification
+        LEF...' at line 2
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(41): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:08:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification ORDER BY notification_id) AS notification
+        LEFT JOI...' at line 2
+CRITICAL - 2021-12-21 06:08:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification ORDER BY notification_id) AS notification
+        LEFT JOI...' at line 2
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(41): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:09:33 --> Unknown column 'post.text' in 'field list'
+CRITICAL - 2021-12-21 06:09:33 --> Unknown column 'post.text' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(41): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:09:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM 
+        (SELECT * FROM notification ORDER BY notification_id ASC) AS n...' at line 1
+CRITICAL - 2021-12-21 06:09:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM 
+        (SELECT * FROM notification ORDER BY notification_id ASC) AS n...' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(41): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:10:39 --> Unknown column 'notification.post_id' in 'field list'
+CRITICAL - 2021-12-21 06:10:39 --> Unknown column 'notification.post_id' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(41): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:10:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification ORDER BY notification_id DESC) AS notification
+        -- ...' at line 2
+CRITICAL - 2021-12-21 06:10:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification ORDER BY notification_id DESC) AS notification
+        -- ...' at line 2
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(41): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:11:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification ORDER BY notification_id DESC) AS notification
+        -- ...' at line 2
+CRITICAL - 2021-12-21 06:11:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification ORDER BY notification_id DESC) AS notification
+        -- ...' at line 2
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(41): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:12:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 7
+CRITICAL - 2021-12-21 06:12:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 7
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(41): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:15:19 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' type) DESC) AS notification
+        -- LEFT JOIN post
+        -- ON notifi...' at line 2
+CRITICAL - 2021-12-21 06:15:19 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' type) DESC) AS notification
+        -- LEFT JOIN post
+        -- ON notifi...' at line 2
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(41): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:16:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 7
+CRITICAL - 2021-12-21 06:16:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 7
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(41): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:25:27 --> Unknown column 'notification.notification_id' in 'field list'
+CRITICAL - 2021-12-21 06:25:27 --> Unknown column 'notification.notification_id' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(41): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:27:16 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FIRST) AS notification
+        -- LEFT JOIN post
+        -- ON notification...' at line 2
+CRITICAL - 2021-12-21 06:27:16 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FIRST) AS notification
+        -- LEFT JOIN post
+        -- ON notification...' at line 2
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(41): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:27:30 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS FIRST) AS notification
+        -- LEFT JOIN post
+        -- ON notificat...' at line 2
+CRITICAL - 2021-12-21 06:27:30 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS FIRST) AS notification
+        -- LEFT JOIN post
+        -- ON notificat...' at line 2
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(41): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:27:46 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FIRST' at line 7
+CRITICAL - 2021-12-21 06:27:46 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FIRST' at line 7
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(41): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:32:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE notification.user_id = 31
+        -- ORDER BY notification.notificatio...' at line 5
+CRITICAL - 2021-12-21 06:32:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE notification.user_id = 31
+        -- ORDER BY notification.notificatio...' at line 5
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(no...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(no...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(no...')
+#3 /app/app/Models/NotificationModel.php(41): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(no...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:33:16 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1 DESC
+        GROUP BY notification.post_id, notification.type FIRST' at line 7
+CRITICAL - 2021-12-21 06:33:16 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1 DESC
+        GROUP BY notification.post_id, notification.type FIRST' at line 7
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(no...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(no...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(no...')
+#3 /app/app/Models/NotificationModel.php(41): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(no...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:34:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type FIRST' at line 8
+CRITICAL - 2021-12-21 06:34:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type FIRST' at line 8
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(no...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(no...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(no...')
+#3 /app/app/Models/NotificationModel.php(41): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(no...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:34:56 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type FIRST' at line 8
+CRITICAL - 2021-12-21 06:34:56 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type FIRST' at line 8
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(no...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(no...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(no...')
+#3 /app/app/Models/NotificationModel.php(41): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(no...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:35:30 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'time,new FROM notification
+        
+        -- LEFT JOIN post
+        -- O...' at line 1
+CRITICAL - 2021-12-21 06:35:30 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'time,new FROM notification
+        
+        -- LEFT JOIN post
+        -- O...' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(no...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(no...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(no...')
+#3 /app/app/Models/NotificationModel.php(41): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(no...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:35:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'time,new FROM notification
+        
+        
+        ORDER BY COUNT(notifi...' at line 1
+CRITICAL - 2021-12-21 06:35:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'time,new FROM notification
+        
+        
+        ORDER BY COUNT(notifi...' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(no...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(no...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(no...')
+#3 /app/app/Models/NotificationModel.php(37): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(no...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:36:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'time,new, FROM notification
+        
+        
+        ORDER BY COUNT(notif...' at line 1
+CRITICAL - 2021-12-21 06:36:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'time,new, FROM notification
+        
+        
+        ORDER BY COUNT(notif...' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(no...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(no...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(no...')
+#3 /app/app/Models/NotificationModel.php(37): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(no...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:36:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type FIRST' at line 5
+CRITICAL - 2021-12-21 06:36:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type FIRST' at line 5
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(no...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(no...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(no...')
+#3 /app/app/Models/NotificationModel.php(37): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(no...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:36:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 5
+CRITICAL - 2021-12-21 06:36:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 5
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(no...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(no...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(no...')
+#3 /app/app/Models/NotificationModel.php(37): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(no...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:39:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 6
+CRITICAL - 2021-12-21 06:39:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 6
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(no...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(no...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(no...')
+#3 /app/app/Models/NotificationModel.php(38): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(no...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:39:20 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 6
+CRITICAL - 2021-12-21 06:39:20 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 6
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(no...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(no...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(no...')
+#3 /app/app/Models/NotificationModel.php(38): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(no...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:39:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 6
+CRITICAL - 2021-12-21 06:39:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 6
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(no...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(no...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(no...')
+#3 /app/app/Models/NotificationModel.php(38): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(no...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:39:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 5
+CRITICAL - 2021-12-21 06:39:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 5
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(no...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(no...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(no...')
+#3 /app/app/Models/NotificationModel.php(37): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(no...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:40:54 --> No tables used
+CRITICAL - 2021-12-21 06:40:54 --> No tables used
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(no...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(no...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(no...')
+#3 /app/app/Models/NotificationModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(no...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:41:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification) as notification
+        WHERE notification.user_id = 31
+...' at line 2
+CRITICAL - 2021-12-21 06:41:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification) as notification
+        WHERE notification.user_id = 31
+...' at line 2
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(no...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(no...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(no...')
+#3 /app/app/Models/NotificationModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(no...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:44:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE notification.user_id = 31
+        
+
+        -- ORDER BY COUNT(notifi...' at line 4
+CRITICAL - 2021-12-21 06:44:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE notification.user_id = 31
+        
+
+        -- ORDER BY COUNT(notifi...' at line 4
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(40): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:47:00 --> Unknown column 'notification.notification_id' in 'field list'
+CRITICAL - 2021-12-21 06:47:00 --> Unknown column 'notification.notification_id' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:48:52 --> Unknown column 'notification.notification_id' in 'field list'
+CRITICAL - 2021-12-21 06:48:52 --> Unknown column 'notification.notification_id' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:49:24 --> Unknown column 'notification.notification_id' in 'field list'
+CRITICAL - 2021-12-21 06:49:24 --> Unknown column 'notification.notification_id' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:50:03 --> Unknown column 'notification_id' in 'field list'
+CRITICAL - 2021-12-21 06:50:03 --> Unknown column 'notification_id' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:50:24 --> Unknown column 'notification.comment_id' in 'field list'
+CRITICAL - 2021-12-21 06:50:24 --> Unknown column 'notification.comment_id' in 'field list'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:50:52 --> Unknown column 'notification.user_id' in 'where clause'
+CRITICAL - 2021-12-21 06:50:52 --> Unknown column 'notification.user_id' in 'where clause'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT * FROM \r...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM \r...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM \r...')
+#3 /app/app/Models/NotificationModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT * FROM \r...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 06:51:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM 
+        (SELECT DISTINCT post_id FROM notification) as notification
+ ...' at line 1
+CRITICAL - 2021-12-21 06:51:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM 
+        (SELECT DISTINCT post_id FROM notification) as notification
+ ...' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT *, FROM ...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, FROM ...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, FROM ...')
+#3 /app/app/Models/NotificationModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT *, FROM ...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-21 07:04:17 --> Undefined variable $arr
+#0 /app/app/Models/NotificationModel.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Models...', 33)
+#1 [internal function]: App\Models\NotificationModel->App\Models\{closure}(Object(stdClass))
+#2 /app/app/Models/NotificationModel.php(36): array_filter(Array, Object(Closure))
+#3 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#4 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#5 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#6 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-12-21 07:04:58 --> Undefined variable $arr
+#0 /app/app/Models/NotificationModel.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Models...', 33)
+#1 [internal function]: App\Models\NotificationModel->App\Models\{closure}(Object(stdClass))
+#2 /app/app/Models/NotificationModel.php(36): array_filter(Array, Object(Closure))
+#3 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#4 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#5 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#6 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-12-21 07:05:22 --> Undefined variable $arr
+#0 /app/app/Models/NotificationModel.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Models...', 33)
+#1 [internal function]: App\Models\NotificationModel->App\Models\{closure}(Object(stdClass))
+#2 /app/app/Models/NotificationModel.php(36): array_filter(Array, Object(Closure))
+#3 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#4 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#5 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#6 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-12-21 07:05:34 --> syntax error, unexpected token "global"
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Noti...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Noti...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\Noti...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'NotificationMod...')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/Notification.php(43): model('NotificationMod...')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-21 07:05:42 --> syntax error, unexpected token "public"
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Noti...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Noti...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\Noti...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'NotificationMod...')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/Notification.php(43): model('NotificationMod...')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-21 07:06:18 --> syntax error, unexpected token "array"
+#0 /app/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/app/app/Models...')
+#1 /app/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Noti...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Noti...')
+#3 /app/system/Config/Factories.php(136): class_exists('App\\Models\\Noti...')
+#4 /app/system/Config/Factories.php(106): CodeIgniter\Config\Factories::locateClass(Array, 'NotificationMod...')
+#5 /app/system/Common.php(783): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#6 /app/app/Controllers/Notification.php(43): model('NotificationMod...')
+#7 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#8 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#9 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-21 07:06:41 --> array_map(): Argument #1 ($callback) must be a valid callback, array must have exactly two members
+#0 /app/app/Models/NotificationModel.php(36): array_map(Array, Object(Closure))
+#1 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-21 07:07:28 --> Undefined variable $arr
+#0 /app/app/Models/NotificationModel.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Models...', 33)
+#1 [internal function]: App\Models\NotificationModel->App\Models\{closure}(Object(stdClass))
+#2 /app/app/Models/NotificationModel.php(36): array_map(Object(Closure), Array)
+#3 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#4 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#5 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#6 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-12-21 07:07:43 --> Undefined constant "App\Models\arr"
+#0 [internal function]: App\Models\NotificationModel->App\Models\{closure}(Object(stdClass))
+#1 /app/app/Models/NotificationModel.php(37): array_map(Object(Closure), Array)
+#2 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-12-21 07:08:21 --> Undefined variable $arr
+#0 /app/app/Models/NotificationModel.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Models...', 34)
+#1 [internal function]: App\Models\NotificationModel->App\Models\{closure}(Object(stdClass))
+#2 /app/app/Models/NotificationModel.php(37): array_map(Object(Closure), Array)
+#3 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#4 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#5 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#6 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-12-21 07:12:16 --> Undefined variable $arr
+#0 /app/app/Models/NotificationModel.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Models...', 33)
+#1 [internal function]: App\Models\NotificationModel->App\Models\{closure}(Object(stdClass))
+#2 /app/app/Models/NotificationModel.php(34): array_filter(Array, Object(Closure))
+#3 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#4 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#5 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#6 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-12-21 07:19:25 --> Can't use method return value in write context
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-12-21 07:20:17 --> Can't use method return value in write context
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-12-21 07:21:21 --> Undefined variable $name
+#0 /app/app/Controllers/Notification.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 55)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-21 07:21:38 --> Undefined variable $name
+#0 /app/app/Controllers/Notification.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 55)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-21 07:22:37 --> Undefined variable $post_id
+#0 /app/app/Controllers/Notification.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 55)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-21 07:23:01 --> Cannot use object of type stdClass as array
+#0 [internal function]: App\Controllers\Notification->App\Controllers\{closure}(Object(stdClass))
+#1 /app/app/Controllers/Notification.php(58): array_filter(Array, Object(Closure))
+#2 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#3 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#4 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-21 07:24:55 --> Undefined variable $post_id
+#0 /app/app/Controllers/Notification.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 55)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-21 07:25:16 --> Undefined variable $post_id
+#0 /app/app/Controllers/Notification.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 57)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-21 07:31:54 --> syntax error, unexpected token "public"
+#0 /app/system/Router/Router.php(176): CodeIgniter\Router\Router->autoRoute('notification/ge...')
+#1 /app/system/CodeIgniter.php(718): CodeIgniter\Router\Router->handle('notification/ge...')
+#2 /app/system/CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-21 07:33:15 --> Can't use method return value in write context
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-12-21 11:54:50 --> Undefined variable $results
+#0 /app/app/Controllers/Notification.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/app/app/Contro...', 89)
+#1 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#2 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-12-21 12:21:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 6
+CRITICAL - 2021-12-21 12:21:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 6
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(38): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 12:36:36 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE notification.user_id = 31 AND notification.new = 0
+        -- ORDER BY...' at line 13
+CRITICAL - 2021-12-21 12:36:36 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE notification.user_id = 31 AND notification.new = 0
+        -- ORDER BY...' at line 13
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(47): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 12:37:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LEFT JOIN post
+        ON notification.post_id = post.post_id 
+        GROU...' at line 3
+CRITICAL - 2021-12-21 12:37:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LEFT JOIN post
+        ON notification.post_id = post.post_id 
+        GROU...' at line 3
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(48): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 12:37:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 17
+CRITICAL - 2021-12-21 12:37:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 17
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(49): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 12:38:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 17
+CRITICAL - 2021-12-21 12:38:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 17
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(49): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 12:42:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 8
+CRITICAL - 2021-12-21 12:42:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 8
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(46): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 12:43:17 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 8
+CRITICAL - 2021-12-21 12:43:17 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 8
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(46): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 12:43:26 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COUNT(notification.post_id AND notification.type) 
+FROM notification GROUP B...' at line 1
+CRITICAL - 2021-12-21 12:43:26 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COUNT(notification.post_id AND notification.type) 
+FROM notification GROUP B...' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(46): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 12:44:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COUNT(notification.post_id AND notification.type) 
+FROM notification WHERE n...' at line 1
+CRITICAL - 2021-12-21 12:44:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COUNT(notification.post_id AND notification.type) 
+FROM notification WHERE n...' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(47): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 12:45:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COUNT(notification.post_id AND notification.type) 
+FROM notification WHERE n...' at line 1
+CRITICAL - 2021-12-21 12:45:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COUNT(notification.post_id AND notification.type) 
+FROM notification WHERE n...' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(47): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 12:50:17 --> Table 'glimradb.test' doesn't exist
+CRITICAL - 2021-12-21 12:50:17 --> Table 'glimradb.test' doesn't exist
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 12:55:45 --> Unknown column 'id' in 'where clause'
+CRITICAL - 2021-12-21 12:55:45 --> Unknown column 'id' in 'where clause'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT a.*, pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT a.*, pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT a.*, pos...')
+#3 /app/app/Models/NotificationModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT a.*, pos...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 12:56:23 --> Unknown column 'a.id' in 'where clause'
+CRITICAL - 2021-12-21 12:56:23 --> Unknown column 'a.id' in 'where clause'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT a.*, pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT a.*, pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT a.*, pos...')
+#3 /app/app/Models/NotificationModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT a.*, pos...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 12:56:37 --> Unknown column 'notification.post_id' in 'group statement'
+CRITICAL - 2021-12-21 12:56:37 --> Unknown column 'notification.post_id' in 'group statement'
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT a.*, pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT a.*, pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT a.*, pos...')
+#3 /app/app/Models/NotificationModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT a.*, pos...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 12:59:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification a
+        LEFT JOIN post
+        ON a.post_id = post.post...' at line 1
+CRITICAL - 2021-12-21 12:59:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification a
+        LEFT JOIN post
+        ON a.post_id = post.post...' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT a.*, pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT a.*, pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT a.*, pos...')
+#3 /app/app/Models/NotificationModel.php(50): CodeIgniter\Database\BaseConnection->query('SELECT a.*, pos...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 13:00:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification a
+        LEFT JOIN post
+        ON a.post_id = post.post...' at line 1
+CRITICAL - 2021-12-21 13:00:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification a
+        LEFT JOIN post
+        ON a.post_id = post.post...' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT a.*, pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT a.*, pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT a.*, pos...')
+#3 /app/app/Models/NotificationModel.php(50): CodeIgniter\Database\BaseConnection->query('SELECT a.*, pos...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 13:00:18 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification a
+        -- LEFT JOIN post
+        -- ON a.post_id = pos...' at line 1
+CRITICAL - 2021-12-21 13:00:18 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification a
+        -- LEFT JOIN post
+        -- ON a.post_id = pos...' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT a.*, pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT a.*, pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT a.*, pos...')
+#3 /app/app/Models/NotificationModel.php(50): CodeIgniter\Database\BaseConnection->query('SELECT a.*, pos...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 13:00:35 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification a
+        -- LEFT JOIN post
+        -- ON a.post_id = pos...' at line 1
+CRITICAL - 2021-12-21 13:00:35 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification a
+        -- LEFT JOIN post
+        -- ON a.post_id = pos...' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT a.*, FRO...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT a.*, FRO...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT a.*, FRO...')
+#3 /app/app/Models/NotificationModel.php(50): CodeIgniter\Database\BaseConnection->query('SELECT a.*, FRO...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-12-21 13:01:03 --> You must set the database table to be used with your query.
+#0 /app/system/Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 /app/system/Model.php(717): CodeIgniter\Model->builder()
+#2 /app/app/Controllers/Notification.php(53): CodeIgniter\Model->__call('get_user_notifi...', Array)
+#3 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#4 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#5 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2021-12-21 13:01:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification a
+        LEFT JOIN post
+        ON a.post_id = post.post...' at line 1
+CRITICAL - 2021-12-21 13:01:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM notification a
+        LEFT JOIN post
+        ON a.post_id = post.post...' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT a.*, pos...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT a.*, pos...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT a.*, pos...')
+#3 /app/app/Models/NotificationModel.php(50): CodeIgniter\Database\BaseConnection->query('SELECT a.*, pos...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 13:23:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 6
+CRITICAL - 2021-12-21 13:23:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY notification.post_id, notification.type' at line 6
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(38): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 15:35:15 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COUNT(notification.post_id AND notification.type) AS NrOfDub FROM notificatio...' at line 1
+CRITICAL - 2021-12-21 15:35:15 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COUNT(notification.post_id AND notification.type) AS NrOfDub FROM notificatio...' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(46): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-12-21 15:37:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COUNT(notification.post_id AND notification.type) AS NrOfDub FROM notificatio...' at line 1
+CRITICAL - 2021-12-21 15:37:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COUNT(notification.post_id AND notification.type) AS NrOfDub FROM notificatio...' at line 1
+#0 /app/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT notifica...', 0)
+#1 /app/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT notifica...')
+#2 /app/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT notifica...')
+#3 /app/app/Models/NotificationModel.php(46): CodeIgniter\Database\BaseConnection->query('SELECT notifica...')
+#4 /app/app/Controllers/Notification.php(53): App\Models\NotificationModel->get_user_notifications('31')
+#5 /app/system/CodeIgniter.php(824): App\Controllers\Notification->get_user_notifications()
+#6 /app/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#7 /app/system/CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /app/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
