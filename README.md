@@ -1,10 +1,10 @@
-# case Glimra
+# case forum
 (school case)
 
 ---
 Uppgift:
 
-* Build a twitter-like app.
+* Make a twitter-like app that uses PHP and a MySQL database.
 
 Krav:
 
