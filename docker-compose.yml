@@ -1,3 +1,5 @@
+# @format
+
 version: "3"
 services:
   php:
@@ -26,10 +28,10 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MARIADB_DATABASE: glimradb
-      MARIADB_ROOT_PASSWORD: root
-      MARIADB_PASSWORD: pass
-      MARIADB_USER: user
+      MARIADB_DATABASE: process.env.DB_DATABASE
+      MARIADB_ROOT_PASSWORD: process.env.DB_ROOT_PASSWORD
+      MARIADB_PASSWORD: process.env.DB_PASSWORD
+      MARIADB_USER: process.env.DB_USERNAME
     volumes:
       - ./docker/mysql/db:/var/lib/mysql
       - ./docker/mysql/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
